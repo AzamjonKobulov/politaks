@@ -1132,6 +1132,11 @@ section{
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.active\:text-brand-red:active{
+  --tw-text-opacity: 1;
+  color: rgb(158 33 27 / var(--tw-text-opacity));
+}
+
 .group:hover .group-hover\:scale-125{
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
