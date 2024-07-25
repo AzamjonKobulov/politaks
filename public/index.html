@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Politaks</title>
+  </head>
+  <body class="pb-96">
+    <!-- HEADER -->
+    <header>
+      <!-- Navbar -->
+      <nav class="max-w-base mx-auto space-y-2 xl:space-y-3 px-4 py-5 lg:py-0">
+        <!-- Top -->
+        <div class="hidden lg:flex items-center justify-between text-sm py-5">
+          <!-- Location -->
+          <p class="flex items-center gap-2.5 font-medium">
+            <img src="./assets/images/icon-location.svg" alt="Location Icon" />
+            Екатеринбург
+          </p>
+          <!-- Links -->
+          <ul class="flex items-center gap-6 xl:gap-10">
+            <li>
+              <a
+                href="#"
+                class="flex items-center gap-1.5 hover:text-brand-red transition-all duration-200"
+                >Готовые решения
+                <img
+                  src="./assets/images/icon-chevron-down.svg"
+                  alt="Chevron icon"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-red transition-all duration-200"
+                >О компании</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-red transition-all duration-200"
+                >База знаний</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-red transition-all duration-200"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+          <!-- Contacts -->
+          <div class="flex items-center gap-6 xl:gap-10">
+            <a href="mailto:" class="font-medium">zakaz@politaks.ru</a>
+            <a href="tel:" class="font-semibold">8 800 505-69-03</a>
+          </div>
+        </div>
+        <!-- Bottom -->
+        <div class="flex items-center justify-between gap-4 xl:gap-30">
+          <!-- Mobile Menu Button -->
+          <button class="w-9 h-9 lg:hidden relative">
+            <img
+              src="./assets/images/icon-mobile-menu.svg"
+              alt="Mobile Menu Icon"
+            />
+            <span
+              class="w-4 h-4 absolute -top-1 -right-1.5 grid place-content-center bg-brand-red text-xs font-medium text-brand-gray-300 rounded-full"
+              >2</span
+            >
+          </button>
+          <!-- Logo -->
+          <a href="#">
+            <img
+              src="./assets/images/logo.svg"
+              alt="Logo"
+              class="w-[200px] h-[50px] xl:w-auto xl:h-auto"
+            />
+          </a>
+          <!-- Catalogs Button -->
+          <button class="catalog-button group">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="fill-white group-active:fill-brand-red"
+            >
+              <path
+                d="M4.19922 4.87012H20.3992V6.67012H4.19922V4.87012ZM4.19922 11.1701H20.3992V12.9701H4.19922V11.1701ZM4.19922 17.4701H20.3992V19.2701H4.19922V17.4701Z"
+              />
+            </svg>
+
+            Каталог
+          </button>
+          <!-- Search -->
+          <div
+            class="h-14 xl:h-sixty hidden lg:flex flex-1 bg-brand-gray-100 items-center gap-2.5 rounded-lg px-4 xl:px-5"
+          >
+            <label for="search" class="cursor-pointer">
+              <img
+                src="./assets/images/icon-search.svg"
+                alt="Search Icon"
+                class="shrink-0"
+              />
+            </label>
+            <input
+              type="text"
+              id="search"
+              placeholder="Поиск"
+              class="placeholder:text-brand-gray-400 bg-transparent outline-none"
+            />
+          </div>
+          <!-- Save -->
+          <button class="hidden lg:inline group">
+            <svg
+              width="31"
+              height="36"
+              viewBox="0 0 31 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="fill-black group-hover:fill-brand-red transition-all duration-150"
+            >
+              <path
+                d="M9.50156 9.07031H22.1016C22.3403 9.07031 22.5692 9.16513 22.738 9.33392C22.9067 9.5027 23.0016 9.73162 23.0016 9.97031V27.199C23.0017 27.2795 22.9802 27.3585 22.9394 27.4278C22.8986 27.4972 22.8399 27.5543 22.7695 27.5933C22.6991 27.6323 22.6195 27.6516 22.5391 27.6494C22.4587 27.6472 22.3803 27.6234 22.3122 27.5806L15.8016 23.4973L9.29096 27.5797C9.22289 27.6225 9.14461 27.6462 9.06425 27.6485C8.9839 27.6508 8.9044 27.6315 8.83403 27.5926C8.76366 27.5537 8.70498 27.4967 8.6641 27.4275C8.62322 27.3583 8.60162 27.2794 8.60156 27.199V9.97031C8.60156 9.73162 8.69638 9.5027 8.86517 9.33392C9.03395 9.16513 9.26287 9.07031 9.50156 9.07031ZM21.2016 10.8703H10.4016V24.7591L15.8016 21.3742L21.2016 24.7591V10.8703Z"
+              />
+            </svg>
+          </button>
+          <!-- Docs -->
+          <button class="hidden lg:inline group">
+            <svg
+              width="31"
+              height="36"
+              viewBox="0 0 31 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+            >
+              <mask
+                id="mask0_339_11757"
+                style="mask-type: luminance"
+                maskUnits="userSpaceOnUse"
+                x="5"
+                y="8"
+                width="21"
+                height="21"
+              >
+                <path
+                  d="M5.80078 8.07031H25.8008V28.0703H5.80078V8.07031Z"
+                  fill="white"
+                />
+              </mask>
+              <g mask="url(#mask0_339_11757)">
+                <path
+                  d="M17.207 19.7891H25.0195V8.85156H20.332C18.6061 8.85156 17.207 10.2507 17.207 11.9766V19.7891Z"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M20.332 8.85156V11.9766H17.207"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M6.58203 27.2891H14.3945V16.3516H9.70703C7.98113 16.3516 6.58203 17.7507 6.58203 19.4766V27.2891Z"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M9.70703 16.3516V19.4766H6.58203"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M14.5117 11.8203H6.875"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M9.01855 9.5L6.875 11.8193L9.01855 14.1387"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M22.6641 22.0034L24.741 24.3196L22.6641 26.6357"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M24.7413 24.3203H16.3867"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+              </g>
+            </svg>
+          </button>
+          <!-- Cart -->
+          <button class="hidden lg:inline group">
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="fill-black group-hover:fill-brand-red transition-all duration-150"
+            >
+              <path
+                d="M11.1023 13.0429L8.18359 10.1251L9.45709 8.85156L12.3749 11.7703H26.0927C26.233 11.7703 26.3713 11.803 26.4967 11.866C26.622 11.929 26.7309 12.0203 26.8147 12.1329C26.8985 12.2454 26.9548 12.3759 26.9791 12.5141C27.0034 12.6523 26.9952 12.7942 26.9549 12.9286L24.7949 20.1286C24.7393 20.314 24.6254 20.4766 24.4701 20.5922C24.3148 20.7078 24.1263 20.7703 23.9327 20.7703H12.9023V22.5703H22.8023V24.3703H12.0023C11.7636 24.3703 11.5347 24.2754 11.3659 24.1067C11.1971 23.9379 11.1023 23.709 11.1023 23.4703V13.0429ZM12.9023 13.5703V18.9703H23.2631L24.8831 13.5703H12.9023ZM12.4523 27.9703C12.0943 27.9703 11.7509 27.828 11.4977 27.5749C11.2445 27.3217 11.1023 26.9783 11.1023 26.6203C11.1023 26.2622 11.2445 25.9188 11.4977 25.6657C11.7509 25.4125 12.0943 25.2703 12.4523 25.2703C12.8103 25.2703 13.1537 25.4125 13.4069 25.6657C13.6601 25.9188 13.8023 26.2622 13.8023 26.6203C13.8023 26.9783 13.6601 27.3217 13.4069 27.5749C13.1537 27.828 12.8103 27.9703 12.4523 27.9703ZM23.2523 27.9703C22.8943 27.9703 22.5509 27.828 22.2977 27.5749C22.0445 27.3217 21.9023 26.9783 21.9023 26.6203C21.9023 26.2622 22.0445 25.9188 22.2977 25.6657C22.5509 25.4125 22.8943 25.2703 23.2523 25.2703C23.6103 25.2703 23.9537 25.4125 24.2069 25.6657C24.4601 25.9188 24.6023 26.2622 24.6023 26.6203C24.6023 26.9783 24.4601 27.3217 24.2069 27.5749C23.9537 27.828 23.6103 27.9703 23.2523 27.9703Z"
+              />
+            </svg>
+          </button>
+          <!-- Login Button -->
+          <button class="login-button">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.2031 14.0967V15.9777C13.3886 15.6897 12.5168 15.6014 11.661 15.7201C10.8052 15.8389 9.9904 16.1612 9.28501 16.6601C8.57962 17.159 8.00423 17.8199 7.60717 18.5872C7.21011 19.3545 7.00296 20.2059 7.00313 21.0699L5.20313 21.069C5.20285 19.97 5.45415 18.8855 5.93779 17.8987C6.42143 16.9118 7.12457 16.0488 7.99332 15.3757C8.86207 14.7025 9.87338 14.2372 10.9498 14.0154C12.0261 13.7936 13.139 13.8211 14.2031 14.0958V14.0967ZM12.4031 12.9699C9.41962 12.9699 7.00313 10.5534 7.00313 7.56992C7.00313 4.58642 9.41962 2.16992 12.4031 2.16992C15.3866 2.16992 17.8031 4.58642 17.8031 7.56992C17.8031 10.5534 15.3866 12.9699 12.4031 12.9699ZM12.4031 11.1699C14.3921 11.1699 16.0031 9.55892 16.0031 7.56992C16.0031 5.58092 14.3921 3.96992 12.4031 3.96992C10.4141 3.96992 8.80313 5.58092 8.80313 7.56992C8.80313 9.55892 10.4141 11.1699 12.4031 11.1699ZM18.3305 16.5699L16.6844 14.9247L17.9579 13.6512L21.7757 17.4699L17.9579 21.2886L16.6844 20.0151L18.3305 18.3699H15.1031V16.5699H18.3305Z"
+                fill="#9E211B"
+              />
+            </svg>
+            Войти
+          </button>
+          <!-- Search Button on Mobile -->
+          <button class="lg:hidden">
+            <img
+              src="./assets/images/icon-search-black.svg"
+              alt="saerch icon  "
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="pt-5 xl:pt-10">
+        <!-- Grid -->
+        <div
+          class="max-w-base mx-auto grid md:grid-cols-3 gap-5 xl:gap-30 px-4"
+        >
+          <!-- Grid Item 1 -->
+          <a
+            href="#"
+            class="h-60 md:h-64 lg:h-72 xl:h-80 xs:col-span-2 group relative rounded-lg overflow-hidden"
+          >
+            <img
+              src="./assets/images/img-hero-1.png"
+              alt="Image"
+              class="w-full h-full object-cover group-hover:scale-125 transition-all duration-500"
+            />
+            <h2
+              class="absolute bottom-5 left-5 md:bottom-6 md:left-6 xl:bottom-30 xl:left-30 text-white z-10"
+            >
+              Материалы для <br />
+              полимерных полов
+            </h2>
+          </a>
+          <!-- Grid Item 2 -->
+          <a
+            href="#"
+            class="h-60 md:h-64 lg:h-72 xl:h-80 group relative rounded-lg overflow-hidden"
+          >
+            <img
+              src="./assets/images/img-hero-2.png"
+              alt="Image"
+              class="w-full h-full object-cover group-hover:scale-125 transition-all duration-500"
+            />
+            <h2
+              class="absolute bottom-5 left-5 md:bottom-6 md:left-6 xl:bottom-30 xl:left-30 text-white z-10"
+            >
+              Фасадные краски
+            </h2>
+          </a>
+          <!-- Grid Item 3 -->
+          <a
+            href="#"
+            class="h-60 md:h-64 lg:h-72 xl:h-80 group relative rounded-lg overflow-hidden"
+          >
+            <img
+              src="./assets/images/img-hero-3.png"
+              alt="Image"
+              class="w-full h-full object-cover group-hover:scale-125 transition-all duration-500"
+            />
+            <h2
+              class="absolute bottom-5 left-5 md:bottom-6 md:left-6 xl:bottom-30 xl:left-30 text-white z-10"
+            >
+              Материалы для <br />
+              полимерной кровли
+            </h2>
+          </a>
+          <!-- Grid Item 4 -->
+          <a
+            href="#"
+            class="h-60 md:h-64 lg:h-72 xl:h-80 xs:col-span-2 group relative rounded-lg overflow-hidden"
+          >
+            <img
+              src="./assets/images/img-hero-4.png"
+              alt="Image"
+              class="w-full h-full object-cover group-hover:scale-125 transition-all duration-500"
+            />
+            <h2
+              class="absolute bottom-5 left-5 md:bottom-6 md:left-6 xl:bottom-30 xl:left-30 text-white z-10"
+            >
+              Краски и лаки <br />
+              для защиты металла
+            </h2>
+          </a>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <div class="max-w-base mx-auto lg:px-4">
+          <div
+            class="space-y-30 lg:space-y-sixty bg-brand-gray-100 lg:rounded-lg py-10 px-4 lg:px-30"
+          >
+            <!-- Texts -->
+            <div class="grid md:grid-cols-3 gap-5 md:gap-6 xl:gap-30">
+              <!-- Left -->
+              <div class="flex flex-col justify-between">
+                <div class="flex items-center gap-6">
+                  <!-- Logo -->
+                  <img src="./assets/images/logo-2.svg" alt="Logo" />
+                  <h4 class="subtitle">О компании</h4>
+                </div>
+                <!-- On Mobile -->
+                <p class="hidden lg:block text-sm lg:text-base">
+                  Компания ООО «Политакс Экспорт» осуществляет оптовые поставки
+                  промышленных полимерных материалов в страны СНГ и ближнего
+                  зарубежья.
+                </p>
+              </div>
+              <!-- Right Texts -->
+              <div class="md:col-span-2 space-y-30 lg:pb-6">
+                <h1>
+                  ООО «Холдинговая компания «Голдман групп» является
+                  единственным производителем материалов <br />
+                  марки «ПОЛИТАКС»!
+                </h1>
+                <div class="space-y-3">
+                  <!-- On Desktop -->
+                  <p class="lg:hidden text-sm lg:text-base">
+                    Компания ООО «Политакс Экспорт» осуществляет оптовые
+                    поставки промышленных полимерных материалов в страны СНГ и
+                    ближнего зарубежья.
+                  </p>
+                  <p class="text-sm lg:text-base">
+                    Широкий опыт работы с задачами различной сложности, низкие
+                    цены за самое высокое качество и квалифицированные
+                    сотрудники позволяют компании действовать слаженно,
+                    эффективно и оперативно.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Images & Video -->
+            <div class="grid md:grid-cols-3 lg:flex gap-5 md:gap-6 xl:gap-30">
+              <!-- Images -->
+              <div
+                class="lg:w-[410px] grid xs:grid-cols-2 md:grid-cols-1 gap-5 md:gap-6 xl:gap-30"
+              >
+                <!-- Image 1 -->
+                <div class="min-h-44 group rounded-lg overflow-hidden">
+                  <img
+                    src="./assets/images/img-about-1.png"
+                    alt="Image"
+                    class="w-full h-full object-cover group-hover:scale-125 transition-all duration-500"
+                  />
+                </div>
+                <!-- Image 2 -->
+                <div class="min-h-44 group rounded-lg overflow-hidden">
+                  <img
+                    src="./assets/images/img-about-2.png"
+                    alt="Image"
+                    class="w-full h-full object-cover group-hover:scale-125 transition-all duration-500"
+                  />
+                </div>
+              </div>
+              <!-- Video -->
+              <div
+                class="min-h-48 xs:min-h-72 sm:min-h-80 md:col-span-2 lg:flex-1 rounded-lg overflow-hidden"
+              >
+                <iframe
+                  class="w-full h-full"
+                  src="https://www.youtube.com/embed/wz7THPQuxhA?si=-1u1VDQyKf2wyE0o"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section id="products">
+        <div class="max-w-base mx-auto px-4">
+          <div class="space-y-30 lg:space-y-sixty">
+            <!-- Texts -->
+            <div class="grid md:grid-cols-3 gap-30">
+              <!-- Left -->
+              <div class="flex flex-col justify-between">
+                <div class="flex items-center gap-6">
+                  <!-- Logo -->
+                  <img src="./assets/images/logo-2.svg" alt="Logo" />
+                  <h4 class="subtitle">Продукция</h4>
+                </div>
+              </div>
+              <!-- Right Texts -->
+              <div class="md:col-span-2 space-y-30">
+                <h1>Продукция марки «ПОЛИТАКС»</h1>
+                <p class="text-sm lg:text-base">
+                  Продукция «Политакс» включает в себя Эпоксидные,
+                  полиуретановые, акриловые, виниловые, алкидные: грунтовки,
+                  краски, эмали, лаки, добавки для бетона. Антикоррозионные,
+                  кислотоупорные, фасадные, гидроизоляционые, огнезащитные,
+                  щёлочестойкие защитные материалы.
+                </p>
+              </div>
+            </div>
+            <!-- Images -->
+            <div class="grid sm:grid-cols-2 gap-4 xs:gap-5 xl:gap-30">
+              <!-- Product 1 -->
+              <a
+                href="#"
+                class="h-[270px] xxs:h-72 xl:h-[500px] relative overflow-hidden rounded-lg"
+              >
+                <img
+                  src="./assets/images/img-products-1.jpg"
+                  alt="Product Image"
+                  class="w-full h-full object-cover"
+                />
+                <h2
+                  class="absolute left-5 bottom-5 lg:left-30 lg:bottom-30 z-20 text-white"
+                >
+                  Химстойкие покрытия
+                </h2>
+                <!-- Gradient overlay -->
+                <div
+                  class="h-1/3 w-full absolute bottom-0 z-10 bg-gradient-to-t from-black/50 to-transparent"
+                ></div>
+              </a>
+              <!-- Product 2 -->
+              <a
+                href="#"
+                class="h-[270px] xxs:h-72 xl:h-[500px] relative overflow-hidden rounded-lg"
+              >
+                <img
+                  src="./assets/images/img-products-2.jpg"
+                  alt="Product Image"
+                  class="w-full h-full object-cover"
+                />
+                <h2
+                  class="absolute left-5 bottom-5 lg:left-30 lg:bottom-30 z-20 text-white"
+                >
+                  Кислотоупорные покрытия
+                </h2>
+                <!-- Gradient overlay -->
+                <div
+                  class="h-1/3 w-full absolute bottom-0 z-10 bg-gradient-to-t from-black/50 to-transparent"
+                ></div>
+              </a>
+              <!-- Product 3 -->
+              <a
+                href="#"
+                class="h-[270px] xxs:h-72 xl:h-[500px] relative overflow-hidden rounded-lg"
+              >
+                <img
+                  src="./assets/images/img-products-3.jpg"
+                  alt="Product Image"
+                  class="w-full h-full object-cover"
+                />
+                <h2
+                  class="absolute left-5 bottom-5 lg:left-30 lg:bottom-30 z-20 text-white"
+                >
+                  Корабельные краски
+                </h2>
+                <!-- Gradient overlay -->
+                <div
+                  class="h-1/3 w-full absolute bottom-0 z-10 bg-gradient-to-t from-black/50 to-transparent"
+                ></div>
+              </a>
+              <!-- Product 4 -->
+              <a
+                href="#"
+                class="h-[270px] xxs:h-72 xl:h-[500px] relative overflow-hidden rounded-lg"
+              >
+                <img
+                  src="./assets/images/img-products-4.jpg"
+                  alt="Product Image"
+                  class="w-full h-full object-cover"
+                />
+                <h2
+                  class="absolute left-5 bottom-5 lg:left-30 lg:bottom-30 z-20 text-white"
+                >
+                  Покрытия для нефтегазовых сооружений
+                </h2>
+                <!-- Gradient overlay -->
+                <div
+                  class="h-1/3 w-full absolute bottom-0 z-10 bg-gradient-to-t from-black/50 to-transparent"
+                ></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Politaks on Map -->
+      <section
+        id="map"
+        class="relative bg-brand-gray-100 overflow-hidden py-sixty md:py-20 xl:py-100"
+      >
+        <div class="max-w-base mx-auto grid lg:grid-cols-2 gap-30 lg:px-4">
+          <!-- Texts -->
+          <div
+            class="relative z-20 flex flex-col space-y-9 lg:space-y-40 px-4 lg:px-0"
+          >
+            <div class="space-y-6">
+              <div class="flex items-center gap-6">
+                <!-- Logo -->
+                <img src="./assets/images/logo-2.svg" alt="Logo" />
+                <h4 class="subtitle">Политакс на карте</h4>
+              </div>
+              <p class="lg:text-lg">Мы представляем страны СНГ</p>
+            </div>
+
+            <!-- Cities -->
+            <ul
+              class="space-y-3.5 lg:space-y-5 font-semibold text-lg md:text-xl lg:text-2xl"
+            >
+              <li>Москва</li>
+              <li>Санкт-Петербург</li>
+              <li>Казахстан</li>
+              <li>Беларусь</li>
+              <li>
+                <button
+                  class="h-50 bg-brand-red font-semibold text-white border border-brand-red rounded-lg hover:bg-brand-dark-red active:bg-white active:text-black px-30"
+                >
+                  Все представительства
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Map -->
+          <img
+            src="./assets/images/img-earth.svg"
+            alt="Map"
+            class="w-full lg:w-2/3 h-full hidden xs:block absolute inset-y-0 xs:-right-[40%] sm:-right-1/3 lg:right-0 -bottom-1/2 md:bottom-auto"
+          />
+
+          <!-- Stats -->
+          <div
+            class="h-[500px] xs:h-auto z-10 flex flex-col justify-end pr-10 pl-4"
+          >
+            <!-- Statistics -->
+            <div
+              class="max-w-[25.625rem] relative z-10 xs:ml-auto space-y-2 bg-white text-brand-red rounded-lg p-4 sm:p-5 lg:p-30"
+            >
+              <p class="text-6xl sm:text-[4.5rem] font-medium">85</p>
+              <p class="sm:text-lg">Представительств в городах СНГ</p>
+            </div>
+
+            <!-- Map on Mobile -->
+            <img
+              src="./assets/images/img-earth-mobile.svg"
+              alt="Map"
+              class="xs:h-2/3 xs:hidden absolute inset-x-0 w-full right-0 bottom-0"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Clients -->
+      <section id="clients" class="pt-60 md:pt-20 lg:pt-100 xl:pt-[8.75rem]">
+        <div class="max-w-base mx-auto space-y-10 lg:px-4">
+          <!-- Texts -->
+          <div class="grid md:grid-cols-3 gap-30 px-4 lg:px-0">
+            <!-- Left -->
+            <div class="flex flex-col justify-between">
+              <div class="flex items-center gap-6">
+                <!-- Logo -->
+                <img src="./assets/images/logo-2.svg" alt="Logo" />
+                <h4 class="subtitle">Наши клиенты</h4>
+              </div>
+            </div>
+            <!-- Right Texts -->
+            <div class="md:col-span-2 space-y-30">
+              <h1>Крупнейшие компании России и стран СНГ</h1>
+              <p class="text-sm lg:text-base">
+                Крупнейшие компании России и стран СНГ разделяют наше мнение о
+                том, каким должен быть продукт и уровень сервиса сегодня.
+              </p>
+            </div>
+          </div>
+
+          <!-- Clients Slider -->
+          <div class="relative">
+            <div class="swiper swiper-clients lg:px-8">
+              <div class="swiper-wrapper h-32 pb-10">
+                <!-- Slide 1 -->
+                <div
+                  class="swiper-slide h-full flex items-center justify-center"
+                >
+                  <img src="./assets/images/gazprom.svg" alt="Gazprom" />
+                </div>
+                <!-- Slide 2 -->
+                <div
+                  class="swiper-slide h-full flex items-center justify-center"
+                >
+                  <img src="./assets/images/tatneft.png" alt="Tatneft" />
+                </div>
+                <!-- Slide 3 -->
+                <div
+                  class="swiper-slide h-full flex items-center justify-center"
+                >
+                  <img src="./assets/images/gazprom.svg" alt="Gazprom" />
+                </div>
+                <!-- Slide 4 -->
+                <div
+                  class="swiper-slide h-full flex items-center justify-center"
+                >
+                  <img src="./assets/images/rosneft.png" alt="Rostneft" />
+                </div>
+                <!-- Slide 5 -->
+                <div
+                  class="swiper-slide h-full flex items-center justify-center"
+                >
+                  <img src="./assets/images/gazprom.svg" alt="Gazprom" />
+                </div>
+                <!-- Slide 6 -->
+                <div
+                  class="swiper-slide h-full flex items-center justify-center"
+                >
+                  <img src="./assets/images/tatneft.png" alt="Tatneft" />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <!-- Custom Navigating Buttons -->
+            <div
+              class="hidden sm:flex absolute z-10 w-full -bottom-24 lg:top-1/2 lg:-translate-y-1/2 flex items-center justify-center lg:justify-between gap-7"
+            >
+              <!-- Prev -->
+              <div
+                class="prev w-50 h-50 shrink-0 grid place-content-center border border-brand-gray-500 rounded-full 2xl:-ml-6"
+              >
+                <img
+                  src="./assets/images/icon-arrow-left.svg"
+                  alt="Arrow Left"
+                />
+              </div>
+              <!-- Next -->
+              <div
+                class="next w-50 h-50 shrink-0 grid place-content-center border border-brand-gray-500 rounded-full 2xl:-mr-6"
+              >
+                <img
+                  src="./assets/images/icon-arrow-right.svg"
+                  alt="Arrow Right"
+                />
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Supfooter -->
+      <section id="supfooter">
+        <div class="max-w-base mx-auto px-4">
+          <!-- Blue Block -->
+          <div
+            class="hidden lg:block h-[28.125rem] relative rounded-lg overflow-hidden py-sixty px-30"
+          >
+            <!-- Bg Image -->
+            <img
+              src="./assets/images/bg-blue.png"
+              alt="Bg image"
+              class="absolute inset-0 w-full h-full object-cover z-10"
+            />
+            <div class="max-w-[56.875rem] space-y-30 text-white">
+              <h2 class="relative z-10">
+                Производство промышленных и полимерных полов, <br />
+                антикоррозионных, кислотоупорных красок, эмалей, <br />
+                лаков по бетону и металлу
+              </h2>
+              <p class="relative z-10">
+                Продукция «Политакс» включает в себя: эпоксидные,
+                полиуретановые, акриловые, виниловые, алкидные: грунтовки,
+                краски, эмали, лаки, добавки для бетона. Антикоррозионные,
+                кислотоупорные, фасадные, гидроизоляционые, огнезащитные,
+                щёлочестойкие защитные материалы. Составы широко применяются на
+                промышленных и гражданских объектах, в сельском хозяйстве,
+                общепите, на складах, цехах и производствах различной
+                направленности.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
