@@ -965,6 +965,12 @@ section{
 .pb-sixty{
   padding-bottom: 3.75rem;
 }
+.\!pt-60{
+  padding-top: 15rem !important;
+}
+.pt-sixty{
+  padding-top: 3.75rem;
+}
 .text-6xl{
   font-size: 3.75rem;
   line-height: 1;
