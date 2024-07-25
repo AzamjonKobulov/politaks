@@ -917,6 +917,10 @@ section{
   padding-top: 3.75rem;
   padding-bottom: 3.75rem;
 }
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -1276,6 +1280,11 @@ section{
     padding-bottom: 5rem;
   }
 
+  .md\:py-12{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   .md\:pt-20{
     padding-top: 5rem;
   }
@@ -1398,6 +1407,11 @@ section{
   .lg\:py-0{
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .lg\:py-sixty{
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
   }
 
   .lg\:pb-6{
