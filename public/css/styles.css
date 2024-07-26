@@ -872,11 +872,6 @@ section{
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
-.space-y-5 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
-}
 .space-y-6 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -959,9 +954,6 @@ section{
 .p-4{
   padding: 1rem;
 }
-.p-6{
-  padding: 1.5rem;
-}
 .px-30{
   padding-left: 1.875rem;
   padding-right: 1.875rem;
@@ -996,6 +988,9 @@ section{
 .pb-20{
   padding-bottom: 5rem;
 }
+.pb-5{
+  padding-bottom: 1.25rem;
+}
 .pl-4{
   padding-left: 1rem;
 }
@@ -1008,8 +1003,8 @@ section{
 .pt-sixty{
   padding-top: 3.75rem;
 }
-.pb-5{
-  padding-bottom: 1.25rem;
+.pb-8{
+  padding-bottom: 2rem;
 }
 .text-left{
   text-align: left;
@@ -1063,6 +1058,13 @@ section{
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
 .transition-\[max-height\]{
   transition-property: max-height;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1075,13 +1077,6 @@ section{
 }
 .transition-transform{
   transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-.transition{
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1191,16 +1186,25 @@ section{
 .swiper-clients .swiper-pagination{
   margin-bottom: -0.5rem !important;
 }
-.swiper-clients .swiper-pagination > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0 !important;
-  margin-right: calc(1.25rem * var(--tw-space-x-reverse)) !important;
-  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse))) !important;
+@media (min-width: 1024px){
+
+  .swiper-clients .swiper-pagination > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0 !important;
+    margin-right: calc(1.25rem * var(--tw-space-x-reverse)) !important;
+    margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse))) !important;
+  }
 }
 
 .swiper-clients .swiper-pagination-bullet{
-  height: 0.75rem;
-  width: 0.75rem;
   flex-shrink: 0;
+}
+
+@media (min-width: 1024px){
+
+  .swiper-clients .swiper-pagination-bullet{
+    height: 0.75rem;
+    width: 0.75rem;
+  }
 }
 
 .swiper-clients .swiper-pagination-bullet-active{
@@ -1388,6 +1392,10 @@ section{
 
   .md\:pt-20{
     padding-top: 5rem;
+  }
+
+  .md\:pb-12{
+    padding-bottom: 3rem;
   }
 
   .md\:text-xl{
