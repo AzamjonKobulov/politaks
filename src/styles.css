@@ -27,11 +27,11 @@
 }
 
 .catalog-button {
-  @apply h-14 xl:h-sixty hidden lg:flex items-center gap-2.5 border border-brand-red bg-brand-red font-semibold text-white rounded-lg hover:bg-brand-dark-red active:bg-white active:text-brand-red transition-all duration-200 px-3 xl:px-3.5;
+  @apply h-14 xl:h-sixty items-center gap-2.5 border border-brand-red bg-brand-red font-semibold text-white rounded-lg hover:bg-brand-dark-red active:bg-white active:text-brand-red transition-all duration-200 px-3 xl:px-3.5;
 }
 
 .login-button {
-  @apply h-14 xl:h-sixty hidden lg:flex items-center gap-2 font-semibold border border-brand-gray-200 rounded-lg hover:text-brand-red hover:border-brand-red transition-all duration-200 px-3 xl:px-4;
+  @apply h-14 xl:h-sixty flex items-center gap-2 font-semibold border border-brand-gray-200 rounded-lg hover:text-brand-red hover:border-brand-red transition-all duration-200 px-3 xl:px-4;
 }
 
 /* Swiper styles */
