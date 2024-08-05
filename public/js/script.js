@@ -1,10 +1,27 @@
+// Common fucntions
+// Function to handle click outside of specified elements
+function handleClickOutside(elementButtonClass, elementClass) {
+  window.addEventListener("click", (e) => {
+    const button = e.target.closest(elementButtonClass);
+    const element = document.querySelector(elementClass);
+
+    if (!button) {
+      if (!element.classList.contains("hidden")) {
+        element.classList.add("hidden");
+      }
+    }
+  });
+}
+
+// Header functions
+
 const mobileMenu = document.querySelector("#mobile-menu");
 const mobileMenuOverlay = document.querySelector("#mobile-menu-overlay");
 const mobileMenuCloseBtn = document.querySelector("#mobile-menu-close-btn");
 const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 
 // Remove page scroll
-function removeScroll() {
+function togglePageScroll() {
   document.body.classList.toggle("overflow-hidden");
 }
 
@@ -31,21 +48,174 @@ function closeOverlay() {
 mobileMenuOverlay.addEventListener("click", () => {
   closeMobMenu();
   closeOverlay();
-  removeScroll();
+  togglePageScroll();
 });
 
 mobileMenuBtn.addEventListener("click", () => {
   openMobMenu();
   openOverlay();
-  removeScroll();
+  togglePageScroll();
 });
 
 mobileMenuCloseBtn.addEventListener("click", () => {
   closeMobMenu();
   closeOverlay();
-  removeScroll();
+  togglePageScroll();
 });
 
+// Search Input Functions
+const searchInput = document.querySelector("#search");
+const searchX = document.querySelector("#searchX");
+const searchHistory = document.querySelector("#search-history");
+const searchSuggest = document.querySelector("#search-suggest");
+
+searchInput.addEventListener("input", () => {
+  if (searchInput.value.length !== 0) {
+    searchX.classList.remove("hidden");
+    searchSuggest.classList.remove("hidden");
+    searchHistory.classList.add("hidden");
+  } else {
+    searchX.classList.add("hidden");
+    searchSuggest.classList.add("hidden");
+    searchHistory.classList.remove("hidden");
+  }
+});
+
+searchInput.addEventListener("focus", () => {
+  if (searchInput.value.length === 0) {
+    searchHistory.classList.remove("hidden");
+  } else {
+    searchHistory.classList.add("hidden");
+  }
+});
+
+searchInput.addEventListener("blur", () => {
+  setTimeout(() => {
+    if (!searchInput.matches(":focus")) {
+      searchHistory.classList.add("hidden");
+      searchSuggest.classList.add("hidden");
+    }
+  }, 100);
+});
+
+searchX.addEventListener("pointerdown", (event) => {
+  event.preventDefault();
+  searchInput.value = "";
+  searchX.classList.add("hidden");
+  searchSuggest.classList.add("hidden");
+
+  if (searchInput.value.length === 0) {
+    searchHistory.classList.remove("hidden");
+  }
+
+  searchInput.focus();
+});
+
+// Hide search history and suggestions when clicking outside
+window.addEventListener("click", (event) => {
+  if (!event.target.closest("#search")) {
+    searchHistory.classList.add("hidden");
+
+    if (searchInput.value.length === 0) {
+      searchSuggest.classList.add("hidden");
+    } else {
+      searchSuggest.classList.remove("hidden");
+    }
+  }
+});
+
+// Navbar Dropdown Funcs
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdown = document.querySelector(".dropdown");
+  const dropdownContent = document.querySelector(".dropdown-content");
+  const dropdownChevron = document.querySelector(".dropdown-chevron");
+
+  dropdown.addEventListener("click", (event) => {
+    event.stopPropagation();
+    dropdownContent.classList.toggle("hidden");
+    dropdownChevron.classList.toggle("rotate-180");
+  });
+
+  handleClickOutside(".dropdown", ".dropdown-content");
+});
+
+// Login Dropdown
+const userLoginBtn = document.querySelector(".login-button");
+const userLoginDropdown = document.querySelector(".user-dropdown-content");
+
+userLoginBtn.addEventListener("click", function () {
+  userLoginDropdown.classList.toggle("hidden");
+});
+
+window.addEventListener("click", (e) => {
+  if (!e.target.closest(".login-button")) {
+    if (!userLoginDropdown.classList.contains("hidden")) {
+      userLoginDropdown.classList.add("hidden");
+    }
+  }
+});
+
+// Catalog Functions
+const catalog = document.querySelector(".catalog");
+const catalogItem = document.querySelector(".catalog-item");
+const catalogButton = document.querySelector(".catalog-button");
+const catalogMenuIcon = document.querySelector(".catalog-button-menu-icon");
+const catalogXIcon = document.querySelector(".catalog-button-x-icon");
+
+function toggleCatalog() {
+  catalog.classList.toggle("hidden");
+  catalogButton.classList.toggle("bg-brand-red");
+  catalogButton.classList.toggle("text-white");
+  catalogButton.classList.toggle("bg-white");
+  catalogButton.classList.toggle("text-brand-red");
+  catalogMenuIcon.classList.toggle("hidden");
+  catalogXIcon.classList.toggle("hidden");
+}
+
+catalogButton.addEventListener("click", toggleCatalog);
+
+window.addEventListener("click", (e) => {
+  if (!e.target.closest(".catalog-button")) {
+    if (!catalog.classList.contains("hidden")) {
+      toggleCatalog();
+    }
+  }
+});
+
+// Search Mobile Functions
+const searchMobile = document.querySelector("#search-mobile");
+const saerchBtnMobile = document.querySelector("#search-button-mobile");
+const searchCloseBtnMobile = document.querySelector("#search-close-mobile");
+
+saerchBtnMobile.addEventListener("click", () => {
+  searchMobile.classList.remove("-translate-x-full");
+  togglePageScroll();
+});
+
+searchCloseBtnMobile.addEventListener("click", () => {
+  searchMobile.classList.add("-translate-x-full");
+  togglePageScroll();
+});
+
+// Catalog Mobile Functions
+const catalogMobile = document.querySelector("#catalog-mobile");
+const catalogCloseMobile = document.querySelector("#catalog-close-mobile");
+const catalogOpenMobMenu = document.querySelector("#catalog-open-mob-menu");
+const openCatalog = document.querySelector("#open-catalog");
+
+openCatalog.addEventListener("click", () => {
+  mobileMenu.classList.add("-translate-x-full");
+  catalogMobile.classList.remove("-translate-x-full");
+  document.body.classList.add("overflow-hidden");
+});
+
+catalogOpenMobMenu.addEventListener("click", () => {
+  mobileMenu.classList.remove("-translate-x-full");
+  catalogMobile.classList.add("-translate-x-full");
+  document.body.classList.add("overflow-hidden");
+});
+
+// Footer Functions
 document.addEventListener("DOMContentLoaded", function () {
   const accordionButtons = document.querySelectorAll(".accordion-button");
 
@@ -100,6 +270,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Sliders
+
+// Home page slider function
 var swiper = new Swiper(".swiper-clients", {
   slidesPerGroup: 1,
   navigation: {
