@@ -816,8 +816,8 @@ section{
 .max-h-0{
   max-height: 0px;
 }
-.max-h-\[calc\(100vh-200px\)\]{
-  max-height: calc(100vh - 200px);
+.max-h-\[calc\(100vh-160px\)\]{
+  max-height: calc(100vh - 160px);
 }
 .min-h-44{
   min-height: 11rem;
@@ -936,6 +936,9 @@ section{
 .gap-2\.5{
   gap: 0.625rem;
 }
+.gap-3{
+  gap: 0.75rem;
+}
 .gap-3\.5{
   gap: 0.875rem;
 }
@@ -958,6 +961,11 @@ section{
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+.space-y-12 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
@@ -1111,6 +1119,9 @@ section{
 .p-2{
   padding: 0.5rem;
 }
+.p-30{
+  padding: 1.875rem;
+}
 .p-4{
   padding: 1rem;
 }
@@ -1201,6 +1212,9 @@ section{
 }
 .pt-2\.5{
   padding-top: 0.625rem;
+}
+.pt-30{
+  padding-top: 1.875rem;
 }
 .pt-5{
   padding-top: 1.25rem;
@@ -1365,6 +1379,25 @@ section{
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+.button-gray-outlined{
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(125 134 147 / var(--tw-border-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.button-gray-outlined:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(158 33 27 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(158 33 27 / var(--tw-text-opacity));
 }
 
 /* Swiper styles */
@@ -1613,6 +1646,10 @@ section{
     grid-column: span 2 / span 2;
   }
 
+  .md\:mt-10{
+    margin-top: 2.5rem;
+  }
+
   .md\:h-64{
     height: 16rem;
   }
@@ -1664,6 +1701,10 @@ section{
 
   .lg\:top-1\/2{
     top: 50%;
+  }
+
+  .lg\:mt-sixty{
+    margin-top: 3.75rem;
   }
 
   .lg\:block{
@@ -1812,6 +1853,10 @@ section{
 
   .lg\:pb-sixty{
     padding-bottom: 3.75rem;
+  }
+
+  .lg\:pt-10{
+    padding-top: 2.5rem;
   }
 
   .lg\:pt-100{

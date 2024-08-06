@@ -197,24 +197,6 @@ searchCloseBtnMobile.addEventListener("click", () => {
   togglePageScroll();
 });
 
-// Catalog Mobile Functions
-const catalogMobile = document.querySelector("#catalog-mobile");
-const catalogCloseMobile = document.querySelector("#catalog-close-mobile");
-const catalogOpenMobMenu = document.querySelector("#catalog-open-mob-menu");
-const openCatalog = document.querySelector("#open-catalog");
-
-openCatalog.addEventListener("click", () => {
-  mobileMenu.classList.add("-translate-x-full");
-  catalogMobile.classList.remove("-translate-x-full");
-  document.body.classList.add("overflow-hidden");
-});
-
-catalogOpenMobMenu.addEventListener("click", () => {
-  mobileMenu.classList.remove("-translate-x-full");
-  catalogMobile.classList.add("-translate-x-full");
-  document.body.classList.add("overflow-hidden");
-});
-
 // Footer Functions
 document.addEventListener("DOMContentLoaded", function () {
   const accordionButtons = document.querySelectorAll(".accordion-button");
