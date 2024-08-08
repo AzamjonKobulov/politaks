@@ -1263,6 +1263,10 @@ section{
   --tw-border-opacity: 1 !important;
   border-color: rgb(211 212 221 / var(--tw-border-opacity)) !important;
 }
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
 .border-b-gray-300{
   --tw-border-opacity: 1;
   border-bottom-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -1506,6 +1510,10 @@ section{
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .font-medium{
   font-weight: 500;
@@ -2063,6 +2071,14 @@ section{
     flex-direction: row;
   }
 
+  .xs\:items-center{
+    align-items: center;
+  }
+
+  .xs\:justify-start{
+    justify-content: flex-start;
+  }
+
   .xs\:gap-5{
     gap: 1.25rem;
   }
@@ -2149,6 +2165,10 @@ section{
 
   .sm\:items-center{
     align-items: center;
+  }
+
+  .sm\:justify-start{
+    justify-content: flex-start;
   }
 
   .sm\:justify-end{

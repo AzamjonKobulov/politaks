@@ -1342,7 +1342,28 @@
           </div>
           <!-- Main Side -->
           <div class="flex-1 space-y-30">
-            <h1>Коммерческое предложение</h1>
+            <div class="flex items-center gap-5">
+              <a href="#" class="lg:hidden">
+                <svg
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.5 7L4.12716 12.3716C4.04239 12.4549 4 12.5641 4 12.6733M9.5 18L4.12716 12.975C4.04239 12.8917 4 12.7825 4 12.6733M4 12.6733H20"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </a>
+
+              <h2 class="text-2xl lg:text-4xl font-semibold">
+                Коммерческое предложение
+              </h2>
+            </div>
             <!-- Buttons -->
             <div
               class="flex flex-col xs:flex-row items-center gap-2.5 font-medium"
@@ -1397,79 +1418,6 @@
                   class="absolute w-full h-full outline-none rounded-t-lg pl-16"
                   placeholder="Введите название или артикул"
                 />
-              </div>
-
-              <!-- Search Suggest -->
-              <div
-                class="divide-y divide-brand-gray-200 border border-brand-gray-200 rounded-b-lg px-5"
-              >
-                <!-- Suggest 1 -->
-                <div
-                  class="sm:flex items-center justify-between space-y-2.5 sm:space-y-0 py-4"
-                >
-                  <a
-                    href="#"
-                    class="hover:text-brand-red transition-all duration-200"
-                    >Эпокси виниловая эмаль-грунт для металла Политакс
-                    <span class="font-semibold text-brand-red">77EPV</span>
-                    2S
-                  </a>
-
-                  <button
-                    class="button-red h-10 flex items-center gap-2.5 px-3.5"
-                  >
-                    <svg
-                      width="16"
-                      height="12"
-                      viewBox="0 0 16 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15 1.5498L6.61244 9.93737C5.92902 10.6208 4.82098 10.6208 4.13756 9.93737L1 6.79981"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-
-                    Добавлено
-                  </button>
-                </div>
-                <!-- Suggest 2 -->
-                <div
-                  class="sm:flex items-center justify-between space-y-2.5 sm:space-y-0 py-4"
-                >
-                  <a
-                    href="#"
-                    class="hover:text-brand-red transition-all duration-200"
-                    >Эпокси виниловая эмаль-грунт для металла Политакс
-                    <span class="font-semibold text-brand-red">77EPV</span>
-                    2S
-                  </a>
-
-                  <button
-                    class="button-red-outline h-10 group flex items-center gap-2.5 px-3.5"
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="stroke-brand-red group-hover:stroke-white transition-all duration-200"
-                    >
-                      <path
-                        d="M8 1L8 15M15 8L1 8"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-
-                    Добавить
-                  </button>
-                </div>
               </div>
             </div>
             <!-- Products -->
@@ -1738,34 +1686,36 @@
                               Название
                             </td>
                             <td
-                              class="w-16 shrink-0 border border-brand-gray-500 px-3.5"
+                              class="w-sixty border border-brand-gray-500 px-3.5"
                             >
-                              Расход кг/м2 (на слой)
+                              Кол-во <br />
+                              слоев
                             </td>
                             <td
                               class="w-sixty border border-brand-gray-500 px-3.5"
                             >
-                              Фасовка
+                              Толщина слоя
                             </td>
                             <td
                               class="w-16 border border-brand-gray-500 px-3.5"
                             >
-                              Площадь, м2
+                              Расход, <br />
+                              ₽/м2
                             </td>
                             <td
                               class="w-sixty border border-brand-gray-500 px-3.5"
                             >
-                              Вес, кг
+                              Цена, ₽/кг
                             </td>
                             <td
                               class="w-sixty border border-brand-gray-500 px-3.5"
                             >
-                              Вес кратно фасовке
+                              Кол-во ЛКМ
                             </td>
                             <td
                               class="w-sixty border border-brand-gray-500 px-3.5"
                             >
-                              Цена за кг, ₽
+                              Кол-во ЛКМ кратно таре, кг
                             </td>
                             <td
                               class="w-sixty border border-brand-gray-500 px-3.5"
@@ -1781,7 +1731,6 @@
                             </td>
                             <td class="border border-brand-gray-500 px-4">
                               <a
-                                a
                                 href="#"
                                 class="underline underline-offset-2 text-xs leading-[1.125rem]"
                               >
@@ -1790,19 +1739,16 @@
                               </a>
                             </td>
                             <td class="border border-brand-gray-500 pl-3.5">
-                              0,2
+                              1
                             </td>
                             <td class="border border-brand-gray-500 pl-3.5">
-                              23
+                              150
                             </td>
                             <td class="border border-brand-gray-500 pl-3.5">
-                              <input
-                                type="text"
-                                class="w-16 h-10 border border-brand-gray-200 rounded-lg outline-none focus:border-brand-gray-400 px-2.5"
-                              />
+                              0,350
                             </td>
                             <td class="border border-brand-gray-500 pl-3.5">
-                              42
+                              905
                             </td>
                             <td class="border border-brand-gray-500 pl-3.5">
                               46
@@ -1816,11 +1762,10 @@
                           </tr>
                           <tr>
                             <td class="border border-brand-gray-500 pl-3.5">
-                              1
+                              2
                             </td>
                             <td class="border border-brand-gray-500 px-4">
                               <a
-                                a
                                 href="#"
                                 class="underline underline-offset-2 text-xs leading-[1.125rem]"
                               >
@@ -1829,19 +1774,16 @@
                               </a>
                             </td>
                             <td class="border border-brand-gray-500 pl-3.5">
-                              0,2
+                              1
                             </td>
                             <td class="border border-brand-gray-500 pl-3.5">
-                              23
+                              150
                             </td>
                             <td class="border border-brand-gray-500 pl-3.5">
-                              <input
-                                type="text"
-                                class="w-16 h-10 border border-brand-gray-200 rounded-lg outline-none focus:border-brand-gray-400 px-2.5"
-                              />
+                              0,350
                             </td>
                             <td class="border border-brand-gray-500 pl-3.5">
-                              42
+                              905
                             </td>
                             <td class="border border-brand-gray-500 pl-3.5">
                               46
@@ -1866,7 +1808,7 @@
                             <td
                               class="text-sm font-semibold border border-brand-gray-500 pl-3.5"
                             >
-                              0,2
+                              -
                             </td>
                             <td
                               class="text-sm font-semibold border border-brand-gray-500 pl-3.5"
@@ -1876,7 +1818,7 @@
                             <td
                               class="text-sm font-semibold border border-brand-gray-500 pl-3.5"
                             >
-                              210
+                              -
                             </td>
                             <td
                               class="text-sm font-semibold border border-brand-gray-500 pl-3.5"
