@@ -291,3 +291,33 @@ var swiper = new Swiper(".swiper-clients", {
     },
   },
 });
+
+// About Swiper
+var swiper = new Swiper(".about-swiper", {
+  navigation: {
+    nextEl: ".swiper-about-next",
+    prevEl: ".swiper-about-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  keyboard: true,
+  loop: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 1.4,
+      spaceBetween: 20,
+      centeredSlides: true,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      centeredSlides: false,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+  },
+});

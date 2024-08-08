@@ -962,7 +962,7 @@
           </button>
           <!-- Top -->
           <div class="space-y-5">
-            <h2>Меню</h2>
+            <h3>Меню</h3>
             <!-- Catalogs Button -->
             <button
               id="open-catalog"
@@ -1303,48 +1303,682 @@
 
       <!-- Path -->
       <div
-        class="max-w-base mx-auto flex items-center gap-3 text-sm mt-30 md:mt-10 lg:mt-sixty px-4"
+        class="max-w-base mx-auto flex items-center gap-3 text-xs xs:text-sm mt-2.5 md:mt-5 lg:mt-sixty px-4"
       >
         <span>Главная</span>
         <img src="./assets/images/chevron-path.svg" alt="Path icon" />
-        <span>Личный кабинет</span>
-        <img src="./assets/images/chevron-path.svg" alt="Path icon" />
-        <span class="text-brand-gray-400">Калькуляторы КП</span>
+        <span class="text-brand-gray-400">О компании</span>
       </div>
     </header>
 
     <!-- MAIN CONTENT -->
     <main>
-      <!-- Commercial Offer -->
-      <section id="commercial-offer" class="pt-30 lg:pt-10">
-        <div class="max-w-base mx-auto flex gap-30 px-4">
-          <!-- Left box -->
-          <div class="w-300 space-y-30 bg-brand-gray-100 rounded-lg p-30">
-            <p class="font-semibold text-lg">Кабинет менеджера</p>
-            <div class="space-y-12">
-              <ul class="space-y-2 font-medium">
-                <li>
-                  <a href="#" class="text-brand-red">Калькулятор КП</a>
+      <!-- Images -->
+      <section id="images" class="pt-sixty xl:pt-20">
+        <div class="lg:max-w-[80.625rem] mx-auto">
+          <h2 class="text-center px-4">
+            Мы поставляем промышленные и полимерные материалы в страны СНГ и
+            ближнее зарубежье
+          </h2>
+          <!-- Images -->
+          <div
+            class="h-300 flex items-center gap-5 lg:gap-30 mt-sixty px-4 sm:px-0"
+          >
+            <div
+              class="hidden sm:block sm:w-40 md:w-52 lg:w-300 h-full rounded-r-lg overflow-hidden"
+            >
+              <img
+                src="./assets/images/img-about-page-1.png"
+                alt="Image About"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex-1 h-full sm:rounded-lg overflow-hidden">
+              <img
+                src="./assets/images/img-about-page-2.png"
+                alt="Image About"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div
+              class="hidden sm:block sm:w-40 md:w-52 lg:w-300 h-full rounded-l-lg overflow-hidden"
+            >
+              <img
+                src="./assets/images/img-about-page-3.png"
+                alt="Image About"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Production -->
+      <section id="production">
+        <div class="max-w-base mx-auto space-y-30 lg:space-y-10 px-4">
+          <h2 class="text-center">Производство</h2>
+
+          <!-- Info -->
+          <div
+            class="grid lg:grid-cols-5 xl:grid-cols-2 gap-sixty xl:gap-20 2xl:gap-36 items-center justify-between"
+          >
+            <!-- Left -->
+            <div class="lg:col-span-2 xl:col-span-1 xl:w-[32.5rem] space-y-30">
+              <!-- Image -->
+              <div class="h-32 lg:h-48 rounded-lg overflow-hidden">
+                <img
+                  src="./assets/images/img-about-1.png"
+                  alt="Image"
+                  class="w-full"
+                />
+              </div>
+
+              <!-- Address -->
+              <div class="space-y-5">
+                <p class="text-lg font-medium">
+                  Наше производство и склад находятся по адресу:
+                </p>
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2.5">
+                    <svg
+                      width="24"
+                      height="25"
+                      viewBox="0 0 24 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.7312 10.9545C18.7312 14.5594 15.5789 17.814 13.5622 19.5273C12.6013 20.3438 11.2315 20.3438 10.2705 19.5273C8.25381 17.814 5.10156 14.5594 5.10156 10.9545C5.10156 9.14706 5.81955 7.41369 7.09757 6.13566C8.3756 4.85764 10.109 4.13965 11.9164 4.13965C13.7238 4.13965 15.4571 4.85764 16.7352 6.13566C18.0132 7.41369 18.7312 9.14706 18.7312 10.9545Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.9164 13.2261C13.1709 13.2261 14.188 12.209 14.188 10.9545C14.188 9.69989 13.1709 8.68286 11.9164 8.68286C10.6618 8.68286 9.64477 9.69989 9.64477 10.9545C9.64477 12.209 10.6618 13.2261 11.9164 13.2261Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <p class="font-medium">
+                      г. Москва, ул. 6-ая Радиальная, д. 15, стр. 6
+                    </p>
+                  </div>
+                  <a href="#" class="text-brand-red">Посмотреть на карте</a>
+                </div>
+              </div>
+
+              <!-- List -->
+              <ul class="list-disc space-y-5">
+                <li class="flex items-center gap-2.5">
+                  <span
+                    class="w-2.5 h-2.5 shrink-0 bg-brand-red rounded-full"
+                  ></span>
+                  Мы работаем на импортных смолах и добавках. Сыпучие компоненты
+                  используем российские. В итоге вы получаете качество мирового
+                  уровня по приятной цене. Показатели мы подтверждаем реальными
+                  протоколами испытаний.
                 </li>
-                <li>
-                  <a href="#">Прайс-лист</a>
+                <li class="flex items-center gap-2.5">
+                  <span
+                    class="w-2.5 h-2.5 shrink-0 bg-brand-red rounded-full"
+                  ></span>
+                  Производство сертифицировано по ISO (9001:2015)
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <span
+                    class="w-2.5 h-2.5 shrink-0 bg-brand-red rounded-full"
+                  ></span>
+                  Мы любим природу, поэтому сделали производство безотходным.
                 </li>
               </ul>
+            </div>
+            <!-- Right -->
+            <div
+              class="lg:col-span-3 xl:col-span-1 h-80 sm:min-h-[32.5rem] lg:h-full relative flex items-center gap-30 bg-brand-gray-100 overflow-hidden"
+            >
+              <!-- Certificate Image 1 -->
+              <img
+                src="./assets/images/img-certificate-about-1.jpg"
+                alt="Certificate"
+                class="w-36 h-[205px] sm:w-[16.25rem] sm:h-[22.9375rem] absolute -left-20 xs:-left-10 sm:-left-36"
+              />
+              <!-- Certificate Image 2 -->
+              <img
+                src="./assets/images/img-certificate-about-2.jpg"
+                alt="Certificate"
+                class="w-[11.25rem] h-64 sm:w-80 sm:h-[28.3125rem] absolute left-1/2 -translate-x-1/2"
+              />
+              <!-- Certificate Image 3 -->
+              <img
+                src="./assets/images/img-certificate-about-3.jpg"
+                alt="Certificate"
+                class="w-36 h-[12.8125rem] sm:w-[16.25rem] sm:h-[22.9375rem] absolute -right-20 xs:-right-10 sm:-right-36"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- Our Goal -->
+      <section id="goal">
+        <div class="max-w-base mx-auto px-4">
+          <div
+            class="space-y-30 bg-brand-gray-100 text-center rounded-lg p-30 lg:p-sixty"
+          >
+            <h2>Наша цель</h2>
+            <p class="md:text-xl xl:text-2xl font-medium">
+              Довольный клиент, который смог реализовать свой проект от идеи до
+              воплощения в рамках запланированного бюджета.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Team -->
+      <section id="team">
+        <div class="max-w-base mx-auto space-y-30 lg:space-y-10 px-4">
+          <h2 class="text-center">Наша команда</h2>
+          <div class="grid lg:grid-cols-2 gap-30">
+            <!-- Left -->
+            <div
+              class="flex flex-col lg:flex-row gap-30 bg-brand-gray-100 rounded-lg p-30"
+            >
+              <!-- Image -->
+              <div class="w-48 h-60 shrink-0 overflow-hidden">
+                <img
+                  src="./assets/images/img-man.png"
+                  alt="Man Image"
+                  class="w-full h-full object-cover object-center"
+                />
+              </div>
+
+              <div class="flex flex-col gap-sixty justify-between">
+                <!-- Texts -->
+                <div class="relative">
+                  <!-- Quotes -->
+                  <img
+                    src="./assets/images/icon-quotes.svg"
+                    alt="Quotes"
+                    class="absolute top-0 -left-5"
+                  />
+                  <img
+                    src="./assets/images/icon-quotes.svg"
+                    alt="Quotes"
+                    class="absolute rotate-180 -bottom-2.5 lg:-bottom-1 left-1/3 xs:left-auto xs:-right-2 lg:left-[53%]"
+                  />
+                  <ul class="space-y-3.5">
+                    <li>В своей работе мы ставим на первое место отношения.</li>
+                    <li>
+                      Мы делаем всё, чтобы поддерживать высокую репутацию. Это -
+                      наш главный актив. 
+                    </li>
+                    <li>
+                      Мы не верим в чудеса, но постараемся предложить лучшее
+                      решение на рынке за те деньги, которые вы готовы потратить
+                      на 1 кв.м. 
+                    </li>
+                    <li>
+                      Если вы не довольны общением или вашу задачу просто не
+                      смогли решить, прошу написать мне.
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Director -->
+                <div>
+                  <p class="font-semibold">Генеральный директор</p>
+                  <p>Иванов Иван Иванович</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-30">
+              <!-- 1 -->
+              <div class="space-y-2.5">
+                <!-- Image -->
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./assets/images/img-man.png"
+                    alt="Man Image"
+                    class="w-full h-full object-cover object-center"
+                  />
+                </div>
+
+                <div>
+                  <p class="font-semibold">Менеджер</p>
+                  <p>Иванов Иван</p>
+                </div>
+              </div>
+              <!-- 2 -->
+              <div class="space-y-2.5">
+                <!-- Image -->
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./assets/images/img-man.png"
+                    alt="Man Image"
+                    class="w-full h-full object-cover object-center"
+                  />
+                </div>
+
+                <div>
+                  <p class="font-semibold">Менеджер</p>
+                  <p>Иванов Иван</p>
+                </div>
+              </div>
+              <!-- 3 -->
+              <div class="space-y-2.5">
+                <!-- Image -->
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./assets/images/img-man.png"
+                    alt="Man Image"
+                    class="w-full h-full object-cover object-center"
+                  />
+                </div>
+
+                <div>
+                  <p class="font-semibold">Менеджер</p>
+                  <p>Иванов Иван</p>
+                </div>
+              </div>
+              <!-- 4 -->
+              <div class="space-y-2.5">
+                <!-- Image -->
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./assets/images/img-man.png"
+                    alt="Man Image"
+                    class="w-full h-full object-cover object-center"
+                  />
+                </div>
+
+                <div>
+                  <p class="font-semibold">Менеджер</p>
+                  <p>Иванов Иван</p>
+                </div>
+              </div>
+              <!-- 5 -->
+              <div class="space-y-2.5">
+                <!-- Image -->
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./assets/images/img-man.png"
+                    alt="Man Image"
+                    class="w-full h-full object-cover object-center"
+                  />
+                </div>
+
+                <div>
+                  <p class="font-semibold">Менеджер</p>
+                  <p>Иванов Иван</p>
+                </div>
+              </div>
+              <!-- 6 -->
+              <div class="space-y-2.5">
+                <!-- Image -->
+                <div class="rounded-lg overflow-hidden">
+                  <img
+                    src="./assets/images/img-man.png"
+                    alt="Man Image"
+                    class="w-full h-full object-cover object-center"
+                  />
+                </div>
+
+                <div>
+                  <p class="font-semibold">Менеджер</p>
+                  <p>Иванов Иван</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texts -->
+        <div
+          class="max-w-base mx-auto space-y-5 text-sm sm:text-base pt-sixty lg:pt-100 px-4"
+        >
+          <p>
+            Компания ООО “Политакс Экспорт" осуществляет оптовые поставки
+            промышленных полимерных материалов в страны СНГ и ближнего
+            зарубежья. Широкий опыт работы с задачами различной сложности,
+            низкие цены за самое высокое качество и квалифицированные сотрудники
+            позволяют компании действовать слаженно, эффективно и оперативно.
+          </p>
+
+          <p>
+            Наш основной актив это высококвалифицированные специалисты в области
+            защиты поверхностей, имеющие большой опыт в данной отрасли. Работы
+            выполняются современным оборудованием под внимательным руководством,
+            а в процессе выполнения применяются передовые материалы собственного
+            производства Политакс, что обеспечивает гарантию качества работы и
+            сдачи объектов.
+          </p>
+        </div>
+      </section>
+
+      <!-- Talk About Us -->
+      <section id="talk" class="bg-brand-gray-100 py-sixty lg:py-20">
+        <div class="max-w-base mx-auto md:px-4 lg:px-10 2xl:px-4">
+          <h2 class="text-center">О нас говорят</h2>
+
+          <!-- Swiper -->
+          <div class="relative">
+            <!-- Slides -->
+            <div class="swiper about-swiper mt-30 lg:mt-10">
+              <div class="swiper-wrapper !pb-20">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <div
+                    class="flex flex-col lg:flex-row gap-30 bg-white rounded-lg p-5 xs:p-30"
+                  >
+                    <!-- Doc Image -->
+                    <div
+                      class="w-40 h-56 shrink-0 !border !border-brand-gray-200 rounded-lg overflow-hidden"
+                    >
+                      <img
+                        src="./assets/images/img-doc-about.png"
+                        alt="Doc Image"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    <!-- Info -->
+                    <div class="space-y-6 md:space-y-8 lg:space-y-14">
+                      <!-- Top -->
+                      <div class="space-y-4">
+                        <h4 class="font-semibold text-lg md:text-2xl">
+                          ОАО «Энерго-Тобольск»
+                        </h4>
+                        <p class="text-sm md:text-base">
+                          В сентябре 2000 года, силами ЗАО «АгроТепСревис» были
+                          выполнены работы по антикоррозийной защите Na-кат.
+                          фильтр..
+                        </p>
+                      </div>
+
+                      <!-- Open PDF Button -->
+                      <button
+                        class="button-gray-outline h-50 flex items-center gap-2.5 px-30"
+                      >
+                        <img
+                          src="./assets/images/icon-pdf.svg"
+                          alt="PDF Icon"
+                          class="shrink-0"
+                        />
+                        <p class="font-medium whitespace-nowrap">
+                          Открыть PDF<span class="text-brand-gray-400"
+                            >3 мб</span
+                          >
+                        </p>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <div
+                    class="flex flex-col lg:flex-row gap-30 bg-white rounded-lg p-5 xs:p-30"
+                  >
+                    <!-- Doc Image -->
+                    <div
+                      class="w-40 h-56 shrink-0 !border !border-brand-gray-200 rounded-lg overflow-hidden"
+                    >
+                      <img
+                        src="./assets/images/img-doc-about.png"
+                        alt="Doc Image"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    <!-- Info -->
+                    <div class="space-y-6 md:space-y-8 lg:space-y-14">
+                      <!-- Top -->
+                      <div class="space-y-4">
+                        <h4 class="font-semibold text-lg md:text-2xl">
+                          ОАО «Энерго-Тобольск»
+                        </h4>
+                        <p class="text-sm md:text-base">
+                          В сентябре 2000 года, силами ЗАО «АгроТепСревис» были
+                          выполнены работы по антикоррозийной защите Na-кат.
+                          фильтр..
+                        </p>
+                      </div>
+
+                      <!-- Open PDF Button -->
+                      <button
+                        class="button-gray-outline h-50 flex items-center gap-2.5 px-30"
+                      >
+                        <img
+                          src="./assets/images/icon-pdf.svg"
+                          alt="PDF Icon"
+                          class="shrink-0"
+                        />
+                        <p class="font-medium whitespace-nowrap">
+                          Открыть PDF<span class="text-brand-gray-400"
+                            >3 мб</span
+                          >
+                        </p>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <div
+                    class="flex flex-col lg:flex-row gap-30 bg-white rounded-lg p-5 xs:p-30"
+                  >
+                    <!-- Doc Image -->
+                    <div
+                      class="w-40 h-56 shrink-0 !border !border-brand-gray-200 rounded-lg overflow-hidden"
+                    >
+                      <img
+                        src="./assets/images/img-doc-about.png"
+                        alt="Doc Image"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    <!-- Info -->
+                    <div class="space-y-6 md:space-y-8 lg:space-y-14">
+                      <!-- Top -->
+                      <div class="space-y-4">
+                        <h4 class="font-semibold text-lg md:text-2xl">
+                          ОАО «Энерго-Тобольск»
+                        </h4>
+                        <p class="text-sm md:text-base">
+                          В сентябре 2000 года, силами ЗАО «АгроТепСревис» были
+                          выполнены работы по антикоррозийной защите Na-кат.
+                          фильтр..
+                        </p>
+                      </div>
+
+                      <!-- Open PDF Button -->
+                      <button
+                        class="button-gray-outline h-50 flex items-center gap-2.5 px-30"
+                      >
+                        <img
+                          src="./assets/images/icon-pdf.svg"
+                          alt="PDF Icon"
+                          class="shrink-0"
+                        />
+                        <p class="font-medium whitespace-nowrap">
+                          Открыть PDF<span class="text-brand-gray-400"
+                            >3 мб</span
+                          >
+                        </p>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                  <div
+                    class="flex flex-col lg:flex-row gap-30 bg-white rounded-lg p-5 xs:p-30"
+                  >
+                    <!-- Doc Image -->
+                    <div
+                      class="w-40 h-56 shrink-0 !border !border-brand-gray-200 rounded-lg overflow-hidden"
+                    >
+                      <img
+                        src="./assets/images/img-doc-about.png"
+                        alt="Doc Image"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    <!-- Info -->
+                    <div class="space-y-6 md:space-y-8 lg:space-y-14">
+                      <!-- Top -->
+                      <div class="space-y-4">
+                        <h4 class="font-semibold text-lg md:text-2xl">
+                          ОАО «Энерго-Тобольск»
+                        </h4>
+                        <p class="text-sm md:text-base">
+                          В сентябре 2000 года, силами ЗАО «АгроТепСревис» были
+                          выполнены работы по антикоррозийной защите Na-кат.
+                          фильтр..
+                        </p>
+                      </div>
+
+                      <!-- Open PDF Button -->
+                      <button
+                        class="button-gray-outline h-50 flex items-center gap-2.5 px-30"
+                      >
+                        <img
+                          src="./assets/images/icon-pdf.svg"
+                          alt="PDF Icon"
+                          class="shrink-0"
+                        />
+                        <p class="font-medium whitespace-nowrap">
+                          Открыть PDF<span class="text-brand-gray-400"
+                            >3 мб</span
+                          >
+                        </p>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Custom Navigation Buttons -->
+            <div
+              class="absolute -bottom-[20%] lg:top-[40%] inset-x-0 z-20 w-full hidden lg:flex -translate-y-1/2 items-center justify-center lg:justify-end gap-5"
+            >
+              <!-- Prev Button -->
               <button
-                class="h-50 w-full bg-white font-semibold rounded-lg hover:text-brand-red transition-all duration-200"
+                class="swiper-about-prev w-50 h-50 shrink-0 lg:hidden grid place-content-center bg-white border border-brand-gray-500 rounded-full overflow-hidden lg:-ml-6"
               >
-                Выйти из профиля
+                <svg
+                  width="12"
+                  height="20"
+                  viewBox="0 0 12 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="rotate-180"
+                >
+                  <path
+                    d="M1.5 18.999L10.0281 11.0597C10.6573 10.4739 10.6573 9.52415 10.0281 8.93836L1.5 0.999023"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+              <!-- Next Button -->
+              <button
+                class="swiper-about-next w-50 h-50 shrink-0 grid place-content-center bg-white border border-brand-gray-500 rounded-full overflow-hidden lg:-mr-6"
+              >
+                <svg
+                  width="12"
+                  height="20"
+                  viewBox="0 0 12 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 18.999L10.0281 11.0597C10.6573 10.4739 10.6573 9.52415 10.0281 8.93836L1.5 0.999023"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
               </button>
             </div>
           </div>
-          <!-- Main Side -->
-          <div class="flex-1 space-y-30">
-            <h1>Коммерческое предложение</h1>
-            <!-- Buttons -->
-            <div class="flex items-center gap-2.5 font-medium">
-              <button class="button-gray-outline h-10">Полимерные полы</button>
-              <button class="button-red h-10">Полимерные полы</button>
+
+          <div class="flex items-center justify-center mt-30 lg:mt-10">
+            <button class="button-red h-sixty px-30">Все отзывы</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- We Are In Numbers -->
+      <section id="numbers" class="pt-sixty md:pt-20 lg:pt-100">
+        <div class="max-w-base mx-auto space-y-30 lg:space-y-10 px-4">
+          <h2 class="text-center">Мы в цифрах</h2>
+          <!-- Stats -->
+          <div
+            class="grid sm:grid-cols-2 gap-4 sm:gap-5 lg:gap-30 px-3 sm:px-0 pb-5"
+          >
+            <!-- Stat 1 -->
+            <div
+              class="flex items-center gap-30 bg-brand-gray-100 rounded-lg p-30"
+            >
+              <!-- Icon -->
+              <img src="./assets/images/icon-stat-1.svg" alt="Icon" />
+              <!-- Texts -->
+              <div class="space-y-1.5">
+                <h3 class="text-3xl lg:text-4xl font-semibold">16 лет</h3>
+                <p class="text-sm sm:text-base text-brand-gray-400">
+                  На рынке России и Снг
+                </p>
+              </div>
+            </div>
+            <!-- Stat 2 -->
+            <div
+              class="flex items-center gap-30 bg-brand-gray-100 rounded-lg p-30"
+            >
+              <!-- Icon -->
+              <img src="./assets/images/icon-stat-2.svg" alt="Icon" />
+              <!-- Texts -->
+              <div class="space-y-1.5">
+                <h3 class="text-3xl lg:text-4xl font-semibold">22 637</h3>
+                <p class="text-sm sm:text-base text-brand-gray-400">Клиентов</p>
+              </div>
+            </div>
+            <!-- Stat 3 -->
+            <div
+              class="flex items-center gap-30 bg-brand-gray-100 rounded-lg p-30"
+            >
+              <!-- Icon -->
+              <img src="./assets/images/icon-stat-3.svg" alt="Icon" />
+              <!-- Texts -->
+              <div class="space-y-1.5">
+                <h3 class="text-3xl lg:text-4xl font-semibold">2</h3>
+                <p class="text-sm sm:text-base text-brand-gray-400">
+                  Лаборатории
+                </p>
+              </div>
+            </div>
+            <!-- Stat 4 -->
+            <div
+              class="flex items-center gap-30 bg-brand-gray-100 rounded-lg p-30"
+            >
+              <!-- Icon -->
+              <img src="./assets/images/icon-stat-4.svg" alt="Icon" />
+              <!-- Texts -->
+              <div class="space-y-1.5">
+                <h3 class="text-3xl lg:text-4xl font-semibold">1 400 м2</h3>
+                <p class="text-sm sm:text-base text-brand-gray-400">
+                  Производство
+                </p>
+              </div>
             </div>
           </div>
         </div>

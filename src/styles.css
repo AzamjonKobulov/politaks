@@ -9,11 +9,11 @@
     @apply font-montserrat;
   }
 
-  h1 {
+  h2 {
     @apply font-semibold text-lg xxs:text-xl xs:text-2xl md:text-3xl lg:text-4xl leading-[120%];
   }
 
-  h2 {
+  h3 {
     @apply font-semibold text-lg xxs:text-xl lg:text-2xl leading-[120%];
   }
 
@@ -31,7 +31,7 @@
 }
 
 .login-button {
-  @apply h-14 xl:h-sixty items-center gap-2 font-semibold border border-brand-gray-200 rounded-lg hover:border-brand-red transition-all duration-200 px-3 xl:px-4;
+  @apply h-14 xl:h-sixty font-semibold items-center gap-2 font-semibold border border-brand-gray-200 rounded-lg hover:border-brand-red transition-all duration-200 px-3 xl:px-4;
 }
 
 .button-gray-outline {
@@ -39,24 +39,11 @@
 }
 
 .button-red {
-  @apply font-medium bg-brand-red text-white border border-transparent rounded-lg hover:bg-brand-dark-red transition-all duration-200 px-5;
+  @apply font-medium bg-brand-red text-white border border-transparent rounded-lg hover:bg-brand-dark-red transition-all duration-200;
 }
 
 .button-red-outline {
-  @apply font-medium bg-white text-brand-red border border-brand-red rounded-lg hover:bg-brand-red hover:text-white transition-all duration-200 px-5;
-}
-
-/* Swiper styles */
-.swiper-clients .swiper-pagination {
-  @apply lg:!space-x-5 !-mb-2;
-}
-
-.swiper-clients .swiper-pagination-bullet {
-  @apply lg:w-3 lg:h-3 shrink-0;
-}
-
-.swiper-clients .swiper-pagination-bullet-active {
-  @apply !bg-brand-red;
+  @apply font-medium bg-white text-brand-red border border-brand-red rounded-lg hover:bg-brand-red hover:text-white transition-all duration-200;
 }
 
 /* Scroll Styles */
@@ -73,4 +60,51 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   @apply bg-brand-gray-400/70 rounded-full;
+}
+
+/* Switch Toggle Styles */
+
+.switch:checked + label {
+  @apply bg-brand-red;
+}
+
+.switch:checked + label div {
+  @apply translate-x-3;
+}
+
+.switch:checked + label div span {
+  @apply bg-brand-red;
+}
+
+/* Swiper styles */
+
+/* Home Swiper */
+.swiper-clients .swiper-pagination {
+  @apply lg:!space-x-5 !-mb-2;
+}
+
+.swiper-clients .swiper-pagination-bullet {
+  @apply lg:w-3 lg:h-3 shrink-0;
+}
+
+.swiper-clients .swiper-pagination-bullet-active {
+  @apply !bg-brand-red;
+}
+
+/* About Swiper */
+
+.about-swiper .swiper-pagination {
+  @apply !-mb-1;
+}
+
+.about-swiper .swiper-pagination {
+  @apply !space-x-5;
+}
+
+.about-swiper .swiper-pagination-bullet {
+  @apply !w-3 !h-3;
+}
+
+.about-swiper .swiper-pagination-bullet-active {
+  @apply w-3 h-3 !bg-brand-red;
 }

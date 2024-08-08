@@ -28,6 +28,7 @@ module.exports = {
             300: "#FEFCFA",
             400: "#7D8693",
             500: "#E7EAF1",
+            600: "#9BA0A6",
           },
         },
       },
@@ -39,6 +40,10 @@ module.exports = {
         100: "6.25rem",
         190: "11.875rem",
         300: "18.75rem",
+      },
+      boxShadow: {
+        switch: "0px 4px 4px 0px #0F0F100F inset;",
+        "switch-toggle": "0px 4px 4px 0px #0F0F100F inset;",
       },
     },
   },
