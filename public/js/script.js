@@ -197,6 +197,84 @@ searchCloseBtnMobile.addEventListener("click", () => {
   togglePageScroll();
 });
 
+// Accordion Func for the Orders Page of Admin
+document.addEventListener("DOMContentLoaded", function () {
+  const accordionHeaders = document.querySelectorAll(".order-accordion-header");
+
+  // Function to close all open accordions
+  function closeAllAccordions() {
+    document.querySelectorAll(".order-accordion-item.open").forEach((item) => {
+      item.classList.remove("open");
+      item.classList.add("max-h-28", "xs:max-h-[68px]", "lg:max-h-[89px]"); // Add class to accordion item when closing
+      const accordionContent = item.querySelector(".order-accordion-content");
+      accordionContent.style.maxHeight = null;
+    });
+  }
+
+  // Accordion click event handler
+  accordionHeaders.forEach((header) => {
+    header.addEventListener("click", function (event) {
+      const accordionItem = this.parentElement;
+      const accordionContent = accordionItem.querySelector(
+        ".order-accordion-content"
+      );
+
+      if (accordionItem.classList.contains("open")) {
+        // Close the accordion
+        accordionItem.classList.remove("open");
+        accordionItem.classList.add(
+          "max-h-28",
+          "xs:max-h-[68px]",
+          "lg:max-h-[89px]"
+        ); // Add class to accordion item when closing
+        accordionContent.style.maxHeight = null;
+      } else {
+        // Close all other open accordions
+        closeAllAccordions();
+
+        // Open the clicked accordion
+        accordionItem.classList.add("open");
+        accordionItem.classList.remove(
+          "max-h-28",
+          "xs:max-h-[68px]",
+          "lg:max-h-[89px]"
+        ); // Remove class from accordion item when opening
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+      }
+
+      // Prevent the event from bubbling up to the document
+      event.stopPropagation();
+    });
+  });
+
+  // Use handleClickOutside function to close accordions when clicking outside
+  handleClickOutside(".order-accordion-header", ".order-accordion-item.open");
+
+  function handleClickOutside(elementButtonClass, elementClass) {
+    window.addEventListener("click", (e) => {
+      const button = e.target.closest(elementButtonClass);
+      const elements = document.querySelectorAll(elementClass);
+
+      if (!button) {
+        elements.forEach((element) => {
+          if (element.classList.contains("open")) {
+            element.classList.remove("open");
+            element.classList.add(
+              "max-h-28",
+              "xs:max-h-[68px]",
+              "lg:max-h-[89px]"
+            ); // Add class to accordion item when closing
+            const accordionContent = element.querySelector(
+              ".order-accordion-content"
+            );
+            accordionContent.style.maxHeight = null;
+          }
+        });
+      }
+    });
+  }
+});
+
 // Footer Functions
 document.addEventListener("DOMContentLoaded", function () {
   const accordionButtons = document.querySelectorAll(".accordion-button");
@@ -320,4 +398,40 @@ var swiper = new Swiper(".about-swiper", {
       spaceBetween: 30,
     },
   },
+});
+
+// Accordion Function for the Accordion on Price List Page
+document.addEventListener("DOMContentLoaded", function () {
+  const accordionItems = document.querySelectorAll(
+    "#accordion .accordion-item"
+  );
+
+  accordionItems.forEach((item) => {
+    const header = item.querySelector(".accordion-header");
+    const body = item.querySelector(".accordion-body");
+    const plusIcon = item.querySelector(".plus-on");
+
+    header.addEventListener("click", function () {
+      // Toggle the "open" class on the accordion item
+      if (item.classList.contains("open")) {
+        // If open, close it
+        item.classList.remove("open");
+        body.classList.add("hidden");
+        plusIcon.classList.remove("rotate-45");
+        plusIcon.classList.remove("hidden"); // Show plus-on icon
+        item
+          .querySelectorAll(".hidden-td")
+          .forEach((td) => td.classList.add("hidden"));
+      } else {
+        // If closed, open it
+        item.classList.add("open");
+        body.classList.remove("hidden");
+        plusIcon.classList.add("rotate-45");
+        plusIcon.classList.add("hidden"); // Hide plus-on icon
+        item
+          .querySelectorAll(".hidden-td")
+          .forEach((td) => td.classList.remove("hidden"));
+      }
+    });
+  });
 });

@@ -108,3 +108,24 @@
 .about-swiper .swiper-pagination-bullet-active {
   @apply w-3 h-3 !bg-brand-red;
 }
+
+/* CSS for the accordion transitions */
+.order-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.order-accordion-item.open .order-accordion-content {
+  max-height: 1000px; /* Adjust if needed */
+  transition: max-height 0.5s ease-in;
+}
+
+.order-accordion-item.open .order-accordion-header svg {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.order-accordion-header svg {
+  transition: transform 0.3s ease;
+}
