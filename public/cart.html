@@ -1,0 +1,3244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Politaks</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="relative z-50">
+      <!-- Navbar -->
+      <nav class="max-w-base mx-auto relative xl:space-y-3 px-4 py-5 lg:py-1">
+        <!-- Top -->
+        <div class="hidden lg:flex items-center justify-between text-sm py-5">
+          <!-- Location -->
+          <p class="flex items-center gap-2.5 font-medium">
+            <img src="./assets/images/icon-location.svg" alt="Location Icon" />
+            Екатеринбург
+          </p>
+          <!-- Links -->
+          <ul class="flex items-center gap-6 xl:gap-10 xl:-ml-14">
+            <!-- Dropdown -->
+            <li class="relative">
+              <a
+                href="#"
+                class="nav-dropdown group flex items-center gap-1.5 hover:text-brand-red transition-all duration-200"
+                >Готовые решения
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="nav-dropdown-chevron stroke-brand-gray-400 group-hover:stroke-brand-red transition-all duration-300"
+                >
+                  <path
+                    d="M4 6L7.5286 9.79026C7.78894 10.0699 8.21106 10.0699 8.4714 9.79026L12 6"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown -->
+              <div
+                class="nav-dropdown-content min-w-[11.25rem] absolute top-7 z-40 hidden bg-brand-gray-100 rounded-lg p-2"
+              >
+                <a
+                  href="#"
+                  class="block hover:bg-white leading-7 rounded transition-all duration-200 p-2"
+                  >Подкатегория</a
+                >
+                <a
+                  href="#"
+                  class="block hover:bg-white leading-7 rounded transition-all duration-200 p-2"
+                  >Подкатегория</a
+                >
+                <a
+                  href="#"
+                  class="block hover:bg-white leading-7 rounded transition-all duration-200 p-2"
+                  >Подкатегория</a
+                >
+                <a
+                  href="#"
+                  class="block hover:bg-white leading-7 rounded transition-all duration-200 p-2"
+                  >Подкатегория</a
+                >
+                <a
+                  href="#"
+                  class="block hover:bg-white leading-7 rounded transition-all duration-200 p-2"
+                  >Подкатегория</a
+                >
+              </div>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-red transition-all duration-200"
+                >О компании</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-red transition-all duration-200"
+                >База знаний</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-brand-red transition-all duration-200"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+          <!-- Contacts -->
+          <div class="flex items-center gap-6 xl:gap-10">
+            <a href="mailto:" class="font-medium">zakaz@politaks.ru</a>
+            <a href="tel:" class="font-semibold">8 800 505-69-03</a>
+          </div>
+        </div>
+        <!-- Bottom -->
+        <div class="flex items-center justify-between gap-4 xl:gap-30 !mt-5">
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="w-9 h-9 lg:hidden relative">
+            <img
+              src="./assets/images/icon-mobile-menu.svg"
+              alt="Mobile Menu Icon"
+            />
+            <span
+              class="w-4 h-4 absolute -top-1 -right-1.5 grid place-content-center bg-brand-red text-xs font-medium text-brand-gray-300 rounded-full"
+              >2</span
+            >
+          </button>
+          <!-- Logo -->
+          <a href="#">
+            <img
+              src="./assets/images/logo.svg"
+              alt="Logo"
+              class="w-[12.5rem] h-[3.125rem] xl:w-auto xl:h-auto"
+            />
+          </a>
+          <!-- Catalogs Button -->
+          <button
+            class="catalog-button group hidden lg:flex bg-brand-red text-white"
+          >
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="catalog-button-menu-icon fill-white"
+            >
+              <path
+                d="M4.19922 4.87012H20.3992V6.67012H4.19922V4.87012ZM4.19922 11.1701H20.3992V12.9701H4.19922V11.1701ZM4.19922 17.4701H20.3992V19.2701H4.19922V17.4701Z"
+              />
+            </svg>
+
+            <!-- X icon -->
+            <div
+              class="catalog-button-x-icon w-[1.5625rem] h-[1.5625rem] grid place-content-center hidden"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class=""
+              >
+                <path
+                  d="M1.43623 1.70635L14.1641 14.4343M14.1641 1.70635L1.43623 14.4343"
+                  stroke="#9E211B"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+
+            Каталог
+          </button>
+          <!-- Search -->
+          <div
+            class="h-14 relative xl:h-sixty flex-1 hidden lg:flex bg-brand-gray-100 items-center rounded-lg"
+          >
+            <label for="search" class="cursor-pointer pl-4">
+              <img
+                src="./assets/images/icon-search.svg"
+                alt="Search Icon"
+                class="relative z-10 shrink-0"
+              />
+            </label>
+            <input
+              type="text"
+              id="search"
+              placeholder="Поиск"
+              class="absolute w-full h-full bg-transparent outline-none placeholder:text-brand-gray-400 focus:h-[3.1875rem] focus:xl:h-14 focus:bg-white outline-1 focus:outline-brand-gray-400 rounded-lg lg:px-11 xl:pl-12"
+            />
+            <button id="searchX" class="hidden absolute right-5 z-50">
+              <svg
+                width="19"
+                height="19"
+                viewBox="0 0 19 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.80078 1.13965L9.80078 9.13965M9.80078 9.13965L17.8008 17.1396M9.80078 9.13965L17.8008 1.13965M9.80078 9.13965L1.80078 17.1396"
+                  stroke="#7D8693"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <!-- Search History -->
+            <div
+              id="search-history"
+              class="absolute w-full top-16 z-30 hidden space-y-5 bg-white border border-b-gray-300 rounded-lg p-5"
+            >
+              <!-- Top Buttons -->
+              <div class="flex items-center flex-wrap gap-2.5">
+                <button
+                  class="h-10 font-medium text-brand-red border border-brand-red rounded-lg hover:bg-brand-red hover:text-white active:text-brand-red active:bg-white transition-all duration-200 px-5"
+                >
+                  огнезащита
+                </button>
+                <button
+                  class="h-10 font-medium border border-brand-gray-400 rounded-lg hover:text-brand-red hover:border-brand-red transition-all duration-200 px-5"
+                >
+                  для бетона
+                </button>
+                <button
+                  class="h-10 font-medium border border-brand-gray-400 rounded-lg hover:text-brand-red hover:border-brand-red transition-all duration-200 px-5"
+                >
+                  фасады
+                </button>
+                <button
+                  class="h-10 font-medium border border-brand-gray-400 rounded-lg hover:text-brand-red hover:border-brand-red transition-all duration-200 px-5"
+                >
+                  по металлу
+                </button>
+              </div>
+
+              <!-- List -->
+              <ul
+                class="divide-y divide-brand-gray-500 border-t border-brand-gray-500"
+              >
+                <li class="group py-3.5">
+                  <a
+                    href="#"
+                    class="flex items-center gap-2.5 group-hover:text-brand-red"
+                  >
+                    <!-- Search Icon -->
+                    <img
+                      src="./assets/images/icon-search.svg"
+                      alt="Search Icon"
+                    />
+                    краска для бетона
+                  </a>
+                </li>
+                <li class="group py-3.5">
+                  <a
+                    href="#"
+                    class="flex items-center gap-2.5 group-hover:text-brand-red"
+                  >
+                    <!-- Search Icon -->
+                    <img
+                      src="./assets/images/icon-search.svg"
+                      alt="Search Icon"
+                    />
+                    политекс для полов
+                  </a>
+                </li>
+                <li class="group py-3.5">
+                  <a
+                    href="#"
+                    class="flex items-center gap-2.5 group-hover:text-brand-red"
+                  >
+                    <!-- Search Icon -->
+                    <img
+                      src="./assets/images/icon-search.svg"
+                      alt="Search Icon"
+                    />
+                    расчет расхода
+                  </a>
+                </li>
+                <li class="group py-3.5">
+                  <a
+                    href="#"
+                    class="flex items-center gap-2.5 group-hover:text-brand-red"
+                  >
+                    <!-- Search Icon -->
+                    <img
+                      src="./assets/images/icon-search.svg"
+                      alt="Search Icon"
+                    />
+                    наливной пол
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Search Suggestions -->
+            <div
+              id="search-suggest"
+              class="absolute w-full top-16 z-30 hidden space-y-5 bg-white border border-b-gray-300 rounded-lg p-5"
+            >
+              <!-- Top -->
+              <div>
+                <p class="font-semibold">Товары</p>
+                <!-- Suggestions List -->
+                <div>
+                  <div class="border-b border-brand-gray-500 py-2.5">
+                    <a href="#" class="hover:text-brand-red my-2.5">
+                      Политакс
+                      <span class="font-semibold">77EPV 2S</span> Эпокси
+                      виниловая эмаль-грунт для металла
+                    </a>
+                  </div>
+                  <div class="border-b border-brand-gray-500 py-2.5">
+                    <a href="#" class="hover:text-brand-red my-2.5">
+                      Политакс
+                      <span class="font-semibold">77EPV 2S</span> Эпокси
+                      виниловая эмаль-грунт для металла
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom -->
+              <div>
+                <p class="font-semibold">Готовые решения</p>
+                <!-- Suggestions List -->
+                <div class="space-y-2.5 divide-y divide-brand-gray-500">
+                  <div class="pt-2.5">
+                    <a href="#" class="hover:text-brand-red my-2.5">
+                      Гладкое эпоксидное покрытие Тэпинг Политакс
+                      <span class="font-semibold">77EPV 2S</span> в 2 мм
+                    </a>
+                  </div>
+                  <div class="pt-2.5">
+                    <a href="#" class="hover:text-brand-red my-2.5">
+                      Гладкое эпоксидное покрытие Тэпинг Политакс
+                      <span class="font-semibold">77EPV 2S</span> в 2 мм
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Save -->
+          <button class="hidden lg:inline group relative">
+            <svg
+              width="31"
+              height="36"
+              viewBox="0 0 31 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="fill-black group-hover:fill-brand-red transition-all duration-150"
+            >
+              <path
+                d="M9.50156 9.07031H22.1016C22.3403 9.07031 22.5692 9.16513 22.738 9.33392C22.9067 9.5027 23.0016 9.73162 23.0016 9.97031V27.199C23.0017 27.2795 22.9802 27.3585 22.9394 27.4278C22.8986 27.4972 22.8399 27.5543 22.7695 27.5933C22.6991 27.6323 22.6195 27.6516 22.5391 27.6494C22.4587 27.6472 22.3803 27.6234 22.3122 27.5806L15.8016 23.4973L9.29096 27.5797C9.22289 27.6225 9.14461 27.6462 9.06425 27.6485C8.9839 27.6508 8.9044 27.6315 8.83403 27.5926C8.76366 27.5537 8.70498 27.4967 8.6641 27.4275C8.62322 27.3583 8.60162 27.2794 8.60156 27.199V9.97031C8.60156 9.73162 8.69638 9.5027 8.86517 9.33392C9.03395 9.16513 9.26287 9.07031 9.50156 9.07031ZM21.2016 10.8703H10.4016V24.7591L15.8016 21.3742L21.2016 24.7591V10.8703Z"
+              />
+            </svg>
+          </button>
+          <!-- Comparison -->
+          <button class="hidden lg:inline group relative">
+            <svg
+              width="31"
+              height="36"
+              viewBox="0 0 31 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+            >
+              <mask
+                id="mask0_339_11757"
+                style="mask-type: luminance"
+                maskUnits="userSpaceOnUse"
+                x="5"
+                y="8"
+                width="21"
+                height="21"
+              >
+                <path
+                  d="M5.80078 8.07031H25.8008V28.0703H5.80078V8.07031Z"
+                  fill="white"
+                />
+              </mask>
+              <g mask="url(#mask0_339_11757)">
+                <path
+                  d="M17.207 19.7891H25.0195V8.85156H20.332C18.6061 8.85156 17.207 10.2507 17.207 11.9766V19.7891Z"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M20.332 8.85156V11.9766H17.207"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M6.58203 27.2891H14.3945V16.3516H9.70703C7.98113 16.3516 6.58203 17.7507 6.58203 19.4766V27.2891Z"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M9.70703 16.3516V19.4766H6.58203"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M14.5117 11.8203H6.875"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M9.01855 9.5L6.875 11.8193L9.01855 14.1387"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M22.6641 22.0034L24.741 24.3196L22.6641 26.6357"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+                <path
+                  d="M24.7413 24.3203H16.3867"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                />
+              </g>
+            </svg>
+          </button>
+          <!-- Cart -->
+          <button class="hidden lg:inline group relative">
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="fill-brand-red group-hover:fill-brand-red transition-all duration-150"
+            >
+              <path
+                d="M11.1023 13.0429L8.18359 10.1251L9.45709 8.85156L12.3749 11.7703H26.0927C26.233 11.7703 26.3713 11.803 26.4967 11.866C26.622 11.929 26.7309 12.0203 26.8147 12.1329C26.8985 12.2454 26.9548 12.3759 26.9791 12.5141C27.0034 12.6523 26.9952 12.7942 26.9549 12.9286L24.7949 20.1286C24.7393 20.314 24.6254 20.4766 24.4701 20.5922C24.3148 20.7078 24.1263 20.7703 23.9327 20.7703H12.9023V22.5703H22.8023V24.3703H12.0023C11.7636 24.3703 11.5347 24.2754 11.3659 24.1067C11.1971 23.9379 11.1023 23.709 11.1023 23.4703V13.0429ZM12.9023 13.5703V18.9703H23.2631L24.8831 13.5703H12.9023ZM12.4523 27.9703C12.0943 27.9703 11.7509 27.828 11.4977 27.5749C11.2445 27.3217 11.1023 26.9783 11.1023 26.6203C11.1023 26.2622 11.2445 25.9188 11.4977 25.6657C11.7509 25.4125 12.0943 25.2703 12.4523 25.2703C12.8103 25.2703 13.1537 25.4125 13.4069 25.6657C13.6601 25.9188 13.8023 26.2622 13.8023 26.6203C13.8023 26.9783 13.6601 27.3217 13.4069 27.5749C13.1537 27.828 12.8103 27.9703 12.4523 27.9703ZM23.2523 27.9703C22.8943 27.9703 22.5509 27.828 22.2977 27.5749C22.0445 27.3217 21.9023 26.9783 21.9023 26.6203C21.9023 26.2622 22.0445 25.9188 22.2977 25.6657C22.5509 25.4125 22.8943 25.2703 23.2523 25.2703C23.6103 25.2703 23.9537 25.4125 24.2069 25.6657C24.4601 25.9188 24.6023 26.2622 24.6023 26.6203C24.6023 26.9783 24.4601 27.3217 24.2069 27.5749C23.9537 27.828 23.6103 27.9703 23.2523 27.9703Z"
+              />
+            </svg>
+
+            <!-- Items in Cart -->
+            <div
+              class="w-3.5 h-3.5 shrink-0 absolute top-0 right-0 grid place-content-center bg-brand-red text-white rounded-full"
+            >
+              <span class="text-[11px] font-semibold mt-px">1</span>
+            </div>
+          </button>
+          <!-- Login -->
+          <div class="relative hidden lg:block">
+            <!-- Login Button -->
+            <button class="user-dropdown login-button group flex">
+              <svg
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.2031 14.0967V15.9777C13.3886 15.6897 12.5168 15.6014 11.661 15.7201C10.8052 15.8389 9.9904 16.1612 9.28501 16.6601C8.57962 17.159 8.00423 17.8199 7.60717 18.5872C7.21011 19.3545 7.00296 20.2059 7.00313 21.0699L5.20313 21.069C5.20285 19.97 5.45415 18.8855 5.93779 17.8987C6.42143 16.9118 7.12457 16.0488 7.99332 15.3757C8.86207 14.7025 9.87338 14.2372 10.9498 14.0154C12.0261 13.7936 13.139 13.8211 14.2031 14.0958V14.0967ZM12.4031 12.9699C9.41962 12.9699 7.00313 10.5534 7.00313 7.56992C7.00313 4.58642 9.41962 2.16992 12.4031 2.16992C15.3866 2.16992 17.8031 4.58642 17.8031 7.56992C17.8031 10.5534 15.3866 12.9699 12.4031 12.9699ZM12.4031 11.1699C14.3921 11.1699 16.0031 9.55892 16.0031 7.56992C16.0031 5.58092 14.3921 3.96992 12.4031 3.96992C10.4141 3.96992 8.80313 5.58092 8.80313 7.56992C8.80313 9.55892 10.4141 11.1699 12.4031 11.1699ZM18.3305 16.5699L16.6844 14.9247L17.9579 13.6512L21.7757 17.4699L17.9579 21.2886L16.6844 20.0151L18.3305 18.3699H15.1031V16.5699H18.3305Z"
+                  fill="#9E211B"
+                />
+              </svg>
+              <span
+                class="group-hover:text-brand-red transition-all duration-200"
+                >Войти</span
+              >
+            </button>
+            <!-- User dropdown -->
+            <div
+              class="user-dropdown-content min-w-[13.75rem] absolute top-[4.5rem] right-0 z-40 hidden bg-brand-gray-100 rounded-lg p-5"
+            >
+              <!-- Arrow -->
+              <svg
+                width="14"
+                height="9"
+                viewBox="0 0 14 9"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="absolute right-12 -top-2"
+              >
+                <path d="M7 0L13.0622 8.25H0.937822L7 0Z" fill="#F2F4F7" />
+              </svg>
+
+              <!-- Name -->
+              <div class="border-b border-brand-gray-500 pb-2.5">
+                <p class="font-semibold">Михаил</p>
+                <p class="text-sm">ООО «Моя компания»</p>
+              </div>
+              <!-- Features -->
+              <div class="font-medium leading-7 pt-2.5">
+                <ul class="space-y-3">
+                  <li>
+                    <a href="#" class="hover:text-brand-red">Мои заказы</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-brand-red hover:text-brand-red"
+                      >Прайс-лист</a
+                    >
+                  </li>
+                  <li>
+                    <button class="hover:text-brand-red">Выйти</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Search Button on Mobile -->
+          <button class="lg:hidden" id="search-button-mobile">
+            <img
+              src="./assets/images/icon-search-black.svg"
+              alt="saerch icon  "
+            />
+          </button>
+        </div>
+
+        <!-- Catalog -->
+        <div
+          class="catalog absolute left-1/2 -translate-x-1/2 top-24 xl:top-36 z-50 min-w-full mx-auto hidden grid grid-cols-3 bg-white mt-10 px-4"
+        >
+          <!-- Catalog Items -->
+          <ul>
+            <!-- Item 1 -->
+            <li
+              class="catalog-item catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+            >
+              <div class="flex items-center gap-5">
+                <img src="./assets/images/icon-catalog-1.svg" alt="Icon" />
+                <span class="font-medium">Наливные полы</span>
+              </div>
+
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-black group-hover:stroke-brand-red"
+              >
+                <path
+                  d="M1 13.1396L6.68539 7.84675C7.10487 7.45623 7.10487 6.82307 6.68539 6.43254L1 1.13965"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </li>
+            <!-- Item 2 -->
+            <li
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+            >
+              <div class="flex items-center gap-5">
+                <img src="./assets/images/icon-catalog-2.svg" alt="Icon" />
+                <span class="font-medium">Для бетона</span>
+              </div>
+
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-black group-hover:stroke-brand-red"
+              >
+                <path
+                  d="M1 13.1396L6.68539 7.84675C7.10487 7.45623 7.10487 6.82307 6.68539 6.43254L1 1.13965"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </li>
+            <!-- Item 3 -->
+            <li
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+            >
+              <div class="flex items-center gap-5">
+                <img src="./assets/images/icon-catalog-3.svg" alt="Icon" />
+                <span class="font-medium">Для металла</span>
+              </div>
+
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-black group-hover:stroke-brand-red"
+              >
+                <path
+                  d="M1 13.1396L6.68539 7.84675C7.10487 7.45623 7.10487 6.82307 6.68539 6.43254L1 1.13965"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </li>
+            <!-- Item 4 -->
+            <li
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+            >
+              <div class="flex items-center gap-5">
+                <img src="./assets/images/icon-catalog-4.svg" alt="Icon" />
+                <span class="font-medium">Для фасадов</span>
+              </div>
+
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-black group-hover:stroke-brand-red"
+              >
+                <path
+                  d="M1 13.1396L6.68539 7.84675C7.10487 7.45623 7.10487 6.82307 6.68539 6.43254L1 1.13965"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </li>
+            <!-- Item 5 -->
+            <li
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+            >
+              <div class="flex items-center gap-5">
+                <img src="./assets/images/icon-catalog-5.svg" alt="Icon" />
+                <span class="font-medium">Для дерева</span>
+              </div>
+
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-black group-hover:stroke-brand-red"
+              >
+                <path
+                  d="M1 13.1396L6.68539 7.84675C7.10487 7.45623 7.10487 6.82307 6.68539 6.43254L1 1.13965"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </li>
+            <!-- Item 6 -->
+            <li
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+            >
+              <div class="flex items-center gap-5">
+                <img src="./assets/images/icon-catalog-6.svg" alt="Icon" />
+                <span class="font-medium">Для крыш</span>
+              </div>
+
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-black group-hover:stroke-brand-red"
+              >
+                <path
+                  d="M1 13.1396L6.68539 7.84675C7.10487 7.45623 7.10487 6.82307 6.68539 6.43254L1 1.13965"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </li>
+            <!-- Item 7 -->
+            <li
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+            >
+              <div class="flex items-center gap-5">
+                <img src="./assets/images/icon-catalog-7.svg" alt="Icon" />
+                <span class="font-medium">Для асфальта</span>
+              </div>
+
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-black group-hover:stroke-brand-red"
+              >
+                <path
+                  d="M1 13.1396L6.68539 7.84675C7.10487 7.45623 7.10487 6.82307 6.68539 6.43254L1 1.13965"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </li>
+            <!-- Item 8 -->
+            <li
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+            >
+              <div class="flex items-center gap-5">
+                <img src="./assets/images/icon-catalog-8.svg" alt="Icon" />
+                <span class="font-medium">Для топинга</span>
+              </div>
+
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-black group-hover:stroke-brand-red"
+              >
+                <path
+                  d="M1 13.1396L6.68539 7.84675C7.10487 7.45623 7.10487 6.82307 6.68539 6.43254L1 1.13965"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </li>
+            <!-- Item 9 -->
+            <li
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+            >
+              <div class="flex items-center gap-5">
+                <img src="./assets/images/icon-catalog-9.svg" alt="Icon" />
+                <span class="font-medium">Огнезащитные краски</span>
+              </div>
+
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-black group-hover:stroke-brand-red"
+              >
+                <path
+                  d="M1 13.1396L6.68539 7.84675C7.10487 7.45623 7.10487 6.82307 6.68539 6.43254L1 1.13965"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </li>
+            <!-- Item 10 -->
+            <li
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+            >
+              <div class="flex items-center gap-5">
+                <img src="./assets/images/icon-catalog-10.svg" alt="Icon" />
+                <span class="font-medium">«ЭКО» краски</span>
+              </div>
+
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-black group-hover:stroke-brand-red"
+              >
+                <path
+                  d="M1 13.1396L6.68539 7.84675C7.10487 7.45623 7.10487 6.82307 6.68539 6.43254L1 1.13965"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </li>
+            <!-- Item 11 -->
+            <li
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+            >
+              <div class="flex items-center gap-5">
+                <img src="./assets/images/icon-catalog-11.svg" alt="Icon" />
+                <span class="font-medium">Кислотостойкие краски</span>
+              </div>
+
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-black group-hover:stroke-brand-red"
+              >
+                <path
+                  d="M1 13.1396L6.68539 7.84675C7.10487 7.45623 7.10487 6.82307 6.68539 6.43254L1 1.13965"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </li>
+            <!-- Item 12 -->
+            <li
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+            >
+              <div class="flex items-center gap-5">
+                <img src="./assets/images/icon-catalog-12.svg" alt="Icon" />
+                <span class="font-medium">Промышленные покрытие</span>
+              </div>
+
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="stroke-black group-hover:stroke-brand-red"
+              >
+                <path
+                  d="M1 13.1396L6.68539 7.84675C7.10487 7.45623 7.10487 6.82307 6.68539 6.43254L1 1.13965"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </li>
+          </ul>
+          <!-- Catalog Item Content -->
+          <div
+            class="col-span-2 space-y-10 bg-brand-gray-100 rounded-lg py-10 px-sixty"
+          >
+            <!-- Title -->
+            <p class="text-3xl font-semibold leading-7">Для металла</p>
+            <!-- Texts -->
+            <div class="grid grid-cols-2 gap-30">
+              <!-- Left -->
+              <div class="space-y-10">
+                <!-- Items 1 -->
+                <div class="space-y-4">
+                  <p class="text-lg font-semibold">Антикорозийные материалы</p>
+                  <ul class="space-y-3.5">
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Грунтовки</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Грунт-эмали</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Эмали</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Лаки </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-brand-red"
+                        >Корабельная краска
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Смывка</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Разбавитель</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-brand-red"
+                        >Обезжириватель</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-brand-red"
+                        >Преобразователь ржавчины</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Items 2 -->
+                <div class="space-y-4">
+                  <p class="text-lg font-semibold">
+                    Материалы для нефтегазовых сооружений
+                  </p>
+                  <ul class="space-y-3">
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Грунт-эмали</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Эмали </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Right -->
+              <div class="space-y-10">
+                <!-- Items 1 -->
+                <div class="space-y-4">
+                  <p class="text-lg font-semibold">Кислотоупорные материалы</p>
+                  <ul class="space-y-3.5">
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Эмали </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Лаки </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-brand-red"
+                        >Кислотоупорный пол</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Items 2 -->
+                <div class="space-y-4">
+                  <p class="text-lg font-semibold">Химстойкие материалы</p>
+                  <ul class="space-y-3">
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Эмали </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Лаки </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Items 3 -->
+                <div class="space-y-4">
+                  <p class="text-lg font-semibold">Огнезащита</p>
+                  <ul class="space-y-3">
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Эмали </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Items 4 -->
+                <div class="space-y-4">
+                  <p class="text-lg font-semibold">Термозащита</p>
+                  <ul class="space-y-3">
+                    <li>
+                      <a href="#" class="hover:text-brand-red">Эмали </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Overlay -->
+      <div
+        id="mobile-menu-overlay"
+        class="hidden fixed inset-0 bg-black/50 z-50"
+      ></div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="w-300 fixed left-0 top-0 z-50 min-h-screen bg-white -translate-x-full transition-all duration-300"
+      >
+        <div class="relative h-full px-5 py-10">
+          <!-- Close Button -->
+          <button
+            id="mobile-menu-close-btn"
+            class="w-10 h-10 absolute top-2.5 right-2.5 shrink-0 grid place-content-center bg-brand-gray-100 rounded-full"
+          >
+            <img src="./assets/images/icon-x.svg" alt="X icon" />
+          </button>
+          <!-- Top -->
+          <div class="space-y-5">
+            <h3>Меню</h3>
+            <!-- Catalogs Button -->
+            <button
+              id="open-catalog"
+              class="catalog-button h-11 w-full group flex justify-center text-brand-red hover:bg-brand-red hover:text-white"
+            >
+              Каталог
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18.5L14.6854 13.2071C15.1049 12.8166 15.1049 12.1834 14.6854 11.7929L9 6.5"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  class="stroke-brand-red group-hover:stroke-white"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Bottom Links & others -->
+          <div class="mt-30">
+            <!-- Address -->
+            <div class="space-y-2 border-b border-brand-gray-500 pb-5">
+              <!-- Location -->
+              <p class="flex items-center gap-2.5 font-medium">
+                <img
+                  src="./assets/images/icon-location.svg"
+                  alt="Location Icon"
+                />
+                Екатеринбург
+              </p>
+              <a href="tel:" class="font-semibold block">8 800 505-69-03</a>
+              <a href="mailto:" class="font-medium block">zakaz@politaks.ru</a>
+            </div>
+            <!-- Comparison & Save -->
+            <div class="space-y-2 pt-5">
+              <!-- Comparison -->
+              <button class="flex items-center gap-2.5">
+                <svg
+                  width="31"
+                  height="36"
+                  viewBox="0 0 31 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="stroke-black"
+                >
+                  <mask
+                    id="mask0_339_11757"
+                    style="mask-type: luminance"
+                    maskUnits="userSpaceOnUse"
+                    x="5"
+                    y="8"
+                    width="21"
+                    height="21"
+                  >
+                    <path
+                      d="M5.80078 8.07031H25.8008V28.0703H5.80078V8.07031Z"
+                      fill="white"
+                    />
+                  </mask>
+                  <g mask="url(#mask0_339_11757)">
+                    <path
+                      d="M17.207 19.7891H25.0195V8.85156H20.332C18.6061 8.85156 17.207 10.2507 17.207 11.9766V19.7891Z"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                    />
+                    <path
+                      d="M20.332 8.85156V11.9766H17.207"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                    />
+                    <path
+                      d="M6.58203 27.2891H14.3945V16.3516H9.70703C7.98113 16.3516 6.58203 17.7507 6.58203 19.4766V27.2891Z"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                    />
+                    <path
+                      d="M9.70703 16.3516V19.4766H6.58203"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                    />
+                    <path
+                      d="M14.5117 11.8203H6.875"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                    />
+                    <path
+                      d="M9.01855 9.5L6.875 11.8193L9.01855 14.1387"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                    />
+                    <path
+                      d="M22.6641 22.0034L24.741 24.3196L22.6641 26.6357"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                    />
+                    <path
+                      d="M24.7413 24.3203H16.3867"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      class="stroke-black group-hover:stroke-brand-red transition-all duration-150"
+                    />
+                  </g>
+                </svg>
+                Сравнение
+              </button>
+              <!-- Save -->
+              <button class="flex items-center gap-2.5">
+                <svg
+                  width="31"
+                  height="36"
+                  viewBox="0 0 31 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-black"
+                >
+                  <path
+                    d="M9.50156 9.07031H22.1016C22.3403 9.07031 22.5692 9.16513 22.738 9.33392C22.9067 9.5027 23.0016 9.73162 23.0016 9.97031V27.199C23.0017 27.2795 22.9802 27.3585 22.9394 27.4278C22.8986 27.4972 22.8399 27.5543 22.7695 27.5933C22.6991 27.6323 22.6195 27.6516 22.5391 27.6494C22.4587 27.6472 22.3803 27.6234 22.3122 27.5806L15.8016 23.4973L9.29096 27.5797C9.22289 27.6225 9.14461 27.6462 9.06425 27.6485C8.9839 27.6508 8.9044 27.6315 8.83403 27.5926C8.76366 27.5537 8.70498 27.4967 8.6641 27.4275C8.62322 27.3583 8.60162 27.2794 8.60156 27.199V9.97031C8.60156 9.73162 8.69638 9.5027 8.86517 9.33392C9.03395 9.16513 9.26287 9.07031 9.50156 9.07031ZM21.2016 10.8703H10.4016V24.7591L15.8016 21.3742L21.2016 24.7591V10.8703Z"
+                  />
+                </svg>
+                Избранное
+              </button>
+            </div>
+            <!-- Login Button -->
+            <button class="login-button w-full flex justify-center mt-5">
+              <svg
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.2031 14.0967V15.9777C13.3886 15.6897 12.5168 15.6014 11.661 15.7201C10.8052 15.8389 9.9904 16.1612 9.28501 16.6601C8.57962 17.159 8.00423 17.8199 7.60717 18.5872C7.21011 19.3545 7.00296 20.2059 7.00313 21.0699L5.20313 21.069C5.20285 19.97 5.45415 18.8855 5.93779 17.8987C6.42143 16.9118 7.12457 16.0488 7.99332 15.3757C8.86207 14.7025 9.87338 14.2372 10.9498 14.0154C12.0261 13.7936 13.139 13.8211 14.2031 14.0958V14.0967ZM12.4031 12.9699C9.41962 12.9699 7.00313 10.5534 7.00313 7.56992C7.00313 4.58642 9.41962 2.16992 12.4031 2.16992C15.3866 2.16992 17.8031 4.58642 17.8031 7.56992C17.8031 10.5534 15.3866 12.9699 12.4031 12.9699ZM12.4031 11.1699C14.3921 11.1699 16.0031 9.55892 16.0031 7.56992C16.0031 5.58092 14.3921 3.96992 12.4031 3.96992C10.4141 3.96992 8.80313 5.58092 8.80313 7.56992C8.80313 9.55892 10.4141 11.1699 12.4031 11.1699ZM18.3305 16.5699L16.6844 14.9247L17.9579 13.6512L21.7757 17.4699L17.9579 21.2886L16.6844 20.0151L18.3305 18.3699H15.1031V16.5699H18.3305Z"
+                  fill="#9E211B"
+                />
+              </svg>
+              Войти в кабинет
+            </button>
+            <!-- Links -->
+            <ul class="space-y-3.5 mt-30">
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-1.5 hover:text-brand-red transition-all duration-200"
+                  >Готовые решения
+                  <img
+                    src="./assets/images/icon-chevron-down.svg"
+                    alt="Chevron icon"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-brand-red transition-all duration-200"
+                  >О компании</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-brand-red transition-all duration-200"
+                  >База знаний</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-brand-red transition-all duration-200"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search on Mobile -->
+      <div
+        id="search-mobile"
+        class="lg:hidden fixed inset-0 z-50 space-y-5 -translate-x-full bg-white transition-all duration-300 px-5 py-30"
+      >
+        <!-- Input -->
+        <div class="flex items-center gap-2.5">
+          <div
+            class="h-50 relative xl:h-sixty flex-1 lg:hidden bg-brand-gray-100 items-center rounded-lg"
+          >
+            <label
+              for="search"
+              class="absolute h-full left-0 grid place-content-center cursor-pointer p-5"
+            >
+              <img
+                src="./assets/images/icon-search.svg"
+                alt="Search Icon"
+                class="relative z-10 shrink-0"
+              />
+            </label>
+            <input
+              type="text"
+              id="search"
+              placeholder="Поиск"
+              class="absolute w-full h-full bg-transparent outline-none placeholder:text-brand-gray-400 focus:h-[3.1875rem] focus:xl:h-14 focus:bg-white outline-1 focus:outline-brand-gray-400 rounded-lg pl-14"
+            />
+            <button id="searchX" class="hidden absolute right-5 z-50">
+              <svg
+                width="19"
+                height="19"
+                viewBox="0 0 19 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.80078 1.13965L9.80078 9.13965M9.80078 9.13965L17.8008 17.1396M9.80078 9.13965L17.8008 1.13965M9.80078 9.13965L1.80078 17.1396"
+                  stroke="#7D8693"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Close Button -->
+          <button
+            id="search-close-mobile"
+            class="w-50 h-50 grid place-content-center bg-brand-gray-100 rounded-full"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L8 8M8 8L15 15M8 8L15 1M8 8L1 15"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- History -->
+        <div class="space-y-30">
+          <!-- Top Buttons -->
+          <div class="flex items-center flex-wrap gap-2.5">
+            <button
+              class="h-10 font-medium border border-brand-gray-400 rounded-lg hover:text-brand-red hover:border-brand-red active:bg-white transition-all duration-200 px-5"
+            >
+              огнезащита
+            </button>
+            <button
+              class="h-10 font-medium border border-brand-gray-400 rounded-lg hover:text-brand-red hover:border-brand-red transition-all duration-200 px-5"
+            >
+              для бетона
+            </button>
+            <button
+              class="h-10 font-medium border border-brand-gray-400 rounded-lg hover:text-brand-red hover:border-brand-red transition-all duration-200 px-5"
+            >
+              фасады
+            </button>
+            <button
+              class="h-10 font-medium border border-brand-gray-400 rounded-lg hover:text-brand-red hover:border-brand-red transition-all duration-200 px-5"
+            >
+              по металлу
+            </button>
+          </div>
+
+          <!-- List -->
+          <ul class="border-t border-brand-gray-500">
+            <li class="group border-b border-brand-gray-500 py-3.5">
+              <a
+                href="#"
+                class="flex items-center gap-2.5 group-hover:text-brand-red"
+              >
+                <!-- Search Icon -->
+                <img src="./assets/images/icon-search.svg" alt="Search Icon" />
+                краска для бетона
+              </a>
+            </li>
+            <li class="group border-b border-brand-gray-500 py-3.5">
+              <a
+                href="#"
+                class="flex items-center gap-2.5 group-hover:text-brand-red"
+              >
+                <!-- Search Icon -->
+                <img src="./assets/images/icon-search.svg" alt="Search Icon" />
+                политекс для полов
+              </a>
+            </li>
+            <li class="group border-b border-brand-gray-500 py-3.5">
+              <a
+                href="#"
+                class="flex items-center gap-2.5 group-hover:text-brand-red"
+              >
+                <!-- Search Icon -->
+                <img src="./assets/images/icon-search.svg" alt="Search Icon" />
+                расчет расхода
+              </a>
+            </li>
+            <li class="group border-b border-brand-gray-500 py-3.5">
+              <a
+                href="#"
+                class="flex items-center gap-2.5 group-hover:text-brand-red"
+              >
+                <!-- Search Icon -->
+                <img src="./assets/images/icon-search.svg" alt="Search Icon" />
+                наливной пол
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-w-base mx-auto mt-2.5 md:mt-5 lg:mt-14 px-4">
+        <!-- Path -->
+        <div class="flex flex-wrap items-center gap-3 text-xs xs:text-sm">
+          <span>Главная</span>
+          <img src="./assets/images/chevron-path.svg" alt="Path icon" />
+          <span class="text-brand-gray-400">Корзина</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="max-w-base mx-auto px-4">
+        <!-- Cart -->
+        <section class="pt-30 lg:mt-2">
+          <!-- Cart Title -->
+          <div>
+            <div class="flex items-center justify-between">
+              <h2 class="font-semibold text-3xl lg:text-4xl/[43.2px]">
+                Корзина
+              </h2>
+              <button class="block lg:hidden items-center gap-1.5">
+                <img src="./assets/images/icon-share.svg" alt="Icon Share" />
+              </button>
+            </div>
+            <!-- Clear Carts -->
+            <div class="flex items-center justify-between pt-30 mt-2">
+              <button class="flex items-center gap-x-3.5">
+                <svg
+                  class="text-brand-gray-400"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.2627 6.87691L9 9.13965M9 9.13965L6.73726 11.4024M9 9.13965L11.2627 11.4024M9 9.13965L6.73726 6.87691M17 9.13965C17 13.5579 13.4183 17.1396 9 17.1396C4.58172 17.1396 1 13.5579 1 9.13965C1 4.72137 4.58172 1.13965 9 1.13965C13.4183 1.13965 17 4.72137 17 9.13965Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span class="text-sm/[28px]"> Очистить корзину </span>
+              </button>
+
+              <button class="hidden lg:flex items-center gap-1.5">
+                <img src="./assets/images/icon-share.svg" alt="Icon Share" />
+                <span class="hidden lg:block text-sm">Поделиться</span>
+              </button>
+            </div>
+          </div>
+          <!-- Carts -->
+          <div class="flex flex-wrap gap-30 mt-30 lg:mt-5">
+            <!-- Left -->
+            <div class="w-full max-w-[53.12500rem] space-y-30">
+              <!-- Item 1 -->
+              <div class="w-full border-b pb-30">
+                <!-- Top  -->
+                <div
+                  class="flex justify-between md:justify-start gap-2.5 md:gap-5 lg:gap-30"
+                >
+                  <img
+                    class="shrink-0 w-20 h-20"
+                    src="./assets/images/img-main-product.png"
+                    alt="product-1"
+                  />
+                  <div
+                    class="flex flex-col sm:flex-row md:items-center gap-x-5 lg:gap-x-30 gap-y-15"
+                  >
+                    <div class="w-full max-w-300">
+                      <p class="text-xs/[14.63px] lg:text-sm/[17.07px]">
+                        Политакс 77EPV 2S
+                      </p>
+                      <h6
+                        class="font-semibold text-sm/[19.7px] lg:text-base/[22.4px] mt-2.5"
+                      >
+                        Эпокси виниловая эмаль-грунт для металла
+                      </h6>
+                    </div>
+                    <div
+                      class="w-full max-w-[26.1875rem] flex flex-col md:flex-row items-end md:items-center gap-x-30 gap-y-15 whitespace-nowrap ml-auto"
+                    >
+                      <div
+                        class="flex items-center justify-between gap-x-5 lg:gap-x-30"
+                      >
+                        <div class="w-28 sm:w-[8.12500rem]">
+                          <p
+                            class="font-semibold text-sm/[17.07px] lg:text-lg/[21.94px]"
+                          >
+                            2 545 
+                            <span class="font-medium text-sm/[17.07px]"
+                              >₽ / компл.</span
+                            >
+                          </p>
+                        </div>
+
+                        <div
+                          class="w-28 sm:w-[8.12500rem] flex items-center justify-between gap-x-3"
+                        >
+                          <button
+                            class="w-30 h-30 bg-brand-gray-100 rounded-full flex justify-center items-center transition duration-200 hover:text-brand-red"
+                          >
+                            <svg
+                              class="shrink-0"
+                              width="14"
+                              height="2"
+                              viewBox="0 0 16 2"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M15 1.13965L1 1.13965"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                              />
+                            </svg>
+                          </button>
+                          <p class="text-base/[26px]">10</p>
+                          <button
+                            class="w-30 h-30 bg-brand-gray-100 rounded-full flex justify-center items-center transition duration-200 hover:text-brand-red"
+                          >
+                            <svg
+                              class="shrink-0"
+                              width="14"
+                              height="14"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8 1.13965L8 15.1396M15 8.13965L1 8.13965"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="w-[90px] text-end">
+                        <p class="font-bold text-lg/[21.94px]">
+                          25 545
+                          <span class="font-medium">₽</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Bottom -->
+                <div class="flex items-center justify-between gap-5 mt-15">
+                  <div
+                    class="flex items-center gap-2.5 whitespace-nowrap lg:ml-28"
+                  >
+                    <div
+                      class="shrink-0 w-10 h-10 bg-brand-red rounded-full flex items-center justify-center"
+                    >
+                      <span class="font-semibold text-white text-[10px]/[24px]"
+                        >2022</span
+                      >
+                    </div>
+                    <p
+                      class="text-brand-red text-sm/[24px] underline underline-offset-8 decoration-dotted"
+                    >
+                      Цвет RAL 2002
+                    </p>
+                  </div>
+                  <div
+                    class="text-brand-gray-400 sm:w-full sm:max-w-[26.1875rem] flex items-center justify-end gap-30"
+                  >
+                    <a
+                      class="flex items-center gap-x-3 transition duration-200 hover:text-brand-red"
+                      href="#"
+                    >
+                      <svg
+                        width="21"
+                        height="21"
+                        viewBox="0 0 21 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_122_9411"
+                          style="mask-type: luminance"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="21"
+                          height="21"
+                        >
+                          <path
+                            d="M0.5 0.639648H20.5V20.6396H0.5V0.639648Z"
+                            fill="white"
+                          />
+                        </mask>
+                        <g mask="url(#mask0_122_9411)">
+                          <path
+                            d="M11.9062 12.3584H19.7188V1.4209H15.0312C13.3054 1.4209 11.9062 2.82 11.9062 4.5459V12.3584Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M15.0312 1.4209V4.5459H11.9062"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M1.28125 19.8584H9.09375V8.9209H4.40625C2.68035 8.9209 1.28125 10.32 1.28125 12.0459V19.8584Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M4.40625 8.9209V12.0459H1.28125"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M9.21094 4.38965H1.57422"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M3.71777 2.06543L1.57422 4.38477L3.71777 6.7041"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M17.3594 14.5718L19.4363 16.8879L17.3594 19.2041"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M19.4405 16.8896H11.0859"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                        </g>
+                      </svg>
+                      <span class="hidden sm:block font-medium text-sm/[24px]">
+                        К сравнению
+                      </span>
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3 transition duration-200 hover:text-brand-red"
+                      href="#"
+                    >
+                      <svg
+                        width="24"
+                        height="25"
+                        viewBox="0 0 24 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.70078 3.5H18.3008C18.5395 3.5 18.7684 3.59482 18.9372 3.7636C19.106 3.93239 19.2008 4.16131 19.2008 4.4V21.6287C19.2009 21.7092 19.1794 21.7882 19.1386 21.8575C19.0978 21.9269 19.0391 21.984 18.9687 22.023C18.8983 22.0619 18.8187 22.0813 18.7383 22.0791C18.6579 22.0769 18.5795 22.0531 18.5114 22.0103L12.0008 17.927L5.49018 22.0094C5.42211 22.0522 5.34383 22.0759 5.26347 22.0782C5.18312 22.0805 5.10362 22.0612 5.03325 22.0223C4.96287 21.9834 4.9042 21.9264 4.86332 21.8572C4.82243 21.788 4.80084 21.7091 4.80078 21.6287V4.4C4.80078 4.16131 4.8956 3.93239 5.06439 3.7636C5.23317 3.59482 5.46209 3.5 5.70078 3.5ZM17.4008 5.3H6.60078V19.1888L12.0008 15.8039L17.4008 19.1888V5.3Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <span class="hidden sm:block font-medium text-sm/[24px]">
+                        В избранное
+                      </span>
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3 transition duration-200 hover:text-brand-red"
+                      href="#"
+                    >
+                      <svg
+                        width="18"
+                        height="19"
+                        viewBox="0 0 18 19"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.5 3.73965H18V5.53965H16.2V17.2396C16.2 17.4783 16.1052 17.7073 15.9364 17.876C15.7676 18.0448 15.5387 18.1396 15.3 18.1396H2.7C2.46131 18.1396 2.23239 18.0448 2.0636 17.876C1.89482 17.7073 1.8 17.4783 1.8 17.2396V5.53965H0V3.73965H4.5V1.03965C4.5 0.800954 4.59482 0.572035 4.7636 0.403252C4.93239 0.23447 5.1613 0.139648 5.4 0.139648H12.6C12.8387 0.139648 13.0676 0.23447 13.2364 0.403252C13.4052 0.572035 13.5 0.800954 13.5 1.03965V3.73965ZM14.4 5.53965H3.6V16.3396H14.4V5.53965ZM10.2726 10.9396L11.8638 12.5308L10.5912 13.8034L9 12.2122L7.4088 13.8034L6.1362 12.5308L7.7274 10.9396L6.1362 9.34845L7.4088 8.07585L9 9.66705L10.5912 8.07585L11.8638 9.34845L10.2726 10.9396ZM6.3 1.93965V3.73965H11.7V1.93965H6.3Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <span class="hidden sm:block font-medium text-sm/[24px]">
+                        Удалить
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Item 2 -->
+              <div class="w-full border-b pb-30">
+                <!-- Top  -->
+                <div
+                  class="flex justify-between md:justify-start gap-2.5 md:gap-5 lg:gap-30"
+                >
+                  <img
+                    class="shrink-0 w-20 h-20"
+                    src="./assets/images/img-main-product2.png"
+                    alt="product-2"
+                  />
+                  <div
+                    class="flex flex-col sm:flex-row md:items-center gap-x-5 lg:gap-x-30 gap-y-15"
+                  >
+                    <div class="w-full max-w-300">
+                      <p class="text-xs/[14.63px] lg:text-sm/[17.07px]">
+                        Политакс 44UR 1Zn
+                      </p>
+                      <h6
+                        class="font-semibold text-sm/[19.7px] lg:text-base/[22.4px] mt-2.5"
+                      >
+                        Цинковая краска (холодное цинкование)
+                      </h6>
+                    </div>
+                    <div
+                      class="w-full max-w-[26.1875rem] flex flex-col md:flex-row items-end md:items-center gap-x-30 gap-y-15 whitespace-nowrap ml-auto"
+                    >
+                      <div
+                        class="flex items-center justify-between gap-x-5 lg:gap-x-30"
+                      >
+                        <div class="w-28 sm:w-[8.12500rem]">
+                          <p
+                            class="font-semibold text-sm/[17.07px] lg:text-lg/[21.94px]"
+                          >
+                            345 
+                            <span class="font-medium text-sm/[17.07px]"
+                              >₽ / компл.</span
+                            >
+                          </p>
+                        </div>
+
+                        <div
+                          class="w-28 sm:w-[8.12500rem] flex items-center justify-between gap-x-3"
+                        >
+                          <button
+                            class="w-30 h-30 bg-brand-gray-100 rounded-full flex justify-center items-center transition duration-200 hover:text-brand-red"
+                          >
+                            <svg
+                              class="shrink-0"
+                              width="14"
+                              height="2"
+                              viewBox="0 0 16 2"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M15 1.13965L1 1.13965"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                              />
+                            </svg>
+                          </button>
+                          <p class="text-base/[26px]">1</p>
+                          <button
+                            class="w-30 h-30 bg-brand-gray-100 rounded-full flex justify-center items-center transition duration-200 hover:text-brand-red"
+                          >
+                            <svg
+                              class="shrink-0"
+                              width="14"
+                              height="14"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8 1.13965L8 15.1396M15 8.13965L1 8.13965"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="w-[90px] text-end">
+                        <p class="font-bold text-lg/[21.94px]">
+                          3 145
+                          <span class="font-medium">₽</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Bottom -->
+                <div class="flex items-center justify-between gap-5 mt-15">
+                  <div class="flex items-center gap-2.5 lg:ml-28">
+                    <div
+                      class="shrink-0 w-10 h-10 bg-brand-gray-400 rounded-full flex items-center justify-center"
+                    >
+                      <span class="font-semibold text-white text-[10px]/[24px]"
+                        >7040</span
+                      >
+                    </div>
+                    <p
+                      class="text-brand-red text-sm/[24px] underline underline-offset-8 decoration-dotted"
+                    >
+                      Цвет RAL 7040 Базовый
+                    </p>
+                  </div>
+                  <div
+                    class="text-brand-gray-400 sm:w-full sm:max-w-[26.1875rem] flex items-center justify-end gap-30"
+                  >
+                    <a
+                      class="flex items-center gap-x-3 transition duration-200 hover:text-brand-red"
+                      href="#"
+                    >
+                      <svg
+                        width="21"
+                        height="21"
+                        viewBox="0 0 21 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_122_9411"
+                          style="mask-type: luminance"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="21"
+                          height="21"
+                        >
+                          <path
+                            d="M0.5 0.639648H20.5V20.6396H0.5V0.639648Z"
+                            fill="white"
+                          />
+                        </mask>
+                        <g mask="url(#mask0_122_9411)">
+                          <path
+                            d="M11.9062 12.3584H19.7188V1.4209H15.0312C13.3054 1.4209 11.9062 2.82 11.9062 4.5459V12.3584Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M15.0312 1.4209V4.5459H11.9062"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M1.28125 19.8584H9.09375V8.9209H4.40625C2.68035 8.9209 1.28125 10.32 1.28125 12.0459V19.8584Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M4.40625 8.9209V12.0459H1.28125"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M9.21094 4.38965H1.57422"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M3.71777 2.06543L1.57422 4.38477L3.71777 6.7041"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M17.3594 14.5718L19.4363 16.8879L17.3594 19.2041"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M19.4405 16.8896H11.0859"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                        </g>
+                      </svg>
+                      <span class="hidden sm:block font-medium text-sm/[24px]">
+                        К сравнению
+                      </span>
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3 transition duration-200 hover:text-brand-red"
+                      href="#"
+                    >
+                      <svg
+                        width="24"
+                        height="25"
+                        viewBox="0 0 24 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.70078 3.5H18.3008C18.5395 3.5 18.7684 3.59482 18.9372 3.7636C19.106 3.93239 19.2008 4.16131 19.2008 4.4V21.6287C19.2009 21.7092 19.1794 21.7882 19.1386 21.8575C19.0978 21.9269 19.0391 21.984 18.9687 22.023C18.8983 22.0619 18.8187 22.0813 18.7383 22.0791C18.6579 22.0769 18.5795 22.0531 18.5114 22.0103L12.0008 17.927L5.49018 22.0094C5.42211 22.0522 5.34383 22.0759 5.26347 22.0782C5.18312 22.0805 5.10362 22.0612 5.03325 22.0223C4.96287 21.9834 4.9042 21.9264 4.86332 21.8572C4.82243 21.788 4.80084 21.7091 4.80078 21.6287V4.4C4.80078 4.16131 4.8956 3.93239 5.06439 3.7636C5.23317 3.59482 5.46209 3.5 5.70078 3.5ZM17.4008 5.3H6.60078V19.1888L12.0008 15.8039L17.4008 19.1888V5.3Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <span class="hidden sm:block font-medium text-sm/[24px]">
+                        В избранное
+                      </span>
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3 transition duration-200 hover:text-brand-red"
+                      href="#"
+                    >
+                      <svg
+                        width="18"
+                        height="19"
+                        viewBox="0 0 18 19"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.5 3.73965H18V5.53965H16.2V17.2396C16.2 17.4783 16.1052 17.7073 15.9364 17.876C15.7676 18.0448 15.5387 18.1396 15.3 18.1396H2.7C2.46131 18.1396 2.23239 18.0448 2.0636 17.876C1.89482 17.7073 1.8 17.4783 1.8 17.2396V5.53965H0V3.73965H4.5V1.03965C4.5 0.800954 4.59482 0.572035 4.7636 0.403252C4.93239 0.23447 5.1613 0.139648 5.4 0.139648H12.6C12.8387 0.139648 13.0676 0.23447 13.2364 0.403252C13.4052 0.572035 13.5 0.800954 13.5 1.03965V3.73965ZM14.4 5.53965H3.6V16.3396H14.4V5.53965ZM10.2726 10.9396L11.8638 12.5308L10.5912 13.8034L9 12.2122L7.4088 13.8034L6.1362 12.5308L7.7274 10.9396L6.1362 9.34845L7.4088 8.07585L9 9.66705L10.5912 8.07585L11.8638 9.34845L10.2726 10.9396ZM6.3 1.93965V3.73965H11.7V1.93965H6.3Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <span class="hidden sm:block font-medium text-sm/[24px]">
+                        Удалить
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Item 3 -->
+              <div class="w-full">
+                <!-- Top  -->
+                <div
+                  class="flex justify-between md:justify-start gap-2.5 md:gap-5 lg:gap-30"
+                >
+                  <img
+                    class="shrink-0 w-20 h-20"
+                    src="./assets/images/img-main-product2.png"
+                    alt="product-2"
+                  />
+                  <div
+                    class="flex flex-col sm:flex-row md:items-center gap-x-5 lg:gap-x-30 gap-y-15"
+                  >
+                    <div class="w-full max-w-300">
+                      <p class="text-xs/[14.63px] lg:text-sm/[17.07px]">
+                        Политакс 44UR 1Zn
+                      </p>
+                      <h6
+                        class="font-semibold text-sm/[19.7px] lg:text-base/[22.4px] mt-2.5"
+                      >
+                        Цинковая краска (холодное цинкование)
+                      </h6>
+                    </div>
+                    <div
+                      class="w-full max-w-[26.1875rem] flex flex-col md:flex-row items-end md:items-center gap-x-30 gap-y-15 whitespace-nowrap ml-auto"
+                    >
+                      <div
+                        class="flex items-center justify-between gap-x-5 lg:gap-x-30"
+                      >
+                        <div class="w-28 sm:w-[8.12500rem]">
+                          <p
+                            class="font-semibold text-sm/[17.07px] lg:text-lg/[21.94px]"
+                          >
+                            345 
+                            <span class="font-medium text-sm/[17.07px]"
+                              >₽ / компл.</span
+                            >
+                          </p>
+                        </div>
+
+                        <div
+                          class="w-28 sm:w-[8.12500rem] flex items-center justify-between gap-x-3"
+                        >
+                          <button
+                            class="w-30 h-30 bg-brand-gray-100 rounded-full flex justify-center items-center transition duration-200 hover:text-brand-red"
+                          >
+                            <svg
+                              class="shrink-0"
+                              width="14"
+                              height="2"
+                              viewBox="0 0 16 2"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M15 1.13965L1 1.13965"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                              />
+                            </svg>
+                          </button>
+                          <p class="text-base/[26px]">1</p>
+                          <button
+                            class="w-30 h-30 bg-brand-gray-100 rounded-full flex justify-center items-center transition duration-200 hover:text-brand-red"
+                          >
+                            <svg
+                              class="shrink-0"
+                              width="14"
+                              height="14"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8 1.13965L8 15.1396M15 8.13965L1 8.13965"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="w-[90px] text-end">
+                        <p class="font-bold text-lg/[21.94px]">
+                          3 145
+                          <span class="font-medium">₽</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Bottom -->
+                <div class="flex items-center justify-between gap-5 mt-15">
+                  <div class="flex items-center gap-2.5 lg:ml-28">
+                    <div
+                      class="shrink-0 w-10 h-10 bg-brand-gray-400 rounded-full flex items-center justify-center"
+                    >
+                      <span class="font-semibold text-white text-[10px]/[24px]"
+                        >7040</span
+                      >
+                    </div>
+                    <p
+                      class="text-brand-red text-sm/[24px] underline underline-offset-8 decoration-dotted"
+                    >
+                      Цвет RAL 7040 Базовый
+                    </p>
+                  </div>
+                  <div
+                    class="text-brand-gray-400 sm:w-full sm:max-w-[26.1875rem] flex items-center justify-end gap-30"
+                  >
+                    <a
+                      class="flex items-center gap-x-3 transition duration-200 hover:text-brand-red"
+                      href="#"
+                    >
+                      <svg
+                        width="21"
+                        height="21"
+                        viewBox="0 0 21 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_122_9411"
+                          style="mask-type: luminance"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="21"
+                          height="21"
+                        >
+                          <path
+                            d="M0.5 0.639648H20.5V20.6396H0.5V0.639648Z"
+                            fill="white"
+                          />
+                        </mask>
+                        <g mask="url(#mask0_122_9411)">
+                          <path
+                            d="M11.9062 12.3584H19.7188V1.4209H15.0312C13.3054 1.4209 11.9062 2.82 11.9062 4.5459V12.3584Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M15.0312 1.4209V4.5459H11.9062"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M1.28125 19.8584H9.09375V8.9209H4.40625C2.68035 8.9209 1.28125 10.32 1.28125 12.0459V19.8584Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M4.40625 8.9209V12.0459H1.28125"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M9.21094 4.38965H1.57422"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M3.71777 2.06543L1.57422 4.38477L3.71777 6.7041"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M17.3594 14.5718L19.4363 16.8879L17.3594 19.2041"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M19.4405 16.8896H11.0859"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                          />
+                        </g>
+                      </svg>
+                      <span class="hidden sm:block font-medium text-sm/[24px]">
+                        К сравнению
+                      </span>
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3 transition duration-200 hover:text-brand-red"
+                      href="#"
+                    >
+                      <svg
+                        width="24"
+                        height="25"
+                        viewBox="0 0 24 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.70078 3.5H18.3008C18.5395 3.5 18.7684 3.59482 18.9372 3.7636C19.106 3.93239 19.2008 4.16131 19.2008 4.4V21.6287C19.2009 21.7092 19.1794 21.7882 19.1386 21.8575C19.0978 21.9269 19.0391 21.984 18.9687 22.023C18.8983 22.0619 18.8187 22.0813 18.7383 22.0791C18.6579 22.0769 18.5795 22.0531 18.5114 22.0103L12.0008 17.927L5.49018 22.0094C5.42211 22.0522 5.34383 22.0759 5.26347 22.0782C5.18312 22.0805 5.10362 22.0612 5.03325 22.0223C4.96287 21.9834 4.9042 21.9264 4.86332 21.8572C4.82243 21.788 4.80084 21.7091 4.80078 21.6287V4.4C4.80078 4.16131 4.8956 3.93239 5.06439 3.7636C5.23317 3.59482 5.46209 3.5 5.70078 3.5ZM17.4008 5.3H6.60078V19.1888L12.0008 15.8039L17.4008 19.1888V5.3Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <span class="hidden sm:block font-medium text-sm/[24px]">
+                        В избранное
+                      </span>
+                    </a>
+                    <a
+                      class="flex items-center gap-x-3 transition duration-200 hover:text-brand-red"
+                      href="#"
+                    >
+                      <svg
+                        width="18"
+                        height="19"
+                        viewBox="0 0 18 19"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.5 3.73965H18V5.53965H16.2V17.2396C16.2 17.4783 16.1052 17.7073 15.9364 17.876C15.7676 18.0448 15.5387 18.1396 15.3 18.1396H2.7C2.46131 18.1396 2.23239 18.0448 2.0636 17.876C1.89482 17.7073 1.8 17.4783 1.8 17.2396V5.53965H0V3.73965H4.5V1.03965C4.5 0.800954 4.59482 0.572035 4.7636 0.403252C4.93239 0.23447 5.1613 0.139648 5.4 0.139648H12.6C12.8387 0.139648 13.0676 0.23447 13.2364 0.403252C13.4052 0.572035 13.5 0.800954 13.5 1.03965V3.73965ZM14.4 5.53965H3.6V16.3396H14.4V5.53965ZM10.2726 10.9396L11.8638 12.5308L10.5912 13.8034L9 12.2122L7.4088 13.8034L6.1362 12.5308L7.7274 10.9396L6.1362 9.34845L7.4088 8.07585L9 9.66705L10.5912 8.07585L11.8638 9.34845L10.2726 10.9396ZM6.3 1.93965V3.73965H11.7V1.93965H6.3Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <span class="hidden sm:block font-medium text-sm/[24px]">
+                        Удалить
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Right -->
+            <div class="flex-1 h-max bg-brand-gray-100 rounded-lg p-30">
+              <ul class="space-y-2.5">
+                <li class="text-base/[28px] flex items-center justify-between">
+                  <p>Товары (3):</p>
+                  <p class="font-medium">28 690 ₽</p>
+                </li>
+                <li class="text-base/[28px] flex items-center justify-between">
+                  <p>Вес:</p>
+                  <p class="font-medium">62 кг</p>
+                </li>
+                <li class="text-base/[28px] flex items-center justify-between">
+                  <p>Объём:</p>
+                  <p class="font-medium">0.97 м3</p>
+                </li>
+                <li class="text-base/[28px] flex items-center justify-between">
+                  <p>Скидка:</p>
+                  <p class="font-medium">-1 500 ₽</p>
+                </li>
+                <li class="text-base/[28px] flex items-center justify-between">
+                  <p>Доставка:</p>
+                  <p class="font-medium">450 ₽</p>
+                </li>
+              </ul>
+              <div
+                class="font-bold text-2xl flex items-center justify-between mt-30"
+              >
+                <p>Итого</p>
+                <p>27 190 <span class="font-medium">₽</span></p>
+              </div>
+
+              <!-- Overall Cost -->
+              <div class="text-end mt-2">
+                <div class="flex items-center justify-between gap-2">
+                  <input
+                    type="checkbox"
+                    id="nds-switch"
+                    class="switch hidden"
+                  />
+                  <label
+                    for="nds-switch"
+                    class="w-7 h-4 relative bg-brand-gray-200 rounded-full cursor-pointer shadow-switch transition-all duration-300"
+                  >
+                    <div
+                      class="w-3 h-3 block absolute top-1/2 -translate-y-1/2 left-0.5 grid place-content-center !bg-white rounded-full shadow-switch-toggle transition-all duration-200"
+                    >
+                      <span
+                        class="w-1 h-1 bg-brand-gray-200 rounded-full transition-all duration-300"
+                      ></span>
+                    </div>
+                  </label>
+
+                  <p class="font-medium">5 438 ₽</p>
+                </div>
+              </div>
+              <!-- Button -->
+              <button
+                class="button-red w-full h-sixty font-semibold py-18 px-5 mt-30"
+              >
+                Оформить заказ
+              </button>
+              <p class="text-brand-gray-400 text-sm/[19.6px] mt-30">
+                Нажимая кнопку, я даю
+                <a class="underline" href="#">согласие</a>
+                на обработку персональных данных, в соответствии с Политикой, и
+                соглашаюсь с Правилами
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Recipient -->
+        <section class="w-full max-w-[53.12500rem]">
+          <div class="space-y-sixty lg:space-y-20">
+            <!-- 1 -->
+            <div class="space-y-30">
+              <h2 class="font-semibold text-3xl lg:text-4xl/[43.2px]">
+                Получатель
+              </h2>
+              <!-- Drob Down -->
+              <div class="relative dropdown">
+                <button
+                  class="dropdown-button w-full button-gray-outline flex items-center justify-between border rounded-lg py-4 px-5"
+                >
+                  <span class="text-base/[28px]"> Создать нового </span>
+                  <svg
+                    class="dropdown-icon transition-transform duration-300"
+                    width="14"
+                    height="8"
+                    viewBox="0 0 14 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1.13965L6.29289 6.82504C6.68342 7.24452 7.31658 7.24452 7.70711 6.82504L13 1.13965"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+                <!-- List -->
+                <div
+                  class="dropdown-list hidden absolute top-20 z-20 w-full flex flex-col gap-1 rounded-lg bg-brand-gray-100 p-4"
+                >
+                  <a
+                    class="rounded-lg transition duration-200 hover:bg-white py-2 px-4"
+                    href="#"
+                    >Получатель 1</a
+                  >
+                  <a
+                    class="rounded-lg transition duration-200 hover:bg-white py-2 px-4"
+                    href="#"
+                    >Получатель 2</a
+                  >
+                  <a
+                    class="rounded-lg transition duration-200 hover:bg-white py-2 px-4"
+                    href="#"
+                    >Получатель 3</a
+                  >
+                </div>
+              </div>
+              <!-- Recipient Item -->
+              <div
+                class="bg-brand-gray-100 rounded-[10px] flex gap-5 py-4 px-5"
+              >
+                <svg
+                  class="shrink-0"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 23.3897C14.225 23.3897 16.4001 22.7299 18.2502 21.4937C20.1002 20.2575 21.5422 18.5005 22.3936 16.4448C23.2451 14.3892 23.4679 12.1272 23.0338 9.94489C22.5998 7.7626 21.5283 5.75804 19.955 4.1847C18.3816 2.61136 16.3771 1.5399 14.1948 1.10582C12.0125 0.671735 9.75048 0.894523 7.69481 1.74601C5.63914 2.59749 3.88213 4.03944 2.64597 5.88949C1.4098 7.73954 0.75 9.91461 0.75 12.1397C0.75 15.1233 1.93526 17.9848 4.04505 20.0946C6.15483 22.2044 9.01631 23.3897 12 23.3897ZM12 5.10465C12.2967 5.10465 12.5867 5.19263 12.8334 5.35745C13.08 5.52227 13.2723 5.75654 13.3858 6.03063C13.4994 6.30472 13.5291 6.60632 13.4712 6.89729C13.4133 7.18826 13.2704 7.45554 13.0607 7.66531C12.8509 7.87509 12.5836 8.01795 12.2926 8.07583C12.0017 8.13371 11.7001 8.104 11.426 7.99047C11.1519 7.87694 10.9176 7.68468 10.7528 7.43801C10.588 7.19133 10.5 6.90133 10.5 6.60465C10.5 6.20683 10.658 5.8253 10.9393 5.54399C11.2206 5.26269 11.6022 5.10465 12 5.10465ZM10.5 12.1397C10.5 11.7418 10.658 11.3603 10.9393 11.079C11.2206 10.7977 11.6022 10.6397 12 10.6397C12.3978 10.6397 12.7794 10.7977 13.0607 11.079C13.342 11.3603 13.5 11.7418 13.5 12.1397V18.1397C13.5 18.5375 13.342 18.919 13.0607 19.2003C12.7794 19.4816 12.3978 19.6397 12 19.6397C11.6022 19.6397 11.2206 19.4816 10.9393 19.2003C10.658 18.919 10.5 18.5375 10.5 18.1397V12.1397Z"
+                    fill="#7D8693"
+                  />
+                </svg>
+                <p
+                  class="lg:max-w-lg text-brand-gray-400 text-xs/[16.8px] md:text-base/[22.4px] lg:pr-5"
+                >
+                  Выбранная организация будет автоматически добавлена в список
+                  ваших налогоплательщиков
+                </p>
+              </div>
+              <!-- Input 1 -->
+              <div class="relative">
+                <input
+                  type="text"
+                  id="inputName-1"
+                  class="peer h-sixty w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 pt-3 px-5"
+                  required
+                />
+                <label
+                  for="inputName-1"
+                  class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-7 peer-focus:scale-75 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-75"
+                  >Название организации</label
+                >
+              </div>
+              <!-- Input 2 & 3 -->
+              <div class="grid sm:grid-cols-2 gap-30">
+                <div class="relative">
+                  <input
+                    type="number"
+                    id="inputName-2"
+                    class="peer h-sixty w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 pt-3 px-5"
+                    required
+                  />
+                  <label
+                    for="inputName-2"
+                    class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-7 peer-focus:scale-75 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-75"
+                    >ИНН</label
+                  >
+                </div>
+                <div class="relative">
+                  <input
+                    type="text"
+                    id="inputName-3"
+                    class="peer h-sixty w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 pt-3 px-5"
+                    required
+                  />
+                  <label
+                    for="inputName-3"
+                    class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-7 peer-focus:scale-75 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-75"
+                    >КПП</label
+                  >
+                </div>
+              </div>
+              <!-- Input 4 -->
+              <div class="relative">
+                <input
+                  type="text"
+                  id="inputName-4"
+                  class="peer h-sixty w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 pt-3 px-5"
+                  required
+                />
+                <label
+                  for="inputName-4"
+                  class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-7 peer-focus:scale-75 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-75"
+                  >Юридический адрес</label
+                >
+              </div>
+              <!-- Input 5 -->
+              <div class="relative">
+                <input
+                  type="text"
+                  id="inputName-5"
+                  class="peer h-sixty w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 pt-3 px-5"
+                  required
+                />
+                <label
+                  for="inputName-5"
+                  class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-7 peer-focus:scale-75 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-75"
+                  >Почтовый адрес</label
+                >
+              </div>
+              <!-- Contact person -->
+              <div class="space-y-30">
+                <h3 class="font-semibold text-2xl/[29.26px] mt-5 lg:mt-0">
+                  Контактное лицо
+                </h3>
+                <div class="grid sm:grid-cols-2 gap-30">
+                  <!-- Name -->
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="inputName-6"
+                      class="peer h-sixty w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 pt-3 px-5"
+                      required
+                    />
+                    <label
+                      for="inputName-6"
+                      class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-7 peer-focus:scale-75 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-75"
+                      >Имя</label
+                    >
+                  </div>
+                  <!-- Surname -->
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="inputName-7"
+                      class="peer h-sixty w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 pt-3 px-5"
+                      required
+                    />
+                    <label
+                      for="inputName-7"
+                      class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-7 peer-focus:scale-75 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-75"
+                      >Фамилия</label
+                    >
+                  </div>
+                  <!-- Number -->
+                  <div class="relative">
+                    <input
+                      type="number"
+                      id="inputName-8"
+                      class="peer h-sixty w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 pt-3 px-5"
+                      required
+                    />
+                    <label
+                      for="inputName-8"
+                      class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-7 peer-focus:scale-75 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-75"
+                      >Телефон</label
+                    >
+                  </div>
+                  <!-- Submit -->
+                  <button class="button-red sm:w-max font-semibold px-30 py-18">
+                    Получить код
+                  </button>
+                  <!-- Label -->
+                  <div>
+                    <!-- Gmail -->
+                    <div class="relative">
+                      <input
+                        type="email"
+                        id="inputName-9"
+                        class="peer h-sixty w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 pt-3 px-5"
+                        required
+                      />
+                      <label
+                        for="inputName-9"
+                        class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-7 peer-focus:scale-75 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-75"
+                        >Email</label
+                      >
+                    </div>
+                    <div class="flex flex-col gap-y-15 mt-30">
+                      <!-- Checkbox -->
+                      <div class="mt-1 lg:mt-0">
+                        <input
+                          type="checkbox"
+                          id="inputName-10"
+                          class="hidden"
+                        />
+                        <label
+                          for="inputName-10"
+                          class="flex items-center gap-5 cursor-pointer"
+                        >
+                          <div
+                            class="w-5 h-5 shrink-0 grid place-content-center bg-white border border-brand-gray-400 rounded"
+                          >
+                            <svg
+                              width="14"
+                              height="10"
+                              viewBox="0 0 14 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="hidden"
+                            >
+                              <path
+                                d="M13 1.32617L5.81066 8.51551C5.22487 9.1013 4.27513 9.1013 3.68934 8.51551L1 5.82617"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                          <span class="text-sm/[19.6px] lg:text-base/[28px]">
+                            Получать документы через ЭДО
+                          </span>
+                          <svg
+                            width="20"
+                            height="21"
+                            viewBox="0 0 20 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M20 10.1396C20 4.6168 15.5228 0.139648 10 0.139648C4.47715 0.139648 0 4.6168 0 10.1396C0 15.6625 4.47715 20.1396 10 20.1396C15.5228 20.1396 20 15.6625 20 10.1396Z"
+                              fill="#7D8693"
+                            />
+                            <path
+                              d="M7 7.62446C7 7.248 7.12087 6.86656 7.3626 6.48016C7.60434 6.09376 7.95705 5.77373 8.42073 5.52008C8.88446 5.2666 9.4254 5.13978 10.0436 5.13965C10.6181 5.13965 11.1253 5.24567 11.5653 5.4577C12.0053 5.66973 12.3452 5.95805 12.5849 6.32265C12.8207 6.67419 12.9459 7.08822 12.9445 7.5115C12.9445 7.84835 12.8761 8.1436 12.7393 8.39724C12.611 8.63961 12.4466 8.86108 12.2518 9.05407C12.0636 9.2384 11.7258 9.54851 11.2384 9.9844C11.1245 10.0863 11.0163 10.1945 10.9144 10.3084C10.844 10.3861 10.7831 10.4719 10.7331 10.5641C10.6947 10.6381 10.6639 10.7158 10.641 10.7959C10.6191 10.8733 10.5864 11.009 10.5429 11.2031C10.4675 11.6153 10.2318 11.8214 9.83554 11.8213C9.73977 11.8238 9.64446 11.8072 9.55516 11.7725C9.46586 11.7378 9.38434 11.6857 9.31536 11.6192C9.17464 11.4846 9.1043 11.2845 9.10434 11.0188C9.10434 10.686 9.15585 10.3977 9.25886 10.1541C9.35713 9.91769 9.49594 9.70032 9.66904 9.51173C9.88763 9.28126 10.1178 9.06202 10.3586 8.85487C10.6122 8.63299 10.7955 8.46555 10.9085 8.35256C11.0207 8.24062 11.1167 8.11357 11.1938 7.97508C11.2709 7.83707 11.3108 7.6814 11.3097 7.52331C11.312 7.37197 11.2816 7.22191 11.2206 7.0834C11.1595 6.9449 11.0693 6.82121 10.956 6.72082C10.7202 6.50295 10.416 6.39397 10.0436 6.39388C9.6076 6.39388 9.28661 6.5038 9.08059 6.72364C8.87457 6.94348 8.70017 7.26745 8.55741 7.69553C8.42266 8.14362 8.16706 8.36767 7.79062 8.36767C7.6858 8.36976 7.58169 8.34996 7.48496 8.30953C7.38823 8.2691 7.301 8.20893 7.22885 8.13286C7.07628 7.97626 7 7.80679 7 7.62446ZM9.90092 14.1396C9.66802 14.1429 9.44227 14.0591 9.26784 13.9048C9.08744 13.7483 8.99727 13.5293 8.99734 13.2479C8.99482 13.1305 9.01677 13.0138 9.06179 12.9053C9.10682 12.7968 9.17393 12.6989 9.25886 12.6178C9.34321 12.5342 9.44354 12.4685 9.55385 12.4245C9.66417 12.3806 9.78221 12.3593 9.90092 12.362C10.0177 12.3604 10.1336 12.3821 10.2419 12.426C10.3501 12.47 10.4484 12.5351 10.531 12.6177C10.6136 12.7003 10.6787 12.7987 10.7226 12.9069C10.7665 13.0152 10.7882 13.1311 10.7865 13.2479C10.7865 13.5253 10.6973 13.7433 10.519 13.9018C10.3505 14.0565 10.1296 14.1415 9.90092 14.1396Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </label>
+                      </div>
+                      <!-- EDI Number -->
+                      <div class="order-first lg:order-none relative">
+                        <input
+                          type="number"
+                          id="inputName-11"
+                          class="peer h-sixty w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 pt-3 px-5"
+                          required
+                        />
+                        <label
+                          for="inputName-11"
+                          class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-7 peer-focus:scale-75 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-75"
+                        >
+                          Ваш номер ЭДО
+                        </label>
+                      </div>
+                      <!-- Checkbox -->
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="inputName-12"
+                          class="hidden"
+                        />
+                        <label
+                          for="inputName-12"
+                          class="flex items-center gap-5 cursor-pointer"
+                        >
+                          <div
+                            class="w-5 h-5 shrink-0 grid place-content-center bg-white border border-brand-gray-400 rounded"
+                          >
+                            <svg
+                              width="14"
+                              height="10"
+                              viewBox="0 0 14 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="hidden"
+                            >
+                              <path
+                                d="M13 1.32617L5.81066 8.51551C5.22487 9.1013 4.27513 9.1013 3.68934 8.51551L1 5.82617"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                          <span class="text-sm/[19.6px] lg:text-base/[28px]">
+                            Отправить копию счета на Email
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="grid sm:grid-cols-2 gap-30">
+              <div>
+                <h3 class="font-semibold text-2xl/[29.26px]">Оплата</h3>
+                <form class="flex space-x-4 mt-30">
+                  <label
+                    class="w-full radio-group__label flex items-center space-x-3 border cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name="delivery"
+                      class="radio-group__input"
+                    />
+                    <span class="text-lg">Счет</span>
+                  </label>
+                </form>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div>
+              <h3 class="font-semibold text-2xl/[29.26px]">
+                Доставка и получение
+              </h3>
+              <p class="font-semibold text-base/[19.5px] mt-30">
+                Способ получения
+              </p>
+              <div class="">
+                <form class="grid sm:grid-cols-2 gap-30 mt-15">
+                  <label
+                    class="w-full radio-group__label flex items-center space-x-3 border cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name="delivery"
+                      class="radio-group__input"
+                    />
+                    <span class="text-lg">Доставка ТК</span>
+                  </label>
+                  <label
+                    class="w-full radio-group__label flex items-center space-x-3 border cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name="delivery"
+                      class="radio-group__input"
+                    />
+                    <span class="text-lg">Самовывоз</span>
+                  </label>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="inputName-12"
+                      class="peer h-sixty w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 pt-3 px-5"
+                      required
+                    />
+                    <label
+                      for="inputName-12"
+                      class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-7 peer-focus:scale-75 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-75"
+                      >Адрес
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="lg:pt-2">
+              <h3 class="font-semibold text-2xl/[29.26px]">
+                Доставка и получение
+              </h3>
+              <p class="font-semibold text-base/[19.5px] mt-30">
+                Способ получения
+              </p>
+              <div class="">
+                <form class="grid sm:grid-cols-2 gap-30 mt-15">
+                  <label
+                    class="w-full radio-group__label flex items-center space-x-3 border cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name="delivery"
+                      class="radio-group__input"
+                    />
+                    <span class="text-lg">Доставка ТК</span>
+                  </label>
+                  <label
+                    class="w-full radio-group__label flex items-center space-x-3 border cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name="delivery"
+                      class="radio-group__input"
+                    />
+                    <span class="text-lg">Самовывоз</span>
+                  </label>
+                </form>
+                <div class="bg-brand-gray-100 rounded-lg p-5 lg:p-30 mt-15">
+                  <h3 class="font-semibold text-2xl/[31.2px]">
+                    Склад отгрузки
+                  </h3>
+                  <div class="space-y-5 mt-30">
+                    <!-- Adress -->
+                    <div>
+                      <span class="text-sm/[16px]">Адрес</span>
+                      <p
+                        class="font-medium text-base/[19.5px] flex items-center gap-15 mt-2"
+                      >
+                        <svg
+                          class="shrink-0"
+                          width="16"
+                          height="18"
+                          viewBox="0 0 16 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.7292 7.95446C14.7292 11.5594 11.577 14.814 9.56028 16.5273C8.59932 17.3438 7.22952 17.3438 6.26856 16.5273C4.25185 14.814 1.09961 11.5594 1.09961 7.95446C1.09961 6.14706 1.8176 4.41369 3.09562 3.13566C4.37365 1.85764 6.10702 1.13965 7.91442 1.13965C9.72182 1.13965 11.4552 1.85764 12.7332 3.13566C14.0112 4.41369 14.7292 6.14706 14.7292 7.95446Z"
+                            stroke="black"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M7.91442 10.2261C9.16899 10.2261 10.186 9.20903 10.186 7.95446C10.186 6.69989 9.16899 5.68286 7.91442 5.68286C6.65985 5.68286 5.64282 6.69989 5.64282 7.95446C5.64282 9.20903 6.65985 10.2261 7.91442 10.2261Z"
+                            stroke="black"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        г. Москва, ул. 6-ая Радиальная, д. 15, стр. 6
+                      </p>
+                      <p
+                        class="text-brand-red underline underline-offset-8 decoration-dotted mt-1"
+                      >
+                        Посмотреть на карте
+                      </p>
+                    </div>
+                    <!-- Rejim -->
+                    <div>
+                      <span class="text-sm/[16px]">Режим работы</span>
+                      <p
+                        class="font-medium text-base/[19.5px] flex items-center gap-15 mt-2"
+                      >
+                        <svg
+                          class="shrink-0"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 5.13965V9.13965L11.5 10.1396M17 9.13965C17 13.5579 13.4183 17.1396 9 17.1396C4.58172 17.1396 1 13.5579 1 9.13965C1 4.72137 4.58172 1.13965 9 1.13965C13.4183 1.13965 17 4.72137 17 9.13965Z"
+                            stroke="black"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Пн - Пт 9.00 - 17.00 <br />
+                        Сб - Вс выходной.
+                      </p>
+                    </div>
+                    <!-- Phone -->
+                    <div>
+                      <span class="text-sm/[16px]">Телефон</span>
+                      <p
+                        class="font-medium text-base/[19.5px] flex items-center gap-15 mt-2"
+                      >
+                        <svg
+                          class="shrink-0"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.70951 12.8526C2.25636 9.69239 1.349 6.41941 1.16141 4.3714C1.04703 3.12265 2.02938 2.16509 3.26834 1.9716L4.69573 1.74868C6.10101 1.52921 7.42662 2.46532 7.68987 3.86306L7.91778 5.07312C8.02135 5.62305 7.71682 6.16836 7.19429 6.36864C6.59715 6.59751 6.3046 7.266 6.60957 7.82809C6.97455 8.50078 7.53551 9.3726 8.27498 10.0493C9.01446 10.7261 9.93246 11.2078 10.6348 11.5118C11.2216 11.7659 11.8616 11.4154 12.0368 10.8004C12.1901 10.2622 12.7064 9.91065 13.2633 9.9652L14.4888 10.0852C15.9043 10.2239 16.954 11.4615 16.8596 12.8807L16.7637 14.3222C16.6806 15.5734 15.8136 16.6366 14.5596 16.6331C12.503 16.6273 9.16265 16.0128 5.70951 12.8526Z"
+                            stroke="black"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                        +7 (915) 354 62 76
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Comment 5 -->
+            <div class="lg:pt-2 lg:pr-1 dropdown">
+              <button
+                class="dropdown-button w-full flex items-center justify-between font-semibold text-2xl/[29.26px]"
+              >
+                Комментарий
+                <svg
+                  class="dropdown-icon transition-transform duration-300"
+                  width="20"
+                  height="12"
+                  viewBox="0 0 20 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 10.1396L8.93934 1.61157C9.52513 0.982343 10.4749 0.982342 11.0607 1.61157L19 10.1396"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+              <textarea
+                class="dropdown-list w-full h-28 border rounded-lg p-5 placeholder:text-brand-gray-400 outline-none mt-30"
+                name="comment"
+                id="comment"
+                placeholder="Ваш комментарий"
+              ></textarea>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      id="footer"
+      class="bg-brand-gray-100 pt-8 md:pt-12 lg:pt-sixty !mt-5"
+    >
+      <!-- Top -->
+      <div
+        class="max-w-base mx-auto flex flex-col lg:flex-row justify-between gap-30 pb-10 px-30 lg:px-4"
+      >
+        <!-- Links on Desktop -->
+        <div
+          class="lg:max-w-[53.125rem] hidden lg:flex justify-between lg:justify-start lg:gap-10 xl:gap-30 text-sm"
+        >
+          <!-- Links 1 -->
+          <div class="xl:w-190 space-y-6">
+            <!-- Title -->
+            <p class="text-lg font-semibold">Продукция</p>
+            <!-- Links -->
+            <ul class="space-y-2.5">
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Готовые решения</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Промышленные полы</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Полимерные полы</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Полимербетонные полы</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Для бетона</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Для фасадов</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Для крыш</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Для дерева</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Links 2 -->
+          <div class="xl:w-190 space-y-6">
+            <!-- Title -->
+            <p class="text-lg font-semibold">Политакс</p>
+            <!-- Links -->
+            <ul class="space-y-2.5">
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >О компании</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >База знаний</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Новости</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Услуги</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Links 3 -->
+          <div class="xl:w-190 space-y-6">
+            <!-- Title -->
+            <p class="text-lg font-semibold">Информация</p>
+            <!-- Links -->
+            <ul class="space-y-2.5">
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Доставка</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Оплата</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Условия возврата</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Приёмка товара</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Links 4 -->
+          <div class="xl:w-190 space-y-6">
+            <!-- Title -->
+            <p class="text-lg font-semibold">Документация</p>
+            <!-- Links -->
+            <ul class="space-y-2.5">
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Сертификаты</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Инструкции</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Условия возврата</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:underline underline-offset-2 transition-all duration-200"
+                  >Приёмка товара</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Links Accordion on Mobile -->
+        <div class="accordion lg:hidden">
+          <!-- Link Accordion 1 -->
+          <div class="accordion-item border-b border-brand-gray-200">
+            <h2 class="accordion-header flex items-center justify-between">
+              <button
+                class="accordion-button w-full text-lg text-left py-4"
+                data-accordion-target="content-1"
+              >
+                Продукция
+              </button>
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="accordion-icon transition-transform duration-500"
+              >
+                <path
+                  d="M3 7.57812L10.9393 16.1062C11.5251 16.7354 12.4749 16.7354 13.0607 16.1062L21 7.57813"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </h2>
+            <!-- Accordion Content Links -->
+            <div
+              id="content-1"
+              class="accordion-content hidden overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0"
+            >
+              <!-- Links -->
+              <ul class="space-y-2.5 pb-5">
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Готовые решения</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Промышленные полы</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Полимерные полы</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Полимербетонные полы</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Для бетона</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Для фасадов</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Для крыш</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Для дерева</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Link Accordion 2 -->
+          <div class="accordion-item border-b border-brand-gray-200">
+            <h2 class="accordion-header flex items-center justify-between">
+              <button
+                class="accordion-button w-full text-lg text-left py-4"
+                data-accordion-target="content-2"
+              >
+                Политакс
+              </button>
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="accordion-icon transition-transform duration-500"
+              >
+                <path
+                  d="M3 7.57812L10.9393 16.1062C11.5251 16.7354 12.4749 16.7354 13.0607 16.1062L21 7.57813"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </h2>
+            <!-- Accordion Content Links -->
+            <div
+              id="content-2"
+              class="accordion-content hidden overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0"
+            >
+              <!-- Links -->
+              <ul class="space-y-2.5 pb-5">
+                <li class="block">
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >О компании</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >База знаний</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Новости</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Услуги</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Контакты</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Link Accordion 3 -->
+          <div class="accordion-item border-b border-brand-gray-200">
+            <h2 class="accordion-header flex items-center justify-between">
+              <button
+                class="accordion-button w-full text-lg text-left py-4"
+                data-accordion-target="content-3"
+              >
+                Информация
+              </button>
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="accordion-icon transition-transform duration-500"
+              >
+                <path
+                  d="M3 7.57812L10.9393 16.1062C11.5251 16.7354 12.4749 16.7354 13.0607 16.1062L21 7.57813"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </h2>
+            <!-- Accordion Content Links -->
+            <div
+              id="content-3"
+              class="accordion-content hidden overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0"
+            >
+              <!-- Links -->
+              <ul class="space-y-2.5 pb-5">
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Доставка</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Оплата</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Условия возврата</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Приёмка товара</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Link Accordion 4 -->
+          <div class="accordion-item border-b border-brand-gray-200">
+            <h2 class="accordion-header flex items-center justify-between">
+              <button
+                class="accordion-button w-full text-lg text-left py-4"
+                data-accordion-target="content-4"
+              >
+                Документация
+              </button>
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="accordion-icon transition-transform duration-500"
+              >
+                <path
+                  d="M3 7.57812L10.9393 16.1062C11.5251 16.7354 12.4749 16.7354 13.0607 16.1062L21 7.57813"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </h2>
+            <!-- Accordion Content Links -->
+            <div
+              id="content-4"
+              class="accordion-content hidden overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0"
+            >
+              <!-- Links -->
+              <ul class="space-y-2.5 pb-5">
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Сертификаты</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Инструкции</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Условия возврата</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline underline-offset-2 transition-all duration-200"
+                    >Приёмка товара</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contacts -->
+        <div class="lg:w-300 text-sm">
+          <div class="space-y-4 lg:space-y-6">
+            <!-- Title -->
+            <p class="text-lg font-semibold">Контакты</p>
+            <!-- Links -->
+            <ul class="space-y-2.5">
+              <li>ООО «Политакс»</li>
+              <li>Москва, ул. 6-ая Радиальная, д. 15, стр. 6, оф. 14</li>
+              <li class="flex items-center gap-3.5">
+                <p class="text-brand-gray-400">Бесплатно по России:</p>
+                <a href="tel:8 800 505-69-03" class="font-medium"
+                  >8 800 505-69-03</a
+                >
+              </li>
+              <li class="flex items-center gap-3.5">
+                <p class="text-brand-gray-400">По Москве:</p>
+                <a href="tel:+7 499 517-91-72" class="font-medium"
+                  >+7 499 517-91-72</a
+                >
+              </li>
+              <li class="flex items-center gap-3.5">
+                <p class="text-brand-gray-400">Для заказов:</p>
+                <a href="mailto:zakaz@politaks.ru" class="font-medium"
+                  >zakaz@politaks.ru</a
+                >
+              </li>
+              <li class="flex items-center gap-3.5">
+                <p class="text-brand-gray-400">Для любых вопросов:</p>
+                <a href="mailto:zakaz@politaks.ru" class="font-medium"
+                  >info@politaks.ru</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom -->
+      <div
+        class="max-w-base mx-auto flex flex-col-reverse lg:flex-row lg:items-center justify-between gap-4 text-sm border-t border-brand-gray-200 pt-10 pb-20 lg:pb-sixty px-30 lg:px-4"
+      >
+        <p class="text-brand-gray-400">
+          © 1992–2023 Политакс. Все права защищены.
+        </p>
+        <p>Политика конфиденциальности</p>
+        <p>Согласие на получение рассылки</p>
+        <p>Пользовательское соглашение</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("click", function (event) {
+        const dropdowns = document.querySelectorAll(".dropdown");
+
+        // Loop through all dropdowns
+        dropdowns.forEach((dropdown) => {
+          const dropdownButton = dropdown.querySelector(".dropdown-button");
+          const dropdownList = dropdown.querySelector(".dropdown-list");
+          const dropdownIcon = dropdown.querySelector(".dropdown-icon");
+
+          // Toggle the current dropdown if its button is clicked
+          if (dropdownButton.contains(event.target)) {
+            dropdownList.classList.toggle("hidden");
+            dropdownIcon.classList.toggle("rotate-180");
+          } else {
+            // Close the dropdown if clicking outside
+            dropdownList.classList.add("hidden");
+            dropdownIcon.classList.remove("rotate-180");
+          }
+        });
+      });
+    </script>
+    <script src="./js/script.js" type="module"></script>
+  </body>
+</html>

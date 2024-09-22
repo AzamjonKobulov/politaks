@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-montserrat;
+  }
+
+  h2 {
+    @apply font-semibold text-lg xxs:text-xl xs:text-2xl md:text-3xl lg:text-4xl lg:leading-[2.875rem];
+  }
+
+  h3 {
+    @apply font-semibold text-lg xxs:text-xl lg:text-2xl leading-[120%];
+  }
+
+  h4 {
+    @apply text-lg font-semibold leading-7;
+  }
+
+  section {
+    @apply pb-sixty md:pb-20 xl:pb-100;
+  }
+
+  .subtitle {
+    @apply font-semibold text-brand-red xs:text-lg md:text-xl lg:text-2xl leading-[120%];
+  }
+
+  td {
+    @apply p-0;
+  }
+}
+
+.catalog-button {
+  @apply h-14 xl:h-sixty items-center gap-2.5 border border-brand-red font-semibold rounded-lg px-3 xl:px-3.5;
+}
+
+.login-button {
+  @apply h-14 xl:h-sixty font-semibold items-center gap-2 font-semibold border border-brand-gray-200 rounded-lg hover:border-brand-red transition-all duration-200 px-3 xl:px-4;
+}
+
+.button-gray-outline {
+  @apply border border-brand-gray-400 rounded-lg hover:border-brand-red hover:text-brand-red transition-all duration-200;
+}
+
+.button-red {
+  @apply bg-brand-red text-white border border-transparent rounded-lg hover:bg-brand-dark-red transition-all duration-200;
+}
+
+.button-red-outline {
+  @apply bg-white text-brand-red border border-brand-red rounded-lg hover:bg-brand-red hover:text-white transition-all duration-200;
+}
+
+.tab-button.active span {
+  @apply bg-brand-red;
+}
+
+/* Scroll Styles */
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+  @apply w-1 h-1;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-brand-gray-200;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-gray-400/70 rounded-full;
+}
+
+.no-scroll::-webkit-scrollbar {
+  @apply w-1 h-1;
+}
+
+/* Switch Toggle Styles */
+
+.switch:checked + label {
+  @apply bg-brand-red;
+}
+
+.switch:checked + label div {
+  @apply translate-x-3;
+}
+
+.switch:checked + label div span {
+  @apply bg-brand-red;
+}
+
+/* Swiper styles */
+
+/* Home Swiper */
+.swiper-clients .swiper-pagination {
+  @apply lg:!space-x-5 !-mb-2;
+}
+
+.swiper-clients .swiper-pagination-bullet {
+  @apply lg:w-3 lg:h-3 shrink-0;
+}
+
+.swiper-clients .swiper-pagination-bullet-active {
+  @apply !bg-brand-red;
+}
+
+/* About Swiper */
+
+.about-swiper .swiper-pagination {
+  @apply !-mb-1;
+}
+
+.about-swiper .swiper-pagination {
+  @apply !space-x-5;
+}
+
+.about-swiper .swiper-pagination-bullet {
+  @apply !w-3 !h-3;
+}
+
+.about-swiper .swiper-pagination-bullet-active {
+  @apply w-3 h-3 !bg-brand-red;
+}
+
+/* CSS for the accordion transitions */
+.order-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.order-accordion-item.open .order-accordion-content {
+  max-height: 1000px; /* Adjust if needed */
+  transition: max-height 0.5s ease-in;
+}
+
+.order-accordion-item.open .order-accordion-header svg {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.order-accordion-header svg {
+  transition: transform 0.3s ease;
+}
+
+input[type="checkbox"]:checked + label div {
+  @apply bg-brand-red border-brand-red;
+}
+
+input[type="checkbox"]:checked + label div svg {
+  @apply block;
+}
+
+input[type="radio"]:checked + label div {
+  @apply border-brand-red;
+}
+
+input[type="radio"]:checked + label div span {
+  @apply block;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-item.open .accordion-body {
+  @apply max-h-fit py-4;
+}
+
+.plus-on {
+  transition: transform 0.3s ease;
+}
+
+.accordion-header.active .plus-on {
+  transform: rotate(45deg);
+}
+
+.no-scroll::-webkit-scrollbar {
+  @apply h-0 w-0;
+}
+
+.artice-content-active {
+  @apply !font-semibold;
+}
+
+.artice-content-active span {
+  @apply bg-brand-red;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+.faq-body {
+  transition: max-height 0.4s ease;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.slider-thumb-button.active {
+  @apply border border-white;
+}
+
+.faq-body {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-body.hidden {
+  max-height: 0;
+}
+
+.wrong-email {
+  @apply text-brand-red;
+}
+
+.catalog-item {
+  transition: background-color 0.3s ease;
+}
+
+.catalog-item.active {
+  @apply bg-brand-gray-100 text-brand-red;
+}
+
+.catalog {
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+.catalog.fade-in {
+  opacity: 1;
+}
+
+/* Radio */
+.radio-group__input {
+  -webkit-appearance: none;
+  @apply w-5 h-5 border-4 border-brand-red flex justify-center items-center cursor-pointer !appearance-none !outline-none rounded-full;
+}
+
+.radio-group__input:checked::before {
+  content: "";
+  @apply w-4/5 h-4/5 bg-brand-red rounded-full;
+}
+
+.radio-group__label {
+  border: 2px solid gray;
+  transition: border-color 0.3s ease;
+  @apply rounded-lg py-2.5 px-5;
+}
+
+.radio-group__input:checked + span {
+  @apply text-brand-red;
+}
+
+.radio-group__input:checked + span::before {
+  @apply !border-brand-red;
+}
+
+.radio-group__input:checked ~ .radio-group__label {
+  @apply !border-brand-red;
+}
+
+/* Style for the range input sliders */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: #fff; /* Tailwind 'blue-700' */
+  border-radius: 50%;
+  border: 4px solid #9e211b;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background-color: #fff; /* Tailwind 'blue-700' */
+  border-radius: 50%;
+  border: 4px solid #9e211b;
+  cursor: pointer;
+}
+
+/* Hide the default appearance of the range track */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 0;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 0;
+}

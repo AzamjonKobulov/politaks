@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Politaks</title>
+  </head>
+  <body>
+    <!--  Inner of Subcategory of Catalog Mobile -->
+    <div
+      id="catalog-mobile"
+      class="w-300 fixed left-0 top-0 z-50 min-h-screen bg-white transition-all duration-300"
+    >
+      <div class="relative h-full pt-10">
+        <!-- Close Button -->
+        <button
+          id="catalog-close-mobile"
+          class="w-10 h-10 absolute top-2.5 right-2.5 shrink-0 grid place-content-center bg-brand-gray-100 rounded-full"
+        >
+          <img src="./assets/images/icon-x.svg" alt="X icon" />
+        </button>
+        <!-- Top -->
+        <div class="space-y-5 px-5">
+          <h3>Антикорозийные материалы</h3>
+          <!-- Catalogs Button -->
+          <button
+            id="catalog-open-mob-menu"
+            class="catalog-button h-11 w-full group flex justify-center text-brand-red hover:bg-brand-red hover:text-white"
+          >
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="rotate-180"
+            >
+              <path
+                d="M9 18.5L14.6854 13.2071C15.1049 12.8166 15.1049 12.1834 14.6854 11.7929L9 6.5"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                class="stroke-brand-red group-hover:stroke-white"
+              />
+            </svg>
+            Для металла
+          </button>
+        </div>
+
+        <!-- Catalog Items -->
+        <div class="max-h-[calc(100vh-160px)] overflow-auto mt-5 pb-10 px-5">
+          <ul class="space-y-2.5">
+            <!-- Item 1 -->
+            <li
+              class="catalog-subcategory-item group flex items-center justify-between border-b border-brand-gray-500 cursor-pointer transition-all duration-200 pb-5"
+            >
+              <span class="font-medium">Грунтовки </span>
+            </li>
+            <!-- Item 2 -->
+            <li
+              class="catalog-subcategory-item group flex items-center justify-between border-b border-brand-gray-500 cursor-pointer transition-all duration-200 pb-5"
+            >
+              <span class="font-medium">Грунт-эмали</span>
+            </li>
+            <!-- Item 3 -->
+            <li
+              class="catalog-subcategory-item group flex items-center justify-between border-b border-brand-gray-500 cursor-pointer transition-all duration-200 pb-5"
+            >
+              <span class="font-medium">Эмали </span>
+            </li>
+
+            <!-- Item 5 -->
+            <li
+              class="catalog-subcategory-item group flex items-center justify-between border-b border-brand-gray-500 cursor-pointer transition-all duration-200 pb-5"
+            >
+              <span class="font-medium">Лаки </span>
+            </li>
+            <!-- Item 6 -->
+            <li
+              class="catalog-subcategory-item group flex items-center justify-between border-b border-brand-gray-500 cursor-pointer transition-all duration-200 pb-5"
+            >
+              <span class="font-medium">Смывка</span>
+            </li>
+            <!-- Item 7 -->
+            <li
+              class="catalog-subcategory-item group flex items-center justify-between border-b border-brand-gray-500 cursor-pointer transition-all duration-200 pb-5"
+            >
+              <span class="font-medium">Разбавитель</span>
+            </li>
+            <!-- Item 8 -->
+            <li
+              class="catalog-subcategory-item group flex items-center justify-between border-b border-brand-gray-500 cursor-pointer transition-all duration-200 pb-5"
+            >
+              <span class="font-medium">Обезжириватель</span>
+            </li>
+            <!-- Item 9 -->
+            <li
+              class="catalog-subcategory-item group flex items-center justify-between border-b border-brand-gray-500 cursor-pointer transition-all duration-200 pb-5"
+            >
+              <span class="font-medium">Преобразователь ржавчины</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
