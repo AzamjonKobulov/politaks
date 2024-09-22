@@ -440,58 +440,73 @@ var swiper = new Swiper(".about-swiper", {
 });
 
 // Common Product Slider
-document.addEventListener("DOMContentLoaded", function () {
-  const slides = [
-    { type: "image", src: "./assets/images/img-artice-slider-1.png" },
-    { type: "image", src: "./assets/images/img-artice-slider-2.png" },
-    { type: "video", src: "./assets/videos/video-1.mp4" },
-    { type: "image", src: "./assets/images/img-artice-slider-3.png" },
-    { type: "image", src: "./assets/images/img-artice-slider-3.png" },
-  ];
+function initializeSlider(sliderContainer) {
+  let currentSlide = 0; // Default to the first slide
+  const sliderActive = sliderContainer.querySelector("#slider-active");
+  const sliderThumbButtons = sliderContainer.querySelectorAll(
+    ".slider-thumb-button"
+  );
+  const nextSlideButton = sliderContainer.querySelector("#next-slide");
+  const prevSlideButton = sliderContainer.querySelector("#prev-slide");
 
-  let currentSlide = 0;
-  const sliderActive = document.getElementById("slider-active");
-  const sliderThumbButtons = document.querySelectorAll(".slider-thumb-button");
-  const nextSlideButton = document.getElementById("next-slide");
-  const prevSlideButton = document.getElementById("prev-slide");
+  const slides = Array.from(sliderThumbButtons).map((button) => {
+    const img = button.querySelector("img");
+    const videoSrc = button.dataset.videoSrc;
+    return videoSrc
+      ? { type: "video", src: videoSrc }
+      : { type: "image", src: img.src };
+  });
 
   function updateSlide() {
-    // Remove active class from all thumb buttons
-    sliderThumbButtons.forEach((btn) => btn.classList.remove("active"));
+    const activeImg = sliderActive.querySelector(".slider-image");
+    const activeVideo = sliderActive.querySelector(".slider-video");
 
-    // Hide all elements inside sliderActive
-    sliderActive.querySelectorAll("img, video").forEach((el) => {
-      el.classList.add("fade-out");
-      setTimeout(() => el.classList.add("hidden"), 200); // Wait for fade-out before hiding
-    });
-
-    // Show the current slide
-    setTimeout(() => {
-      const slide = slides[currentSlide];
-
-      if (slide.type === "image") {
-        const img = sliderActive.querySelector(".slider-image");
-        if (img) {
-          img.src = slide.src;
-          img.classList.remove("hidden", "fade-out");
-          img.classList.add("fade-in");
-        } else {
-          console.error("Image element not found.");
-        }
-      } else if (slide.type === "video") {
-        const video = sliderActive.querySelector(".slider-video");
-        if (video) {
-          video.src = slide.src;
-          video.classList.remove("hidden", "fade-out");
-          video.classList.add("fade-in");
-        } else {
-          console.error("Video element not found.");
-        }
+    const fadeOut = () => {
+      if (activeImg && !activeImg.classList.contains("hidden")) {
+        activeImg.classList.add("fade-out");
+        setTimeout(() => {
+          activeImg.classList.add("hidden");
+          activeImg.classList.remove("fade-out");
+        }, 200); // Match duration with CSS animation
       }
 
-      // Set active class to the corresponding thumb button
-      sliderThumbButtons[currentSlide].classList.add("active");
-    }, 200); // Wait for fade-out before updating
+      if (activeVideo && !activeVideo.classList.contains("hidden")) {
+        activeVideo.classList.add("fade-out");
+        activeVideo.pause();
+        setTimeout(() => {
+          activeVideo.classList.add("hidden");
+          activeVideo.classList.remove("fade-out");
+        }, 200);
+      }
+    };
+
+    const fadeIn = (slide) => {
+      if (slide.type === "image") {
+        activeImg.src = slide.src;
+        activeImg.classList.remove("hidden");
+        activeImg.classList.add("fade-in");
+        setTimeout(() => {
+          activeImg.classList.remove("fade-in");
+        }, 200); // Match duration with CSS animation
+      } else if (slide.type === "video") {
+        const source = activeVideo.querySelector("source");
+        source.src = slide.src;
+        activeVideo.load();
+        activeVideo.classList.remove("hidden");
+        activeVideo.classList.add("fade-in");
+        activeVideo.play();
+        setTimeout(() => {
+          activeVideo.classList.remove("fade-in");
+        }, 200);
+      }
+    };
+
+    fadeOut();
+    const slide = slides[currentSlide];
+    setTimeout(() => fadeIn(slide), 200); // Delay fade-in until fade-out is complete
+
+    sliderThumbButtons.forEach((btn) => btn.classList.remove("active"));
+    sliderThumbButtons[currentSlide].classList.add("active");
   }
 
   function goToNextSlide() {
@@ -500,11 +515,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function goToPrevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length; // Add slides.length to avoid negative index
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     updateSlide();
   }
 
-  // Add event listeners for next and previous buttons
   if (nextSlideButton) {
     nextSlideButton.addEventListener("click", goToNextSlide);
   }
@@ -512,16 +526,18 @@ document.addEventListener("DOMContentLoaded", function () {
     prevSlideButton.addEventListener("click", goToPrevSlide);
   }
 
-  // Add event listeners for the thumb buttons
   sliderThumbButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
-      currentSlide = index; // Set the current slide to the clicked thumb button index
-      updateSlide(); // Update the main slider
+      currentSlide = index;
+      updateSlide();
     });
   });
 
-  // Initialize the first slide
-  updateSlide();
+  updateSlide(); // Call to show the first slide
+}
+
+document.querySelectorAll(".slider-container").forEach((container) => {
+  initializeSlider(container);
 });
 
 // Comparing Products

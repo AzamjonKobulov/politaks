@@ -868,12 +868,6 @@ td{
 .order-first{
   order: -9999;
 }
-.order-1{
-  order: 1;
-}
-.order-2{
-  order: 2;
-}
 .col-span-2{
   grid-column: span 2 / span 2;
 }
@@ -2856,28 +2850,33 @@ input[type="radio"]:checked + label div span{
 }
 
 .fade-in {
-  animation: fadeIn 0.3s ease-in-out forwards;
+  animation: fadeIn 0.2s ease-in-out forwards, scaleIn 0.2s ease-in-out forwards;
 }
 
 .fade-out {
-  animation: fadeOut 0.3s ease-in-out forwards;
+  animation: fadeOut 0.2s ease-in-out forwards,
+    scaleOut 0.2s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0.3;
+    opacity: 0;
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
+    transform: scale(1);
   }
 }
 
 @keyframes fadeOut {
   from {
     opacity: 1;
+    transform: scale(1);
   }
   to {
-    opacity: 0.3;
+    opacity: 0;
+    transform: scale(0.95);
   }
 }
 
@@ -3299,12 +3298,12 @@ input[type="range"]::-moz-range-track {
     top: 35%;
   }
 
-  .xs\:order-3{
-    order: 3;
-  }
-
   .xs\:order-2{
     order: 2;
+  }
+
+  .xs\:order-3{
+    order: 3;
   }
 
   .xs\:col-span-2{
