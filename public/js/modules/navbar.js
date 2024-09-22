@@ -6,6 +6,15 @@ export default function initCatalogHover() {
 
   let activeItem = null; // To keep track of the currently hovered item
 
+  // Hide all content sections initially
+  catalogContentItems.forEach((content, index) => {
+    if (index === 0) {
+      content.classList.remove("hidden"); // Show the first content section
+    } else {
+      content.classList.add("hidden"); // Hide the others
+    }
+  });
+
   // Function to handle hover over catalog items
   function handleItemHover() {
     // If there is an active item, remove the active class from it
