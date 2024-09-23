@@ -1350,22 +1350,20 @@
             </div>
           </div>
           <!-- Carts -->
-          <div class="flex flex-wrap gap-30 mt-30 lg:mt-5">
+          <div class="flex flex-col lg:flex-row gap-30 mt-30 lg:mt-5">
             <!-- Left -->
-            <div class="w-full max-w-[53.12500rem] space-y-30">
+            <div class="w-full xl:max-w-[53.125rem] space-y-30">
               <!-- Item 1 -->
               <div class="w-full border-b pb-30">
                 <!-- Top  -->
-                <div
-                  class="flex justify-between md:justify-start gap-2.5 md:gap-5 lg:gap-30"
-                >
+                <div class="flex md:justify-start gap-2.5 md:gap-5 lg:gap-30">
                   <img
                     class="shrink-0 w-20 h-20"
                     src="./assets/images/img-main-product.png"
                     alt="product-1"
                   />
                   <div
-                    class="flex flex-col sm:flex-row md:items-center gap-x-5 lg:gap-x-30 gap-y-15"
+                    class="flex-1 flex flex-col sm:flex-row lg:flex-col xl:flex-row md:items-center lg:items-start xl:items-center gap-x-5 lg:gap-x-30 gap-y-15"
                   >
                     <div class="w-full max-w-300">
                       <p class="text-xs/[14.63px] lg:text-sm/[17.07px]">
@@ -1449,9 +1447,7 @@
                 </div>
                 <!-- Bottom -->
                 <div class="flex items-center justify-between gap-5 mt-15">
-                  <div
-                    class="flex items-center gap-2.5 whitespace-nowrap lg:ml-28"
-                  >
+                  <div class="flex items-center gap-2.5 whitespace-nowrap">
                     <div
                       class="shrink-0 w-10 h-10 bg-brand-red rounded-full flex items-center justify-center"
                     >
@@ -1594,16 +1590,14 @@
               <!-- Item 2 -->
               <div class="w-full border-b pb-30">
                 <!-- Top  -->
-                <div
-                  class="flex justify-between md:justify-start gap-2.5 md:gap-5 lg:gap-30"
-                >
+                <div class="flex md:justify-start gap-2.5 md:gap-5 lg:gap-30">
                   <img
                     class="shrink-0 w-20 h-20"
                     src="./assets/images/img-main-product2.png"
                     alt="product-2"
                   />
                   <div
-                    class="flex flex-col sm:flex-row md:items-center gap-x-5 lg:gap-x-30 gap-y-15"
+                    class="flex-1 flex flex-col sm:flex-row lg:flex-col xl:flex-row md:items-center lg:items-start xl:items-center gap-x-5 lg:gap-x-30 gap-y-15"
                   >
                     <div class="w-full max-w-300">
                       <p class="text-xs/[14.63px] lg:text-sm/[17.07px]">
@@ -1687,7 +1681,7 @@
                 </div>
                 <!-- Bottom -->
                 <div class="flex items-center justify-between gap-5 mt-15">
-                  <div class="flex items-center gap-2.5 lg:ml-28">
+                  <div class="flex items-center gap-2.5">
                     <div
                       class="shrink-0 w-10 h-10 bg-brand-gray-400 rounded-full flex items-center justify-center"
                     >
@@ -1830,16 +1824,14 @@
               <!-- Item 3 -->
               <div class="w-full">
                 <!-- Top  -->
-                <div
-                  class="flex justify-between md:justify-start gap-2.5 md:gap-5 lg:gap-30"
-                >
+                <div class="flex md:justify-start gap-2.5 md:gap-5 lg:gap-30">
                   <img
                     class="shrink-0 w-20 h-20"
                     src="./assets/images/img-main-product2.png"
                     alt="product-2"
                   />
                   <div
-                    class="flex flex-col sm:flex-row md:items-center gap-x-5 lg:gap-x-30 gap-y-15"
+                    class="flex-1 flex flex-col sm:flex-row lg:flex-col xl:flex-row md:items-center lg:items-start xl:items-center gap-x-5 lg:gap-x-30 gap-y-15"
                   >
                     <div class="w-full max-w-300">
                       <p class="text-xs/[14.63px] lg:text-sm/[17.07px]">
@@ -1923,7 +1915,7 @@
                 </div>
                 <!-- Bottom -->
                 <div class="flex items-center justify-between gap-5 mt-15">
-                  <div class="flex items-center gap-2.5 lg:ml-28">
+                  <div class="flex items-center gap-2.5">
                     <div
                       class="shrink-0 w-10 h-10 bg-brand-gray-400 rounded-full flex items-center justify-center"
                     >
@@ -2065,7 +2057,9 @@
               </div>
             </div>
             <!-- Right -->
-            <div class="flex-1 h-max bg-brand-gray-100 rounded-lg p-30">
+            <div
+              class="min-w-[25.625rem] shrink-0 flex-1 h-max bg-brand-gray-100 rounded-lg p-30"
+            >
               <ul class="space-y-2.5">
                 <li class="text-base/[28px] flex items-center justify-between">
                   <p>Товары (3):</p>
@@ -2167,7 +2161,7 @@
                 </button>
                 <!-- List -->
                 <div
-                  class="dropdown-list hidden absolute top-20 z-20 w-full flex flex-col gap-1 rounded-lg bg-brand-gray-100 p-4"
+                  class="dropdown-list fade-in hidden absolute top-20 z-20 w-full flex flex-col gap-1 rounded-lg bg-brand-gray-100 p-4"
                 >
                   <a
                     class="rounded-lg transition duration-200 hover:bg-white py-2 px-4"
@@ -2459,69 +2453,100 @@
               </div>
             </div>
             <!-- 2 -->
-            <div class="grid sm:grid-cols-2 gap-30">
-              <div>
-                <h3 class="font-semibold text-2xl/[29.26px]">Оплата</h3>
-                <form class="flex space-x-4 mt-30">
-                  <label
-                    class="w-full radio-group__label flex items-center space-x-3 border cursor-pointer"
+            <div class="sm:w-1/2 sm:pr-5">
+              <h3 class="font-semibold text-2xl/[1.8288rem]">Оплата</h3>
+              <form class="mt-30">
+                <input
+                  type="radio"
+                  id="cart-radio-1"
+                  class="cart-radio hidden"
+                  checked
+                  name="cart-radio"
+                />
+                <label
+                  class="w-full h-sixty flex items-center gap-5 font-medium cursor-pointer border border-brand-gray-400 rounded-lg p-5"
+                  for="cart-radio-1"
+                >
+                  <div
+                    class="size-5 grid place-content-center border-[3px] border-brand-gray-400 rounded-full"
                   >
-                    <input
-                      type="radio"
-                      name="delivery"
-                      class="radio-group__input"
-                    />
-                    <span class="text-lg">Счет</span>
-                  </label>
-                </form>
-              </div>
+                    <span
+                      class="size-[.6875rem] hidden bg-brand-red rounded-full"
+                    ></span>
+                  </div>
+                  <span>Счет</span>
+                </label>
+              </form>
             </div>
             <!-- 3 -->
             <div>
-              <h3 class="font-semibold text-2xl/[29.26px]">
+              <h3 class="font-semibold text-2xl/[1.8288rem]">
                 Доставка и получение
               </h3>
-              <p class="font-semibold text-base/[19.5px] mt-30">
-                Способ получения
-              </p>
-              <div class="">
-                <form class="grid sm:grid-cols-2 gap-30 mt-15">
-                  <label
-                    class="w-full radio-group__label flex items-center space-x-3 border cursor-pointer"
-                  >
+              <form class="space-y-30">
+                <div class="grid sm:grid-cols-2 gap-30 mt-30">
+                  <div>
                     <input
                       type="radio"
-                      name="delivery"
-                      class="radio-group__input"
-                    />
-                    <span class="text-lg">Доставка ТК</span>
-                  </label>
-                  <label
-                    class="w-full radio-group__label flex items-center space-x-3 border cursor-pointer"
-                  >
-                    <input
-                      type="radio"
-                      name="delivery"
-                      class="radio-group__input"
-                    />
-                    <span class="text-lg">Самовывоз</span>
-                  </label>
-                  <div class="relative">
-                    <input
-                      type="text"
-                      id="inputName-12"
-                      class="peer h-sixty w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 pt-3 px-5"
-                      required
+                      id="cart-radio-2"
+                      class="cart-radio hidden"
+                      checked
+                      name="cart-radio"
                     />
                     <label
-                      for="inputName-12"
-                      class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-7 peer-focus:scale-75 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-75"
-                      >Адрес
+                      class="w-full h-sixty flex items-center gap-5 font-medium cursor-pointer border border-brand-gray-400 rounded-lg p-5"
+                      for="cart-radio-2"
+                    >
+                      <div
+                        class="size-5 grid place-content-center border-[3px] border-brand-gray-400 rounded-full"
+                      >
+                        <span
+                          class="size-[.6875rem] hidden bg-brand-red rounded-full"
+                        ></span>
+                      </div>
+                      <span>Доставка ТК</span>
                     </label>
                   </div>
-                </form>
-              </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id="cart-radio-3"
+                      class="cart-radio hidden"
+                      name="cart-radio"
+                    />
+                    <label
+                      class="w-full h-sixty flex items-center gap-5 font-medium cursor-pointer border border-brand-gray-400 rounded-lg p-5"
+                      for="cart-radio-3"
+                    >
+                      <div
+                        class="size-5 grid place-content-center border-[3px] border-brand-gray-400 rounded-full"
+                      >
+                        <span
+                          class="size-[.6875rem] hidden bg-brand-red rounded-full"
+                        ></span>
+                      </div>
+                      <span>Самовывоз</span>
+                    </label>
+                  </div>
+                </div>
+                <!--  Postal address -->
+                <div class="relative sm:col-span-2">
+                  <input
+                    type="text"
+                    id="postalAddress"
+                    class="peer h-sixty w-full border border-gray-200 rounded-lg focus:outline-none focus:border focus:border-brand-gray-400 pt-3 px-5"
+                    required
+                    value="г. Брянск, Проспект Московский д. 114, кв. 12"
+                  />
+                  <label
+                    for="postalAddress"
+                    class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 transform transition-transform duration-200 ease-in-out peer-focus:-translate-y-7 peer-focus:scale-75 peer-valid:-translate-y-7 peer-focus:-translate-x-[12%] peer-valid:-translate-x-[12%] peer-valid:scale-75"
+                    >Почтовый адрес
+                  </label>
+                </div>
+              </form>
             </div>
+
             <!-- 4 -->
             <div class="lg:pt-2">
               <h3 class="font-semibold text-2xl/[29.26px]">
@@ -2530,120 +2555,139 @@
               <p class="font-semibold text-base/[19.5px] mt-30">
                 Способ получения
               </p>
-              <div class="">
-                <form class="grid sm:grid-cols-2 gap-30 mt-15">
+              <form class="grid sm:grid-cols-2 gap-30 mt-15">
+                <div>
+                  <input
+                    type="radio"
+                    id="cart-radio-4"
+                    class="cart-radio hidden"
+                    checked
+                    name="cart-radio-2"
+                  />
                   <label
-                    class="w-full radio-group__label flex items-center space-x-3 border cursor-pointer"
+                    class="w-full h-sixty flex items-center gap-5 font-medium cursor-pointer border border-brand-gray-400 rounded-lg p-5"
+                    for="cart-radio-4"
                   >
-                    <input
-                      type="radio"
-                      name="delivery"
-                      class="radio-group__input"
-                    />
-                    <span class="text-lg">Доставка ТК</span>
+                    <div
+                      class="size-5 grid place-content-center border-[3px] border-brand-gray-400 rounded-full"
+                    >
+                      <span
+                        class="size-[.6875rem] hidden bg-brand-red rounded-full"
+                      ></span>
+                    </div>
+                    <span>Доставка ТК</span>
                   </label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="cart-radio-5"
+                    class="cart-radio hidden"
+                    name="cart-radio-2"
+                  />
                   <label
-                    class="w-full radio-group__label flex items-center space-x-3 border cursor-pointer"
+                    class="w-full h-sixty flex items-center gap-5 font-medium cursor-pointer border border-brand-gray-400 rounded-lg p-5"
+                    for="cart-radio-5"
                   >
-                    <input
-                      type="radio"
-                      name="delivery"
-                      class="radio-group__input"
-                    />
-                    <span class="text-lg">Самовывоз</span>
+                    <div
+                      class="size-5 grid place-content-center border-[3px] border-brand-gray-400 rounded-full"
+                    >
+                      <span
+                        class="size-[.6875rem] hidden bg-brand-red rounded-full"
+                      ></span>
+                    </div>
+                    <span>Самовывоз</span>
                   </label>
-                </form>
-                <div class="bg-brand-gray-100 rounded-lg p-5 lg:p-30 mt-15">
-                  <h3 class="font-semibold text-2xl/[31.2px]">
-                    Склад отгрузки
-                  </h3>
-                  <div class="space-y-5 mt-30">
-                    <!-- Adress -->
-                    <div>
-                      <span class="text-sm/[16px]">Адрес</span>
-                      <p
-                        class="font-medium text-base/[19.5px] flex items-center gap-15 mt-2"
+                </div>
+              </form>
+              <div class="bg-brand-gray-100 rounded-lg p-5 lg:p-30 mt-15">
+                <h3 class="font-semibold text-2xl/[31.2px]">Склад отгрузки</h3>
+                <div class="space-y-5 mt-30">
+                  <!-- Adress -->
+                  <div>
+                    <span class="text-sm/[16px]">Адрес</span>
+                    <p
+                      class="font-medium text-base/[19.5px] flex items-center gap-15 mt-2"
+                    >
+                      <svg
+                        class="shrink-0"
+                        width="16"
+                        height="18"
+                        viewBox="0 0 16 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          class="shrink-0"
-                          width="16"
-                          height="18"
-                          viewBox="0 0 16 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14.7292 7.95446C14.7292 11.5594 11.577 14.814 9.56028 16.5273C8.59932 17.3438 7.22952 17.3438 6.26856 16.5273C4.25185 14.814 1.09961 11.5594 1.09961 7.95446C1.09961 6.14706 1.8176 4.41369 3.09562 3.13566C4.37365 1.85764 6.10702 1.13965 7.91442 1.13965C9.72182 1.13965 11.4552 1.85764 12.7332 3.13566C14.0112 4.41369 14.7292 6.14706 14.7292 7.95446Z"
-                            stroke="black"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M7.91442 10.2261C9.16899 10.2261 10.186 9.20903 10.186 7.95446C10.186 6.69989 9.16899 5.68286 7.91442 5.68286C6.65985 5.68286 5.64282 6.69989 5.64282 7.95446C5.64282 9.20903 6.65985 10.2261 7.91442 10.2261Z"
-                            stroke="black"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                        г. Москва, ул. 6-ая Радиальная, д. 15, стр. 6
-                      </p>
-                      <p
-                        class="text-brand-red underline underline-offset-8 decoration-dotted mt-1"
+                        <path
+                          d="M14.7292 7.95446C14.7292 11.5594 11.577 14.814 9.56028 16.5273C8.59932 17.3438 7.22952 17.3438 6.26856 16.5273C4.25185 14.814 1.09961 11.5594 1.09961 7.95446C1.09961 6.14706 1.8176 4.41369 3.09562 3.13566C4.37365 1.85764 6.10702 1.13965 7.91442 1.13965C9.72182 1.13965 11.4552 1.85764 12.7332 3.13566C14.0112 4.41369 14.7292 6.14706 14.7292 7.95446Z"
+                          stroke="black"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7.91442 10.2261C9.16899 10.2261 10.186 9.20903 10.186 7.95446C10.186 6.69989 9.16899 5.68286 7.91442 5.68286C6.65985 5.68286 5.64282 6.69989 5.64282 7.95446C5.64282 9.20903 6.65985 10.2261 7.91442 10.2261Z"
+                          stroke="black"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      г. Москва, ул. 6-ая Радиальная, д. 15, стр. 6
+                    </p>
+                    <p
+                      class="text-brand-red underline underline-offset-8 decoration-dotted mt-1"
+                    >
+                      Посмотреть на карте
+                    </p>
+                  </div>
+                  <!-- Rejim -->
+                  <div>
+                    <span class="text-sm/[16px]">Режим работы</span>
+                    <p
+                      class="font-medium text-base/[19.5px] flex items-center gap-15 mt-2"
+                    >
+                      <svg
+                        class="shrink-0"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        Посмотреть на карте
-                      </p>
-                    </div>
-                    <!-- Rejim -->
-                    <div>
-                      <span class="text-sm/[16px]">Режим работы</span>
-                      <p
-                        class="font-medium text-base/[19.5px] flex items-center gap-15 mt-2"
+                        <path
+                          d="M9 5.13965V9.13965L11.5 10.1396M17 9.13965C17 13.5579 13.4183 17.1396 9 17.1396C4.58172 17.1396 1 13.5579 1 9.13965C1 4.72137 4.58172 1.13965 9 1.13965C13.4183 1.13965 17 4.72137 17 9.13965Z"
+                          stroke="black"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Пн - Пт 9.00 - 17.00 <br />
+                      Сб - Вс выходной.
+                    </p>
+                  </div>
+                  <!-- Phone -->
+                  <div>
+                    <span class="text-sm/[16px]">Телефон</span>
+                    <p
+                      class="font-medium text-base/[19.5px] flex items-center gap-15 mt-2"
+                    >
+                      <svg
+                        class="shrink-0"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        <svg
-                          class="shrink-0"
-                          width="18"
-                          height="18"
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M9 5.13965V9.13965L11.5 10.1396M17 9.13965C17 13.5579 13.4183 17.1396 9 17.1396C4.58172 17.1396 1 13.5579 1 9.13965C1 4.72137 4.58172 1.13965 9 1.13965C13.4183 1.13965 17 4.72137 17 9.13965Z"
-                            stroke="black"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                        Пн - Пт 9.00 - 17.00 <br />
-                        Сб - Вс выходной.
-                      </p>
-                    </div>
-                    <!-- Phone -->
-                    <div>
-                      <span class="text-sm/[16px]">Телефон</span>
-                      <p
-                        class="font-medium text-base/[19.5px] flex items-center gap-15 mt-2"
-                      >
-                        <svg
-                          class="shrink-0"
-                          width="18"
-                          height="18"
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M5.70951 12.8526C2.25636 9.69239 1.349 6.41941 1.16141 4.3714C1.04703 3.12265 2.02938 2.16509 3.26834 1.9716L4.69573 1.74868C6.10101 1.52921 7.42662 2.46532 7.68987 3.86306L7.91778 5.07312C8.02135 5.62305 7.71682 6.16836 7.19429 6.36864C6.59715 6.59751 6.3046 7.266 6.60957 7.82809C6.97455 8.50078 7.53551 9.3726 8.27498 10.0493C9.01446 10.7261 9.93246 11.2078 10.6348 11.5118C11.2216 11.7659 11.8616 11.4154 12.0368 10.8004C12.1901 10.2622 12.7064 9.91065 13.2633 9.9652L14.4888 10.0852C15.9043 10.2239 16.954 11.4615 16.8596 12.8807L16.7637 14.3222C16.6806 15.5734 15.8136 16.6366 14.5596 16.6331C12.503 16.6273 9.16265 16.0128 5.70951 12.8526Z"
-                            stroke="black"
-                            stroke-width="1.5"
-                          />
-                        </svg>
-                        +7 (915) 354 62 76
-                      </p>
-                    </div>
+                        <path
+                          d="M5.70951 12.8526C2.25636 9.69239 1.349 6.41941 1.16141 4.3714C1.04703 3.12265 2.02938 2.16509 3.26834 1.9716L4.69573 1.74868C6.10101 1.52921 7.42662 2.46532 7.68987 3.86306L7.91778 5.07312C8.02135 5.62305 7.71682 6.16836 7.19429 6.36864C6.59715 6.59751 6.3046 7.266 6.60957 7.82809C6.97455 8.50078 7.53551 9.3726 8.27498 10.0493C9.01446 10.7261 9.93246 11.2078 10.6348 11.5118C11.2216 11.7659 11.8616 11.4154 12.0368 10.8004C12.1901 10.2622 12.7064 9.91065 13.2633 9.9652L14.4888 10.0852C15.9043 10.2239 16.954 11.4615 16.8596 12.8807L16.7637 14.3222C16.6806 15.5734 15.8136 16.6366 14.5596 16.6331C12.503 16.6273 9.16265 16.0128 5.70951 12.8526Z"
+                          stroke="black"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                      +7 (915) 354 62 76
+                    </p>
                   </div>
                 </div>
               </div>
@@ -2671,7 +2715,7 @@
                 </svg>
               </button>
               <textarea
-                class="dropdown-list w-full h-28 border rounded-lg p-5 placeholder:text-brand-gray-400 outline-none mt-30"
+                class="dropdown-list fade-in w-full h-28 border rounded-lg p-5 placeholder:text-brand-gray-400 outline-none mt-30"
                 name="comment"
                 id="comment"
                 placeholder="Ваш комментарий"

@@ -263,33 +263,14 @@ input[type="radio"]:checked + label div span {
   opacity: 1;
 }
 
-/* Radio */
-.radio-group__input {
-  -webkit-appearance: none;
-  @apply w-5 h-5 border-4 border-brand-red flex justify-center items-center cursor-pointer !appearance-none !outline-none rounded-full;
+/* Radio Input Styles */
+.cart-radio:checked + label div span {
+  @apply block;
 }
 
-.radio-group__input:checked::before {
-  content: "";
-  @apply w-4/5 h-4/5 bg-brand-red rounded-full;
-}
-
-.radio-group__label {
-  border: 2px solid gray;
-  transition: border-color 0.3s ease;
-  @apply rounded-lg py-2.5 px-5;
-}
-
-.radio-group__input:checked + span {
-  @apply text-brand-red;
-}
-
-.radio-group__input:checked + span::before {
-  @apply !border-brand-red;
-}
-
-.radio-group__input:checked ~ .radio-group__label {
-  @apply !border-brand-red;
+.cart-radio:checked + label div,
+.cart-radio:checked ~ label {
+  @apply text-brand-red border-brand-red;
 }
 
 /* Style for the range input sliders */

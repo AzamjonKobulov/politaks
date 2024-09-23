@@ -1496,7 +1496,7 @@
 
                 <!-- Thumb Images & Videos -->
                 <div
-                  class="max-w-min overflow-auto xs:absolute bottom-5 left-1/2 xs:-translate-x-1/2"
+                  class="max-w-min overflow-auto xs:absolute bottom-10 left-1/2 xs:-translate-x-1/2"
                 >
                   <div
                     class="min-w-max flex items-center gap-2.5 md:gap-5 lg:gap-2.5 xl:gap-5"
@@ -1524,13 +1524,52 @@
                     <!-- Thumb Video 1 -->
                     <button
                       class="slider-thumb-button h-sixty w-sixty md:w-100 md:h-100 lg:w-sixty lg:h-sixty xl:w-100 xl:h-100 shrink-0 relative rounded-full overflow-hidden"
+                      data-video-src="./assets/videos/video.mp4"
                     >
                       <img
                         src="./assets/images/img-video-article-1.png"
-                        alt="Image 1"
-                        class="w-full h h-full object-cover"
+                        alt="Video Thumbnail"
+                        class="w-full h-full object-cover"
                       />
-
+                      <video class="hidden" preload="auto">
+                        <source
+                          src="./assets/videos/video.mp4"
+                          type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                      </video>
+                      <!-- Play Icon -->
+                      <svg
+                        width="19"
+                        height="25"
+                        viewBox="0 0 19 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-3 h-3.5 md:w-auto md:h-auto lg:w-3 lg:h-3.5 xl:w-auto xl:h-auto absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                      >
+                        <path
+                          d="M2.91091 23.7606C2.28884 24.1672 1.65868 24.1903 1.02044 23.8301C0.383441 23.4711 0.0649414 22.9163 0.0649414 22.1658V2.74675C0.0649414 1.99625 0.383441 1.44089 1.02044 1.08065C1.65868 0.721661 2.28884 0.745426 2.91091 1.15195L18.1205 10.8615C18.6804 11.2367 18.9603 11.7683 18.9603 12.4563C18.9603 13.1442 18.6804 13.6759 18.1205 14.0511L2.91091 23.7606Z"
+                          fill="#9E211B"
+                        />
+                      </svg>
+                    </button>
+                    <!-- Thumb Video 2 -->
+                    <button
+                      class="slider-thumb-button h-sixty w-sixty md:w-100 md:h-100 lg:w-sixty lg:h-sixty xl:w-100 xl:h-100 shrink-0 relative rounded-full overflow-hidden"
+                      data-video-src="./assets/videos/video2.mp4"
+                    >
+                      <img
+                        src="./assets/images/img-video-article-1.png"
+                        alt="Video Thumbnail"
+                        class="w-full h-full object-cover"
+                      />
+                      <video class="hidden" preload="auto">
+                        <source
+                          src="./assets/videos/video2.mp4"
+                          type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                      </video>
                       <!-- Play Icon -->
                       <svg
                         width="19"
