@@ -1361,15 +1361,15 @@ td{
 .min-w-\[220px\]{
   min-width: 220px;
 }
+.min-w-\[25\.625rem\]{
+  min-width: 25.625rem;
+}
 .min-w-full{
   min-width: 100%;
 }
 .min-w-max{
   min-width: -moz-max-content;
   min-width: max-content;
-}
-.min-w-\[25\.625rem\]{
-  min-width: 25.625rem;
 }
 .max-w-2xl{
   max-width: 42rem;
@@ -1428,12 +1428,6 @@ td{
 }
 .max-w-xl{
   max-width: 36rem;
-}
-.max-w-\[850px\]{
-  max-width: 850px;
-}
-.max-w-\[53\.125rem\]{
-  max-width: 53.125rem;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -4008,10 +4002,6 @@ input[type="range"]::-moz-range-track {
 
   .lg\:ml-2\.5{
     margin-left: 0.625rem;
-  }
-
-  .lg\:ml-28{
-    margin-left: 7rem;
   }
 
   .lg\:mr-0{

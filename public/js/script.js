@@ -920,13 +920,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchSuggestList = document.getElementById(
     "calculator-search-suggest"
   );
+  const searchClear = document.getElementById("cabinet-search-clear");
+
+  searchClear.addEventListener("click", function () {
+    searchInput.value = "";
+    searchSuggestList.classList.add("hidden");
+    searchClear.classList.add("hidden");
+  });
 
   searchInput.addEventListener("input", function () {
     if (searchInput.value.trim() !== "") {
       searchSuggestList.classList.remove("hidden");
+      searchClear.classList.remove("hidden");
     } else {
       searchSuggestList.classList.add("hidden");
+      searchClear.classList.add("hidden");
     }
   });
 });
-
