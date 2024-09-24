@@ -938,3 +938,74 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Buttons Slides
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all button containers
+  const buttonContainers = document.querySelectorAll(
+    ".buttons-slide-container"
+  );
+
+  buttonContainers.forEach((container) => {
+    // Find the scrollable container and the next button within the current container
+    const scrollableContainer = container.querySelector(
+      ".buttons-slide-srollable-container"
+    );
+    const nextButton = container.querySelector(".buttons-slide-next-button");
+
+    // Add event listener to the next button
+    nextButton.addEventListener("click", () => {
+      // Scroll the container by a specific amount (e.g., 200px)
+      scrollableContainer.scrollBy({
+        left: 200, // Amount to scroll (can be adjusted)
+        behavior: "smooth", // Smooth scrolling
+      });
+    });
+  });
+});
+
+// Solution Details
+document.addEventListener("DOMContentLoaded", function () {
+  const solutionContainers = document.querySelectorAll(".solution-container");
+
+  solutionContainers.forEach((container) => {
+    const detailsButtons = container.querySelectorAll(
+      ".solution-details-button"
+    );
+    const detailsDesktop = container.querySelector(".solution-details-desktop");
+    const detailsMobile = container.querySelector(".solution-details-mobile");
+
+    // Initially hide both details sections
+    if (detailsDesktop) detailsDesktop.classList.add("hidden");
+    if (detailsMobile) detailsMobile.classList.add("hidden");
+
+    detailsButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        // Determine the correct details section to toggle
+        const isDesktop = window.innerWidth >= 768;
+        const detailsSection = isDesktop ? detailsDesktop : detailsMobile;
+
+        if (detailsSection) {
+          toggleDetails(button, detailsSection);
+        }
+      });
+    });
+
+    function toggleDetails(button, detailsSection) {
+      detailsSection.classList.toggle("hidden");
+
+      // Toggle button text and angle rotation
+      const span = button.querySelector("span");
+      const angleIcon = button.querySelector("svg");
+      if (detailsSection.classList.contains("hidden")) {
+        span.textContent = "Показать детали";
+        angleIcon.classList.remove("rotate-180");
+        angleIcon.classList.add("rotate-0");
+      } else {
+        span.textContent = "Скрыть детали";
+        angleIcon.classList.remove("rotate-0");
+        angleIcon.classList.add("rotate-180");
+      }
+    }
+  });
+});

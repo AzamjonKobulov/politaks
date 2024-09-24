@@ -1351,9 +1351,13 @@
               </svg>
             </button>
           </div>
-          <!-- Slides -->
-          <div class="relative hidden lg:flex items-center pr-5 mt-30">
-            <div class="no-scroll flex gap-2 overflow-x-auto whitespace-nowrap">
+          <!-- Buttons Slide -->
+          <div
+            class="buttons-slide-container relative hidden lg:flex items-center pr-5 mt-30"
+          >
+            <div
+              class="buttons-slide-srollable-container no-scroll flex gap-2 overflow-x-auto whitespace-nowrap pr-20"
+            >
               <button class="button-gray-outline font-medium px-5 py-2">
                 Пропитки для бетона 2
               </button>
@@ -1367,7 +1371,7 @@
                 Краски для бетона 5
               </button>
               <button
-                class="button-gray-outline font-medium bg-brand-red text-white border-brand-red px-5 py-2"
+                class="button-red font-medium bg-brand-red text-white border-brand-red px-5 py-2"
               >
                 Дорожные краски 5
               </button>
@@ -1378,7 +1382,7 @@
 
             <!-- Next btn -->
             <button
-              class="bg-white absolute right-0 border border-brand-gray-400 rounded-full transition duration-200 hover:border-brand-red hover:text-brand-red px-5 py-4"
+              class="buttons-slide-next-button bg-white absolute right-0 border border-brand-gray-400 rounded-full transition duration-200 hover:border-brand-red hover:text-brand-red px-5 py-4"
             >
               <svg
                 width="12"
@@ -1786,12 +1790,14 @@
               <!-- Solutions -->
               <div class="w-full lg:flex-1 space-y-10 lg:space-y-sixty">
                 <!-- Solution 1 -->
-                <div>
+                <div class="solution-container">
                   <div
                     class="slider-container flex flex-col lg:flex-row gap-5 lg:gap-30"
                   >
                     <!-- Slider -->
-                    <div class="lg:size-300 relative space-y-2.5">
+                    <div
+                      class="buttons-slide-container lg:size-300 relative space-y-2.5"
+                    >
                       <!-- Slider Active Image | Video -->
                       <div
                         id="slider-active"
@@ -1816,8 +1822,12 @@
                       </div>
 
                       <!-- Thumb Images & Videos -->
-                      <div class="no-scroll max-w-min overflow-auto">
-                        <div class="min-w-max flex items-center gap-2.5">
+                      <div
+                        class="buttons-slide-srollable-container no-scroll max-w-min relative overflow-auto"
+                      >
+                        <div
+                          class="min-w-max w-full flex items-center gap-2.5 lg:pr-10"
+                        >
                           <!-- Thumb Image 1 -->
                           <button
                             class="slider-thumb-button active h-sixty w-sixty shrink-0 rounded-lg overflow-hidden"
@@ -1902,7 +1912,6 @@
                               />
                             </svg>
                           </button>
-
                           <!-- Thumb Image 3 -->
                           <button
                             class="slider-thumb-button h-sixty w-sixty shrink-0 rounded-lg overflow-hidden"
@@ -1925,6 +1934,26 @@
                           </button>
                         </div>
                       </div>
+
+                      <!-- Slider Thumbs Next btn -->
+                      <button
+                        class="buttons-slide-next-button bg-white absolute bottom-0 -right-5 z-30 hidden lg:block border border-brand-gray-400 rounded-full transition duration-200 hover:border-brand-red hover:text-brand-red px-5 py-4"
+                      >
+                        <svg
+                          width="12"
+                          height="20"
+                          viewBox="0 0 12 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.5 19L10.0281 11.0607C10.6573 10.4749 10.6573 9.52513 10.0281 8.93934L1.5 1"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </button>
                     </div>
 
                     <div class="lg:flex-1">
@@ -1986,15 +2015,16 @@
                       </p>
                     </div>
                   </div>
+
                   <div
                     class="flex lg:items-center justify-between gap-x-5 lg:gap-x-30 mt-30"
                   >
                     <button
-                      class="md:basis-1/2 button-gray-outline group w-full lg:max-w-300 h-max hidden md:flex items-center justify-center gap-4 px-10 py-18"
+                      class="solution-details-button md:basis-1/2 button-gray-outline group w-full lg:max-w-300 h-max hidden md:flex items-center justify-center gap-4 px-10 py-18"
                     >
                       <span class="font-semibold">Скрыть детали</span>
                       <svg
-                        class="transition duration-200 rotate-180"
+                        class="solution-details-angle transition duration-200 rotate-180"
                         width="14"
                         height="8"
                         viewBox="0 0 14 8"
@@ -2019,7 +2049,7 @@
                         <span class="font-normal text-base">₽ / м2</span>
                       </p>
                       <button
-                        class="button-gray-outline group w-full lg:max-w-300 flex md:hidden items-center justify-center gap-4 px-10 py-18"
+                        class="solution-details-button button-gray-outline group w-full lg:max-w-300 flex md:hidden items-center justify-center gap-4 px-10 py-18"
                       >
                         <span class="font-semibold">Скрыть детали</span>
                         <svg
@@ -2041,7 +2071,7 @@
 
                       <!-- Table Mobile -->
                       <div
-                        class="block md:hidden space-y-2.5 bg-brand-gray-100 font-medium rounded-lg p-4"
+                        class="solution-details-mobile fade-in block md:hidden space-y-2.5 bg-brand-gray-100 font-medium rounded-lg p-4"
                       >
                         <ul class="space-y-6 text-sm bg-white rounded-lg p-4">
                           <li class="flex items-center justify-between">
@@ -2117,87 +2147,85 @@
                         </ul>
                       </div>
                       <button
-                        class="button-red w-full md:w-max font-semibold text-base/[19.5px] px-30 py-5"
+                        class="button-red ml-auto lg:ml-0 w-full md:w-max font-semibold text-base/[19.5px] px-30 py-5"
                       >
                         Подобрать решение
                       </button>
                     </div>
                   </div>
-                  <!-- Tables -->
-                  <div class="hidden">
-                    <!-- Table Desktop -->
-                    <div class="hidden md:block overflow-x-auto mt-2.5">
-                      <div
-                        class="w-[60rem] lg:w-full shrink-0 bg-brand-gray-100 rounded-lg p-30"
-                      >
-                        <div class="font-semibold space-y-5">
-                          <!-- Header -->
+
+                  <!-- Table Desktop -->
+                  <div class="hidden md:block overflow-x-auto mt-2.5">
+                    <div
+                      class="solution-details-desktop fade-in w-[60rem] lg:w-full shrink-0 bg-brand-gray-100 rounded-lg p-30"
+                    >
+                      <div class="font-semibold space-y-5">
+                        <!-- Header -->
+                        <div
+                          class="flex items-center justify-between gap-10 text-brand-gray-400 px-5"
+                        >
+                          <div class="min-w-80">Материал</div>
                           <div
-                            class="flex items-center justify-between gap-10 text-brand-gray-400 px-5"
+                            class="flex-1 flex items-center justify-between gap-10"
                           >
-                            <div class="min-w-80">Материал</div>
+                            <p class="w-100">Этап работ</p>
+                            <p class="min-w-100">Расход на м2</p>
+                          </div>
+                        </div>
+                        <!-- Data Rows -->
+                        <div class="space-y-2.5">
+                          <!-- Data Row 1 -->
+                          <div
+                            class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                          >
+                            <div class="min-w-80">Грунтование</div>
                             <div
                               class="flex-1 flex items-center justify-between gap-10"
                             >
-                              <p class="w-100">Этап работ</p>
-                              <p class="min-w-100">Расход на м2</p>
+                              <div class="flex items-center gap-5">
+                                <img
+                                  src="./assets/images/img-table.png"
+                                  alt="Image"
+                                />
+                                <p class="min-w-100">Политакс 8866PU 2CB</p>
+                              </div>
+                              <p class="min-w-100 text-end">0.28 кг</p>
                             </div>
                           </div>
-                          <!-- Data Rows -->
-                          <div class="space-y-2.5">
-                            <!-- Data Row 1 -->
+                          <!-- Data Row 2 -->
+                          <div
+                            class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                          >
+                            <div class="min-w-80">Шпатлевание</div>
                             <div
-                              class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                              class="flex-1 flex items-center justify-between gap-10"
                             >
-                              <div class="min-w-80">Грунтование</div>
-                              <div
-                                class="flex-1 flex items-center justify-between gap-10"
-                              >
-                                <div class="flex items-center gap-5">
-                                  <img
-                                    src="./assets/images/img-table.png"
-                                    alt="Image"
-                                  />
-                                  <p class="min-w-100">Политакс 8866PU 2CB</p>
-                                </div>
-                                <p class="min-w-100 text-end">0.28 кг</p>
+                              <div class="flex items-center gap-5">
+                                <img
+                                  src="./assets/images/img-table.png"
+                                  alt="Image"
+                                />
+                                <p class="min-w-100">Политакс 8866PU 2CB</p>
                               </div>
+                              <p class="min-w-100 text-end">1.6 кг</p>
                             </div>
-                            <!-- Data Row 2 -->
+                          </div>
+                          <!-- Data Row 3 -->
+                          <div
+                            class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                          >
+                            <div class="min-w-80">Финишный слой</div>
                             <div
-                              class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                              class="flex-1 flex items-center justify-between gap-10"
                             >
-                              <div class="min-w-80">Шпатлевание</div>
-                              <div
-                                class="flex-1 flex items-center justify-between gap-10"
-                              >
-                                <div class="flex items-center gap-5">
-                                  <img
-                                    src="./assets/images/img-table.png"
-                                    alt="Image"
-                                  />
-                                  <p class="min-w-100">Политакс 8866PU 2CB</p>
-                                </div>
-                                <p class="min-w-100 text-end">1.6 кг</p>
+                              <div class="flex items-center gap-5">
+                                <img
+                                  src="./assets/images/img-table.png"
+                                  alt="Image"
+                                />
+                                <p class="min-w-100">Политакс 8866PU 2CB</p>
                               </div>
-                            </div>
-                            <!-- Data Row 3 -->
-                            <div
-                              class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
-                            >
-                              <div class="min-w-80">Финишный слой</div>
-                              <div
-                                class="flex-1 flex items-center justify-between gap-10"
-                              >
-                                <div class="flex items-center gap-5">
-                                  <img
-                                    src="./assets/images/img-table.png"
-                                    alt="Image"
-                                  />
-                                  <p class="min-w-100">Политакс 8866PU 2CB</p>
-                                </div>
-                                <p class="min-w-100 text-end">0.28 кг</p>
-                              </div>
+                              <p class="min-w-100 text-end">0.28 кг</p>
                             </div>
                           </div>
                         </div>
@@ -2206,12 +2234,14 @@
                   </div>
                 </div>
                 <!-- Solution 2 -->
-                <div>
+                <div class="solution-container">
                   <div
                     class="slider-container flex flex-col lg:flex-row gap-5 lg:gap-30"
                   >
                     <!-- Slider -->
-                    <div class="lg:size-300 relative space-y-2.5">
+                    <div
+                      class="buttons-slide-container lg:size-300 relative space-y-2.5"
+                    >
                       <!-- Slider Active Image | Video -->
                       <div
                         id="slider-active"
@@ -2236,8 +2266,12 @@
                       </div>
 
                       <!-- Thumb Images & Videos -->
-                      <div class="no-scroll max-w-min overflow-auto">
-                        <div class="min-w-max flex items-center gap-2.5">
+                      <div
+                        class="buttons-slide-srollable-container no-scroll max-w-min relative overflow-auto"
+                      >
+                        <div
+                          class="min-w-max w-full flex items-center gap-2.5 lg:pr-10"
+                        >
                           <!-- Thumb Image 1 -->
                           <button
                             class="slider-thumb-button active h-sixty w-sixty shrink-0 rounded-lg overflow-hidden"
@@ -2344,6 +2378,26 @@
                           </button>
                         </div>
                       </div>
+
+                      <!-- Slider Thumbs Next btn -->
+                      <button
+                        class="buttons-slide-next-button bg-white absolute bottom-0 -right-5 z-30 hidden lg:block border border-brand-gray-400 rounded-full transition duration-200 hover:border-brand-red hover:text-brand-red px-5 py-4"
+                      >
+                        <svg
+                          width="12"
+                          height="20"
+                          viewBox="0 0 12 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.5 19L10.0281 11.0607C10.6573 10.4749 10.6573 9.52513 10.0281 8.93934L1.5 1"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </button>
                     </div>
 
                     <div class="lg:flex-1">
@@ -2410,11 +2464,11 @@
                     class="flex lg:items-center justify-between gap-x-5 lg:gap-x-30 mt-30"
                   >
                     <button
-                      class="md:basis-1/2 button-gray-outline group w-full lg:max-w-300 h-max hidden md:flex items-center justify-center gap-4 px-10 py-18"
+                      class="solution-details-button md:basis-1/2 button-gray-outline group w-full lg:max-w-300 h-max hidden md:flex items-center justify-center gap-4 px-10 py-18"
                     >
                       <span class="font-semibold">Скрыть детали</span>
                       <svg
-                        class="transition duration-200 rotate-180"
+                        class="solution-details-angle transition duration-200 rotate-180"
                         width="14"
                         height="8"
                         viewBox="0 0 14 8"
@@ -2439,7 +2493,7 @@
                         <span class="font-normal text-base">₽ / м2</span>
                       </p>
                       <button
-                        class="button-gray-outline group w-full lg:max-w-300 flex md:hidden items-center justify-center gap-4 px-10 py-18"
+                        class="solution-details-button button-gray-outline group w-full lg:max-w-300 flex md:hidden items-center justify-center gap-4 px-10 py-18"
                       >
                         <span class="font-semibold">Скрыть детали</span>
                         <svg
@@ -2461,7 +2515,7 @@
 
                       <!-- Table Mobile -->
                       <div
-                        class="block md:hidden space-y-2.5 bg-brand-gray-100 font-medium rounded-lg p-4"
+                        class="solution-details-mobile fade-in block md:hidden space-y-2.5 bg-brand-gray-100 font-medium rounded-lg p-4"
                       >
                         <ul class="space-y-6 text-sm bg-white rounded-lg p-4">
                           <li class="flex items-center justify-between">
@@ -2537,87 +2591,85 @@
                         </ul>
                       </div>
                       <button
-                        class="button-red w-full md:w-max font-semibold text-base/[19.5px] px-30 py-5"
+                        class="button-red ml-auto lg:ml-0 w-full md:w-max font-semibold text-base/[19.5px] px-30 py-5"
                       >
                         Подобрать решение
                       </button>
                     </div>
                   </div>
-                  <!-- Tables -->
-                  <div>
-                    <!-- Table Desktop -->
-                    <div class="hidden md:block overflow-x-auto mt-2.5">
-                      <div
-                        class="w-[60rem] lg:w-full shrink-0 bg-brand-gray-100 rounded-lg p-30"
-                      >
-                        <div class="font-semibold space-y-5">
-                          <!-- Header -->
+
+                  <!-- Table Desktop -->
+                  <div class="hidden md:block overflow-x-auto mt-2.5">
+                    <div
+                      class="solution-details-desktop fade-in w-[60rem] lg:w-full shrink-0 bg-brand-gray-100 rounded-lg p-30"
+                    >
+                      <div class="font-semibold space-y-5">
+                        <!-- Header -->
+                        <div
+                          class="flex items-center justify-between gap-10 text-brand-gray-400 px-5"
+                        >
+                          <div class="min-w-80">Материал</div>
                           <div
-                            class="flex items-center justify-between gap-10 text-brand-gray-400 px-5"
+                            class="flex-1 flex items-center justify-between gap-10"
                           >
-                            <div class="min-w-80">Материал</div>
+                            <p class="w-100">Этап работ</p>
+                            <p class="min-w-100">Расход на м2</p>
+                          </div>
+                        </div>
+                        <!-- Data Rows -->
+                        <div class="space-y-2.5">
+                          <!-- Data Row 1 -->
+                          <div
+                            class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                          >
+                            <div class="min-w-80">Грунтование</div>
                             <div
                               class="flex-1 flex items-center justify-between gap-10"
                             >
-                              <p class="w-100">Этап работ</p>
-                              <p class="min-w-100">Расход на м2</p>
+                              <div class="flex items-center gap-5">
+                                <img
+                                  src="./assets/images/img-table.png"
+                                  alt="Image"
+                                />
+                                <p class="min-w-100">Политакс 8866PU 2CB</p>
+                              </div>
+                              <p class="min-w-100 text-end">0.28 кг</p>
                             </div>
                           </div>
-                          <!-- Data Rows -->
-                          <div class="space-y-2.5">
-                            <!-- Data Row 1 -->
+                          <!-- Data Row 2 -->
+                          <div
+                            class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                          >
+                            <div class="min-w-80">Шпатлевание</div>
                             <div
-                              class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                              class="flex-1 flex items-center justify-between gap-10"
                             >
-                              <div class="min-w-80">Грунтование</div>
-                              <div
-                                class="flex-1 flex items-center justify-between gap-10"
-                              >
-                                <div class="flex items-center gap-5">
-                                  <img
-                                    src="./assets/images/img-table.png"
-                                    alt="Image"
-                                  />
-                                  <p class="min-w-100">Политакс 8866PU 2CB</p>
-                                </div>
-                                <p class="min-w-100 text-end">0.28 кг</p>
+                              <div class="flex items-center gap-5">
+                                <img
+                                  src="./assets/images/img-table.png"
+                                  alt="Image"
+                                />
+                                <p class="min-w-100">Политакс 8866PU 2CB</p>
                               </div>
+                              <p class="min-w-100 text-end">1.6 кг</p>
                             </div>
-                            <!-- Data Row 2 -->
+                          </div>
+                          <!-- Data Row 3 -->
+                          <div
+                            class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                          >
+                            <div class="min-w-80">Финишный слой</div>
                             <div
-                              class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                              class="flex-1 flex items-center justify-between gap-10"
                             >
-                              <div class="min-w-80">Шпатлевание</div>
-                              <div
-                                class="flex-1 flex items-center justify-between gap-10"
-                              >
-                                <div class="flex items-center gap-5">
-                                  <img
-                                    src="./assets/images/img-table.png"
-                                    alt="Image"
-                                  />
-                                  <p class="min-w-100">Политакс 8866PU 2CB</p>
-                                </div>
-                                <p class="min-w-100 text-end">1.6 кг</p>
+                              <div class="flex items-center gap-5">
+                                <img
+                                  src="./assets/images/img-table.png"
+                                  alt="Image"
+                                />
+                                <p class="min-w-100">Политакс 8866PU 2CB</p>
                               </div>
-                            </div>
-                            <!-- Data Row 3 -->
-                            <div
-                              class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
-                            >
-                              <div class="min-w-80">Финишный слой</div>
-                              <div
-                                class="flex-1 flex items-center justify-between gap-10"
-                              >
-                                <div class="flex items-center gap-5">
-                                  <img
-                                    src="./assets/images/img-table.png"
-                                    alt="Image"
-                                  />
-                                  <p class="min-w-100">Политакс 8866PU 2CB</p>
-                                </div>
-                                <p class="min-w-100 text-end">0.28 кг</p>
-                              </div>
+                              <p class="min-w-100 text-end">0.28 кг</p>
                             </div>
                           </div>
                         </div>
@@ -2626,12 +2678,14 @@
                   </div>
                 </div>
                 <!-- Solution 3 -->
-                <div>
+                <div class="solution-container">
                   <div
                     class="slider-container flex flex-col lg:flex-row gap-5 lg:gap-30"
                   >
                     <!-- Slider -->
-                    <div class="lg:size-300 relative space-y-2.5">
+                    <div
+                      class="buttons-slide-container lg:size-300 relative space-y-2.5"
+                    >
                       <!-- Slider Active Image | Video -->
                       <div
                         id="slider-active"
@@ -2656,8 +2710,12 @@
                       </div>
 
                       <!-- Thumb Images & Videos -->
-                      <div class="no-scroll max-w-min overflow-auto">
-                        <div class="min-w-max flex items-center gap-2.5">
+                      <div
+                        class="buttons-slide-srollable-container no-scroll max-w-min relative overflow-auto"
+                      >
+                        <div
+                          class="min-w-max w-full flex items-center gap-2.5 lg:pr-10"
+                        >
                           <!-- Thumb Image 1 -->
                           <button
                             class="slider-thumb-button active h-sixty w-sixty shrink-0 rounded-lg overflow-hidden"
@@ -2764,6 +2822,26 @@
                           </button>
                         </div>
                       </div>
+
+                      <!-- Slider Thumbs Next btn -->
+                      <button
+                        class="buttons-slide-next-button bg-white absolute bottom-0 -right-5 z-30 hidden lg:block border border-brand-gray-400 rounded-full transition duration-200 hover:border-brand-red hover:text-brand-red px-5 py-4"
+                      >
+                        <svg
+                          width="12"
+                          height="20"
+                          viewBox="0 0 12 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.5 19L10.0281 11.0607C10.6573 10.4749 10.6573 9.52513 10.0281 8.93934L1.5 1"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </button>
                     </div>
 
                     <div class="lg:flex-1">
@@ -2825,15 +2903,16 @@
                       </p>
                     </div>
                   </div>
+
                   <div
                     class="flex lg:items-center justify-between gap-x-5 lg:gap-x-30 mt-30"
                   >
                     <button
-                      class="md:basis-1/2 button-gray-outline group w-full lg:max-w-300 h-max hidden md:flex items-center justify-center gap-4 px-10 py-18"
+                      class="solution-details-button md:basis-1/2 button-gray-outline group w-full lg:max-w-300 h-max hidden md:flex items-center justify-center gap-4 px-10 py-18"
                     >
                       <span class="font-semibold">Скрыть детали</span>
                       <svg
-                        class="transition duration-200 rotate-180"
+                        class="solution-details-angle transition duration-200 rotate-180"
                         width="14"
                         height="8"
                         viewBox="0 0 14 8"
@@ -2858,7 +2937,7 @@
                         <span class="font-normal text-base">₽ / м2</span>
                       </p>
                       <button
-                        class="button-gray-outline group w-full lg:max-w-300 flex md:hidden items-center justify-center gap-4 px-10 py-18"
+                        class="solution-details-button button-gray-outline group w-full lg:max-w-300 flex md:hidden items-center justify-center gap-4 px-10 py-18"
                       >
                         <span class="font-semibold">Скрыть детали</span>
                         <svg
@@ -2880,7 +2959,7 @@
 
                       <!-- Table Mobile -->
                       <div
-                        class="block md:hidden space-y-2.5 bg-brand-gray-100 font-medium rounded-lg p-4"
+                        class="solution-details-mobile fade-in block md:hidden space-y-2.5 bg-brand-gray-100 font-medium rounded-lg p-4"
                       >
                         <ul class="space-y-6 text-sm bg-white rounded-lg p-4">
                           <li class="flex items-center justify-between">
@@ -2956,87 +3035,85 @@
                         </ul>
                       </div>
                       <button
-                        class="button-red w-full md:w-max font-semibold text-base/[19.5px] px-30 py-5"
+                        class="button-red ml-auto lg:ml-0 w-full md:w-max font-semibold text-base/[19.5px] px-30 py-5"
                       >
                         Подобрать решение
                       </button>
                     </div>
                   </div>
-                  <!-- Tables -->
-                  <div class="hidden">
-                    <!-- Table Desktop -->
-                    <div class="hidden md:block overflow-x-auto mt-2.5">
-                      <div
-                        class="w-[60rem] lg:w-full shrink-0 bg-brand-gray-100 rounded-lg p-30"
-                      >
-                        <div class="font-semibold space-y-5">
-                          <!-- Header -->
+
+                  <!-- Table Desktop -->
+                  <div class="hidden md:block overflow-x-auto mt-2.5">
+                    <div
+                      class="solution-details-desktop fade-in w-[60rem] lg:w-full shrink-0 bg-brand-gray-100 rounded-lg p-30"
+                    >
+                      <div class="font-semibold space-y-5">
+                        <!-- Header -->
+                        <div
+                          class="flex items-center justify-between gap-10 text-brand-gray-400 px-5"
+                        >
+                          <div class="min-w-80">Материал</div>
                           <div
-                            class="flex items-center justify-between gap-10 text-brand-gray-400 px-5"
+                            class="flex-1 flex items-center justify-between gap-10"
                           >
-                            <div class="min-w-80">Материал</div>
+                            <p class="w-100">Этап работ</p>
+                            <p class="min-w-100">Расход на м2</p>
+                          </div>
+                        </div>
+                        <!-- Data Rows -->
+                        <div class="space-y-2.5">
+                          <!-- Data Row 1 -->
+                          <div
+                            class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                          >
+                            <div class="min-w-80">Грунтование</div>
                             <div
                               class="flex-1 flex items-center justify-between gap-10"
                             >
-                              <p class="w-100">Этап работ</p>
-                              <p class="min-w-100">Расход на м2</p>
+                              <div class="flex items-center gap-5">
+                                <img
+                                  src="./assets/images/img-table.png"
+                                  alt="Image"
+                                />
+                                <p class="min-w-100">Политакс 8866PU 2CB</p>
+                              </div>
+                              <p class="min-w-100 text-end">0.28 кг</p>
                             </div>
                           </div>
-                          <!-- Data Rows -->
-                          <div class="space-y-2.5">
-                            <!-- Data Row 1 -->
+                          <!-- Data Row 2 -->
+                          <div
+                            class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                          >
+                            <div class="min-w-80">Шпатлевание</div>
                             <div
-                              class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                              class="flex-1 flex items-center justify-between gap-10"
                             >
-                              <div class="min-w-80">Грунтование</div>
-                              <div
-                                class="flex-1 flex items-center justify-between gap-10"
-                              >
-                                <div class="flex items-center gap-5">
-                                  <img
-                                    src="./assets/images/img-table.png"
-                                    alt="Image"
-                                  />
-                                  <p class="min-w-100">Политакс 8866PU 2CB</p>
-                                </div>
-                                <p class="min-w-100 text-end">0.28 кг</p>
+                              <div class="flex items-center gap-5">
+                                <img
+                                  src="./assets/images/img-table.png"
+                                  alt="Image"
+                                />
+                                <p class="min-w-100">Политакс 8866PU 2CB</p>
                               </div>
+                              <p class="min-w-100 text-end">1.6 кг</p>
                             </div>
-                            <!-- Data Row 2 -->
+                          </div>
+                          <!-- Data Row 3 -->
+                          <div
+                            class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                          >
+                            <div class="min-w-80">Финишный слой</div>
                             <div
-                              class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                              class="flex-1 flex items-center justify-between gap-10"
                             >
-                              <div class="min-w-80">Шпатлевание</div>
-                              <div
-                                class="flex-1 flex items-center justify-between gap-10"
-                              >
-                                <div class="flex items-center gap-5">
-                                  <img
-                                    src="./assets/images/img-table.png"
-                                    alt="Image"
-                                  />
-                                  <p class="min-w-100">Политакс 8866PU 2CB</p>
-                                </div>
-                                <p class="min-w-100 text-end">1.6 кг</p>
+                              <div class="flex items-center gap-5">
+                                <img
+                                  src="./assets/images/img-table.png"
+                                  alt="Image"
+                                />
+                                <p class="min-w-100">Политакс 8866PU 2CB</p>
                               </div>
-                            </div>
-                            <!-- Data Row 3 -->
-                            <div
-                              class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
-                            >
-                              <div class="min-w-80">Финишный слой</div>
-                              <div
-                                class="flex-1 flex items-center justify-between gap-10"
-                              >
-                                <div class="flex items-center gap-5">
-                                  <img
-                                    src="./assets/images/img-table.png"
-                                    alt="Image"
-                                  />
-                                  <p class="min-w-100">Политакс 8866PU 2CB</p>
-                                </div>
-                                <p class="min-w-100 text-end">0.28 кг</p>
-                              </div>
+                              <p class="min-w-100 text-end">0.28 кг</p>
                             </div>
                           </div>
                         </div>
@@ -3045,12 +3122,14 @@
                   </div>
                 </div>
                 <!-- Solution 4 -->
-                <div>
+                <div class="solution-container">
                   <div
                     class="slider-container flex flex-col lg:flex-row gap-5 lg:gap-30"
                   >
                     <!-- Slider -->
-                    <div class="lg:size-300 relative space-y-2.5">
+                    <div
+                      class="buttons-slide-container lg:size-300 relative space-y-2.5"
+                    >
                       <!-- Slider Active Image | Video -->
                       <div
                         id="slider-active"
@@ -3075,8 +3154,12 @@
                       </div>
 
                       <!-- Thumb Images & Videos -->
-                      <div class="no-scroll max-w-min overflow-auto">
-                        <div class="min-w-max flex items-center gap-2.5">
+                      <div
+                        class="buttons-slide-srollable-container no-scroll max-w-min relative overflow-auto"
+                      >
+                        <div
+                          class="min-w-max w-full flex items-center gap-2.5 lg:pr-10"
+                        >
                           <!-- Thumb Image 1 -->
                           <button
                             class="slider-thumb-button active h-sixty w-sixty shrink-0 rounded-lg overflow-hidden"
@@ -3183,6 +3266,26 @@
                           </button>
                         </div>
                       </div>
+
+                      <!-- Slider Thumbs Next btn -->
+                      <button
+                        class="buttons-slide-next-button bg-white absolute bottom-0 -right-5 z-30 hidden lg:block border border-brand-gray-400 rounded-full transition duration-200 hover:border-brand-red hover:text-brand-red px-5 py-4"
+                      >
+                        <svg
+                          width="12"
+                          height="20"
+                          viewBox="0 0 12 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.5 19L10.0281 11.0607C10.6573 10.4749 10.6573 9.52513 10.0281 8.93934L1.5 1"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </button>
                     </div>
 
                     <div class="lg:flex-1">
@@ -3244,15 +3347,16 @@
                       </p>
                     </div>
                   </div>
+
                   <div
                     class="flex lg:items-center justify-between gap-x-5 lg:gap-x-30 mt-30"
                   >
                     <button
-                      class="md:basis-1/2 button-gray-outline group w-full lg:max-w-300 h-max hidden md:flex items-center justify-center gap-4 px-10 py-18"
+                      class="solution-details-button md:basis-1/2 button-gray-outline group w-full lg:max-w-300 h-max hidden md:flex items-center justify-center gap-4 px-10 py-18"
                     >
                       <span class="font-semibold">Скрыть детали</span>
                       <svg
-                        class="transition duration-200 rotate-180"
+                        class="solution-details-angle transition duration-200 rotate-180"
                         width="14"
                         height="8"
                         viewBox="0 0 14 8"
@@ -3277,7 +3381,7 @@
                         <span class="font-normal text-base">₽ / м2</span>
                       </p>
                       <button
-                        class="button-gray-outline group w-full lg:max-w-300 flex md:hidden items-center justify-center gap-4 px-10 py-18"
+                        class="solution-details-button button-gray-outline group w-full lg:max-w-300 flex md:hidden items-center justify-center gap-4 px-10 py-18"
                       >
                         <span class="font-semibold">Скрыть детали</span>
                         <svg
@@ -3299,7 +3403,7 @@
 
                       <!-- Table Mobile -->
                       <div
-                        class="block md:hidden space-y-2.5 bg-brand-gray-100 font-medium rounded-lg p-4"
+                        class="solution-details-mobile fade-in block md:hidden space-y-2.5 bg-brand-gray-100 font-medium rounded-lg p-4"
                       >
                         <ul class="space-y-6 text-sm bg-white rounded-lg p-4">
                           <li class="flex items-center justify-between">
@@ -3375,87 +3479,85 @@
                         </ul>
                       </div>
                       <button
-                        class="button-red w-full md:w-max font-semibold text-base/[19.5px] px-30 py-5"
+                        class="button-red ml-auto lg:ml-0 w-full md:w-max font-semibold text-base/[19.5px] px-30 py-5"
                       >
                         Подобрать решение
                       </button>
                     </div>
                   </div>
-                  <!-- Tables -->
-                  <div class="hidden">
-                    <!-- Table Desktop -->
-                    <div class="hidden md:block overflow-x-auto mt-2.5">
-                      <div
-                        class="w-[60rem] lg:w-full shrink-0 bg-brand-gray-100 rounded-lg p-30"
-                      >
-                        <div class="font-semibold space-y-5">
-                          <!-- Header -->
+
+                  <!-- Table Desktop -->
+                  <div class="hidden md:block overflow-x-auto mt-2.5">
+                    <div
+                      class="solution-details-desktop fade-in w-[60rem] lg:w-full shrink-0 bg-brand-gray-100 rounded-lg p-30"
+                    >
+                      <div class="font-semibold space-y-5">
+                        <!-- Header -->
+                        <div
+                          class="flex items-center justify-between gap-10 text-brand-gray-400 px-5"
+                        >
+                          <div class="min-w-80">Материал</div>
                           <div
-                            class="flex items-center justify-between gap-10 text-brand-gray-400 px-5"
+                            class="flex-1 flex items-center justify-between gap-10"
                           >
-                            <div class="min-w-80">Материал</div>
+                            <p class="w-100">Этап работ</p>
+                            <p class="min-w-100">Расход на м2</p>
+                          </div>
+                        </div>
+                        <!-- Data Rows -->
+                        <div class="space-y-2.5">
+                          <!-- Data Row 1 -->
+                          <div
+                            class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                          >
+                            <div class="min-w-80">Грунтование</div>
                             <div
                               class="flex-1 flex items-center justify-between gap-10"
                             >
-                              <p class="w-100">Этап работ</p>
-                              <p class="min-w-100">Расход на м2</p>
+                              <div class="flex items-center gap-5">
+                                <img
+                                  src="./assets/images/img-table.png"
+                                  alt="Image"
+                                />
+                                <p class="min-w-100">Политакс 8866PU 2CB</p>
+                              </div>
+                              <p class="min-w-100 text-end">0.28 кг</p>
                             </div>
                           </div>
-                          <!-- Data Rows -->
-                          <div class="space-y-2.5">
-                            <!-- Data Row 1 -->
+                          <!-- Data Row 2 -->
+                          <div
+                            class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                          >
+                            <div class="min-w-80">Шпатлевание</div>
                             <div
-                              class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                              class="flex-1 flex items-center justify-between gap-10"
                             >
-                              <div class="min-w-80">Грунтование</div>
-                              <div
-                                class="flex-1 flex items-center justify-between gap-10"
-                              >
-                                <div class="flex items-center gap-5">
-                                  <img
-                                    src="./assets/images/img-table.png"
-                                    alt="Image"
-                                  />
-                                  <p class="min-w-100">Политакс 8866PU 2CB</p>
-                                </div>
-                                <p class="min-w-100 text-end">0.28 кг</p>
+                              <div class="flex items-center gap-5">
+                                <img
+                                  src="./assets/images/img-table.png"
+                                  alt="Image"
+                                />
+                                <p class="min-w-100">Политакс 8866PU 2CB</p>
                               </div>
+                              <p class="min-w-100 text-end">1.6 кг</p>
                             </div>
-                            <!-- Data Row 2 -->
+                          </div>
+                          <!-- Data Row 3 -->
+                          <div
+                            class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                          >
+                            <div class="min-w-80">Финишный слой</div>
                             <div
-                              class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
+                              class="flex-1 flex items-center justify-between gap-10"
                             >
-                              <div class="min-w-80">Шпатлевание</div>
-                              <div
-                                class="flex-1 flex items-center justify-between gap-10"
-                              >
-                                <div class="flex items-center gap-5">
-                                  <img
-                                    src="./assets/images/img-table.png"
-                                    alt="Image"
-                                  />
-                                  <p class="min-w-100">Политакс 8866PU 2CB</p>
-                                </div>
-                                <p class="min-w-100 text-end">1.6 кг</p>
+                              <div class="flex items-center gap-5">
+                                <img
+                                  src="./assets/images/img-table.png"
+                                  alt="Image"
+                                />
+                                <p class="min-w-100">Политакс 8866PU 2CB</p>
                               </div>
-                            </div>
-                            <!-- Data Row 3 -->
-                            <div
-                              class="h-sixty bg-white flex items-center justify-between gap-10 rounded-lg px-5"
-                            >
-                              <div class="min-w-80">Финишный слой</div>
-                              <div
-                                class="flex-1 flex items-center justify-between gap-10"
-                              >
-                                <div class="flex items-center gap-5">
-                                  <img
-                                    src="./assets/images/img-table.png"
-                                    alt="Image"
-                                  />
-                                  <p class="min-w-100">Политакс 8866PU 2CB</p>
-                                </div>
-                                <p class="min-w-100 text-end">0.28 кг</p>
-                              </div>
+                              <p class="min-w-100 text-end">0.28 кг</p>
                             </div>
                           </div>
                         </div>
