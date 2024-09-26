@@ -914,6 +914,22 @@ initializeRangeSlider(
   "slider-track-2"
 );
 
+initializeRangeSlider(
+  "min-slider-3",
+  "max-slider-3",
+  "min-cost-3",
+  "max-cost-3",
+  "slider-track-3"
+);
+
+initializeRangeSlider(
+  "min-slider-4",
+  "max-slider-4",
+  "min-cost-4",
+  "max-cost-4",
+  "slider-track-4"
+);
+
 // Cabinet Calculator Search
 document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("calculator-search-input");
@@ -1009,3 +1025,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Filter Toggling
+function toggleFilters() {
+  const toggleButtons = document.querySelectorAll(".toggle-filter-btn");
+
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filtersContainer = button.closest(".filter-container");
+      const filters = filtersContainer.querySelector(".filter");
+
+      filters.classList.toggle("hidden");
+      document.body.classList.toggle("overflow-hidden");
+    });
+  });
+}
+
+// Call the function to apply the behavior
+toggleFilters();

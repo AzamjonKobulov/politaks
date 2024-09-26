@@ -915,6 +915,9 @@ td{
 .mb-5{
   margin-bottom: 1.25rem;
 }
+.mb-8{
+  margin-bottom: 2rem;
+}
 .ml-1{
   margin-left: 0.25rem;
 }
@@ -1190,6 +1193,15 @@ td{
 }
 .h-sixty{
   height: 3.75rem;
+}
+.h-\[90\%\]{
+  height: 90%;
+}
+.h-\[95\%\]{
+  height: 95%;
+}
+.h-96{
+  height: 24rem;
 }
 .max-h-0{
   max-height: 0px;
@@ -2539,6 +2551,9 @@ td{
 }
 .blur{
   --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .transition{
