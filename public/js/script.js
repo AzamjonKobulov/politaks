@@ -968,12 +968,22 @@ document.addEventListener("DOMContentLoaded", () => {
       ".buttons-slide-srollable-container"
     );
     const nextButton = container.querySelector(".buttons-slide-next-button");
+    const prevButton = container.querySelector(".buttons-slide-prev-button");
 
     // Add event listener to the next button
     nextButton.addEventListener("click", () => {
       // Scroll the container by a specific amount (e.g., 200px)
       scrollableContainer.scrollBy({
         left: 200, // Amount to scroll (can be adjusted)
+        behavior: "smooth", // Smooth scrolling
+      });
+    });
+
+    // Add event listener to the next button
+    prevButton.addEventListener("click", () => {
+      // Scroll the container by a specific amount (e.g., 200px)
+      scrollableContainer.scrollBy({
+        right: 200, // Amount to scroll (can be adjusted)
         behavior: "smooth", // Smooth scrolling
       });
     });
