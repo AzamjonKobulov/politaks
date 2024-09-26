@@ -45,7 +45,7 @@
 
               <!-- Dropdown -->
               <div
-                class="nav-dropdown-content min-w-[11.25rem] absolute top-7 z-40 hidden bg-brand-gray-100 rounded-lg p-2"
+                class="nav-dropdown-content fade-in min-w-[180px] absolute top-7 z-40 hidden bg-brand-gray-100 rounded-lg p-2"
               >
                 <a
                   href="#"
@@ -120,7 +120,7 @@
             <img
               src="./assets/images/logo.svg"
               alt="Logo"
-              class="w-[12.5rem] h-[3.125rem] xl:w-auto xl:h-auto"
+              class="w-[200px] h-[50px] xl:w-auto xl:h-auto"
             />
           </a>
           <!-- Catalogs Button -->
@@ -142,7 +142,7 @@
 
             <!-- X icon -->
             <div
-              class="catalog-button-x-icon w-[1.5625rem] h-[1.5625rem] grid place-content-center hidden"
+              class="catalog-button-x-icon w-[25px] h-[25px] grid place-content-center hidden"
             >
               <svg
                 width="16"
@@ -178,7 +178,7 @@
               type="text"
               id="search"
               placeholder="Поиск"
-              class="absolute w-full h-full bg-transparent outline-none placeholder:text-brand-gray-400 focus:h-[3.1875rem] focus:xl:h-14 focus:bg-white outline-1 focus:outline-brand-gray-400 rounded-lg lg:px-11 xl:pl-12"
+              class="absolute w-full h-full bg-transparent outline-none placeholder:text-brand-gray-400 focus:h-[51px] focus:xl:h-14 focus:bg-white outline-1 focus:outline-brand-gray-400 rounded-lg lg:px-11 xl:pl-12"
             />
             <button id="searchX" class="hidden absolute right-5 z-50">
               <svg
@@ -201,7 +201,7 @@
             <!-- Search History -->
             <div
               id="search-history"
-              class="absolute w-full top-16 z-30 hidden space-y-5 bg-white border border-b-gray-300 rounded-lg p-5"
+              class="fade-in absolute w-full top-16 z-30 hidden space-y-5 bg-white border border-b-gray-300 rounded-lg p-5"
             >
               <!-- Top Buttons -->
               <div class="flex items-center flex-wrap gap-2.5">
@@ -289,7 +289,7 @@
             <!-- Search Suggestions -->
             <div
               id="search-suggest"
-              class="absolute w-full top-16 z-30 hidden space-y-5 bg-white border border-b-gray-300 rounded-lg p-5"
+              class="fade-in absolute w-full top-16 z-30 hidden space-y-5 bg-white border border-b-gray-300 rounded-lg p-5"
             >
               <!-- Top -->
               <div>
@@ -452,7 +452,7 @@
             <div
               class="w-3.5 h-3.5 shrink-0 absolute top-0 right-0 grid place-content-center bg-brand-red text-white rounded-full"
             >
-              <span class="text-[11px] font-semibold mt-px">1</span>
+              <span class="text-[.6875rem] font-semibold mt-px">1</span>
             </div>
           </button>
           <!-- Login -->
@@ -478,7 +478,7 @@
             </button>
             <!-- User dropdown -->
             <div
-              class="user-dropdown-content min-w-[13.75rem] absolute top-[4.5rem] right-0 z-40 hidden bg-brand-gray-100 rounded-lg p-5"
+              class="user-dropdown-content fade-in min-w-[220px] absolute top-[72px] right-0 z-40 hidden bg-brand-gray-100 rounded-lg p-5"
             >
               <!-- Arrow -->
               <svg
@@ -526,17 +526,20 @@
 
         <!-- Catalog -->
         <div
-          class="catalog absolute left-1/2 -translate-x-1/2 top-24 xl:top-36 z-50 min-w-full mx-auto hidden grid grid-cols-3 bg-white mt-10 px-4"
+          class="catalog absolute fade-in -translate-x-1/2 top-24 xl:top-36 z-50 max-w-base w-full mx-auto hidden grid grid-cols-3 bg-white mt-10 pr-4"
         >
           <!-- Catalog Items -->
           <ul>
             <!-- Item 1 -->
             <li
-              class="catalog-item catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 rounded-l-lg cursor-pointer transition-all duration-200 pl-5 pr-30"
+              data-target="catalog-content-1"
             >
               <div class="flex items-center gap-5">
                 <img src="./assets/images/icon-catalog-1.svg" alt="Icon" />
-                <span class="font-medium">Наливные полы</span>
+                <span class="font-medium group-hover:text-brand-red"
+                  >Наливные полы</span
+                >
               </div>
 
               <svg
@@ -556,11 +559,14 @@
             </li>
             <!-- Item 2 -->
             <li
-              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 rounded-l-lg cursor-pointer transition-all duration-200 pl-5 pr-30"
+              data-target="catalog-content-2"
             >
               <div class="flex items-center gap-5">
                 <img src="./assets/images/icon-catalog-2.svg" alt="Icon" />
-                <span class="font-medium">Для бетона</span>
+                <span class="font-medium group-hover:text-brand-red"
+                  >Для бетона</span
+                >
               </div>
 
               <svg
@@ -580,11 +586,14 @@
             </li>
             <!-- Item 3 -->
             <li
-              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 rounded-l-lg cursor-pointer transition-all duration-200 pl-5 pr-30"
+              data-target="catalog-content-3"
             >
               <div class="flex items-center gap-5">
                 <img src="./assets/images/icon-catalog-3.svg" alt="Icon" />
-                <span class="font-medium">Для металла</span>
+                <span class="font-medium group-hover:text-brand-red"
+                  >Для металла</span
+                >
               </div>
 
               <svg
@@ -604,11 +613,14 @@
             </li>
             <!-- Item 4 -->
             <li
-              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 rounded-l-lg cursor-pointer transition-all duration-200 pl-5 pr-30"
+              data-target="catalog-content-4"
             >
               <div class="flex items-center gap-5">
                 <img src="./assets/images/icon-catalog-4.svg" alt="Icon" />
-                <span class="font-medium">Для фасадов</span>
+                <span class="font-medium group-hover:text-brand-red"
+                  >Для фасадов</span
+                >
               </div>
 
               <svg
@@ -628,11 +640,14 @@
             </li>
             <!-- Item 5 -->
             <li
-              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 rounded-l-lg cursor-pointer transition-all duration-200 pl-5 pr-30"
+              data-target="catalog-content-5"
             >
               <div class="flex items-center gap-5">
                 <img src="./assets/images/icon-catalog-5.svg" alt="Icon" />
-                <span class="font-medium">Для дерева</span>
+                <span class="font-medium group-hover:text-brand-red"
+                  >Для дерева</span
+                >
               </div>
 
               <svg
@@ -652,11 +667,14 @@
             </li>
             <!-- Item 6 -->
             <li
-              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 rounded-l-lg cursor-pointer transition-all duration-200 pl-5 pr-30"
+              data-target="catalog-content-6"
             >
               <div class="flex items-center gap-5">
                 <img src="./assets/images/icon-catalog-6.svg" alt="Icon" />
-                <span class="font-medium">Для крыш</span>
+                <span class="font-medium group-hover:text-brand-red"
+                  >Для крыш</span
+                >
               </div>
 
               <svg
@@ -676,11 +694,14 @@
             </li>
             <!-- Item 7 -->
             <li
-              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 rounded-l-lg cursor-pointer transition-all duration-200 pl-5 pr-30"
+              data-target="catalog-content-7"
             >
               <div class="flex items-center gap-5">
                 <img src="./assets/images/icon-catalog-7.svg" alt="Icon" />
-                <span class="font-medium">Для асфальта</span>
+                <span class="font-medium group-hover:text-brand-red"
+                  >Для асфальта</span
+                >
               </div>
 
               <svg
@@ -700,11 +721,14 @@
             </li>
             <!-- Item 8 -->
             <li
-              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 rounded-l-lg cursor-pointer transition-all duration-200 pl-5 pr-30"
+              data-target="catalog-content-8"
             >
               <div class="flex items-center gap-5">
                 <img src="./assets/images/icon-catalog-8.svg" alt="Icon" />
-                <span class="font-medium">Для топинга</span>
+                <span class="font-medium group-hover:text-brand-red"
+                  >Для топинга</span
+                >
               </div>
 
               <svg
@@ -724,11 +748,14 @@
             </li>
             <!-- Item 9 -->
             <li
-              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 rounded-l-lg cursor-pointer transition-all duration-200 pl-5 pr-30"
+              data-target="catalog-content-9"
             >
               <div class="flex items-center gap-5">
                 <img src="./assets/images/icon-catalog-9.svg" alt="Icon" />
-                <span class="font-medium">Огнезащитные краски</span>
+                <span class="font-medium group-hover:text-brand-red"
+                  >Огнезащитные краски</span
+                >
               </div>
 
               <svg
@@ -748,11 +775,14 @@
             </li>
             <!-- Item 10 -->
             <li
-              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 rounded-l-lg cursor-pointer transition-all duration-200 pl-5 pr-30"
+              data-target="catalog-content-10"
             >
               <div class="flex items-center gap-5">
                 <img src="./assets/images/icon-catalog-10.svg" alt="Icon" />
-                <span class="font-medium">«ЭКО» краски</span>
+                <span class="font-medium group-hover:text-brand-red"
+                  >«ЭКО» краски</span
+                >
               </div>
 
               <svg
@@ -772,11 +802,14 @@
             </li>
             <!-- Item 11 -->
             <li
-              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 rounded-l-lg cursor-pointer transition-all duration-200 pl-5 pr-30"
+              data-target="catalog-content-11"
             >
               <div class="flex items-center gap-5">
                 <img src="./assets/images/icon-catalog-11.svg" alt="Icon" />
-                <span class="font-medium">Кислотостойкие краски</span>
+                <span class="font-medium group-hover:text-brand-red"
+                  >Кислотостойкие краски</span
+                >
               </div>
 
               <svg
@@ -796,11 +829,14 @@
             </li>
             <!-- Item 12 -->
             <li
-              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 cursor-pointer transition-all duration-200 pl-5 pr-30"
+              class="catalog-item h-sixty group flex items-center justify-between hover:bg-brand-gray-100 rounded-l-lg cursor-pointer transition-all duration-200 pl-5 pr-30"
+              data-target="catalog-content-12"
             >
               <div class="flex items-center gap-5">
                 <img src="./assets/images/icon-catalog-12.svg" alt="Icon" />
-                <span class="font-medium">Промышленные покрытие</span>
+                <span class="font-medium group-hover:text-brand-red"
+                  >Промышленные покрытие</span
+                >
               </div>
 
               <svg
@@ -819,118 +855,376 @@
               </svg>
             </li>
           </ul>
-          <!-- Catalog Item Content -->
+          <!-- Catalog Contents -->
           <div
-            class="col-span-2 space-y-10 bg-brand-gray-100 rounded-lg py-10 px-sixty"
+            class="catalog-contents col-span-2 sticky top-0 bg-brand-gray-100 rounded-r-lg overflow-hidden"
           >
-            <!-- Title -->
-            <p class="text-3xl font-semibold leading-7">Для металла</p>
-            <!-- Texts -->
-            <div class="grid grid-cols-2 gap-30">
-              <!-- Left -->
-              <div class="space-y-10">
-                <!-- Items 1 -->
-                <div class="space-y-4">
-                  <p class="text-lg font-semibold">Антикорозийные материалы</p>
-                  <ul class="space-y-3.5">
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Грунтовки</a>
-                    </li>
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Грунт-эмали</a>
-                    </li>
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Эмали</a>
-                    </li>
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Лаки </a>
-                    </li>
-                    <li>
-                      <a href="#" class="hover:text-brand-red"
-                        >Корабельная краска
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Смывка</a>
-                    </li>
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Разбавитель</a>
-                    </li>
-                    <li>
-                      <a href="#" class="hover:text-brand-red"
-                        >Обезжириватель</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#" class="hover:text-brand-red"
-                        >Преобразователь ржавчины</a
-                      >
-                    </li>
-                  </ul>
+            <!-- Catalog Content 1 -->
+            <div
+              id="catalog-content-1"
+              class="catalog-content fade-in space-y-10 py-10 px-sixty"
+            >
+              <!-- Title -->
+              <p class="text-3xl font-semibold leading-7">Наливные полы</p>
+              <!-- Texts -->
+              <div class="grid grid-cols-2 gap-30">
+                <!-- Left -->
+                <div class="space-y-10">
+                  <!-- Items 1 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">
+                      Антикорозийные материалы
+                    </p>
+                    <ul class="space-y-3.5">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Грунтовки</a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Грунт-эмали</a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали</a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Лаки </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Корабельная краска
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Смывка </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Разбавитель
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Обезжириватель</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Преобразователь ржавчины</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Items 2 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">
+                      Материалы для нефтегазовых сооружений
+                    </p>
+                    <ul class="space-y-3">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Грунт-эмали</a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <!-- Items 2 -->
-                <div class="space-y-4">
-                  <p class="text-lg font-semibold">
-                    Материалы для нефтегазовых сооружений
-                  </p>
-                  <ul class="space-y-3">
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Грунт-эмали</a>
-                    </li>
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Эмали </a>
-                    </li>
-                  </ul>
+                <!-- Right -->
+                <div class="space-y-10">
+                  <!-- Items 1 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">
+                      Кислотоупорные материалы
+                    </p>
+                    <ul class="space-y-3.5">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Лаки </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Кислотоупорный пол</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Items 2 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">Химстойкие материалы</p>
+                    <ul class="space-y-3">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Лаки </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Items 3 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">Огнезащита</p>
+                    <ul class="space-y-3">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Items 4 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">Термозащита</p>
+                    <ul class="space-y-3">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <!-- Right -->
-              <div class="space-y-10">
-                <!-- Items 1 -->
-                <div class="space-y-4">
-                  <p class="text-lg font-semibold">Кислотоупорные материалы</p>
-                  <ul class="space-y-3.5">
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Эмали </a>
-                    </li>
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Лаки </a>
-                    </li>
-                    <li>
-                      <a href="#" class="hover:text-brand-red"
-                        >Кислотоупорный пол</a
-                      >
-                    </li>
-                  </ul>
+            </div>
+            <!-- Catalog Content 2 -->
+            <div
+              id="catalog-content-2"
+              class="catalog-content fade-in space-y-10 py-10 px-sixty"
+            >
+              <!-- Title -->
+              <p class="text-3xl font-semibold leading-7">Для бетона</p>
+              <!-- Texts -->
+              <div class="grid grid-cols-2 gap-30">
+                <!-- Left -->
+                <div class="space-y-10">
+                  <!-- Items 1 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">
+                      Антикорозийные материалы
+                    </p>
+                    <ul class="space-y-3.5">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Грунтовки</a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Грунт-эмали</a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали</a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Лаки </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Корабельная краска
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Смывка </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Разбавитель
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Обезжириватель</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Преобразователь ржавчины</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Items 2 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">
+                      Материалы для нефтегазовых сооружений
+                    </p>
+                    <ul class="space-y-3">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Грунт-эмали</a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <!-- Items 2 -->
-                <div class="space-y-4">
-                  <p class="text-lg font-semibold">Химстойкие материалы</p>
-                  <ul class="space-y-3">
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Эмали </a>
-                    </li>
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Лаки </a>
-                    </li>
-                  </ul>
+                <!-- Right -->
+                <div class="space-y-10">
+                  <!-- Items 1 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">
+                      Кислотоупорные материалы
+                    </p>
+                    <ul class="space-y-3.5">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Лаки </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Кислотоупорный пол</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Items 2 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">Химстойкие материалы</p>
+                    <ul class="space-y-3">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Лаки </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Items 3 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">Огнезащита</p>
+                    <ul class="space-y-3">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Items 4 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">Термозащита</p>
+                    <ul class="space-y-3">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <!-- Items 3 -->
-                <div class="space-y-4">
-                  <p class="text-lg font-semibold">Огнезащита</p>
-                  <ul class="space-y-3">
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Эмали </a>
-                    </li>
-                  </ul>
+              </div>
+            </div>
+            <!-- Catalog Content 3 -->
+            <div
+              id="catalog-content-3"
+              class="catalog-content fade-in space-y-10 py-10 px-sixty"
+            >
+              <!-- Title -->
+              <p class="text-3xl font-semibold leading-7">Для металла</p>
+              <!-- Texts -->
+              <div class="grid grid-cols-2 gap-30">
+                <!-- Left -->
+                <div class="space-y-10">
+                  <!-- Items 1 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">
+                      Антикорозийные материалы
+                    </p>
+                    <ul class="space-y-3.5">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Грунтовки</a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Грунт-эмали</a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали</a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Лаки </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Корабельная краска
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Смывка </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Разбавитель
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Обезжириватель</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Преобразователь ржавчины</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Items 2 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">
+                      Материалы для нефтегазовых сооружений
+                    </p>
+                    <ul class="space-y-3">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Грунт-эмали</a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <!-- Items 4 -->
-                <div class="space-y-4">
-                  <p class="text-lg font-semibold">Термозащита</p>
-                  <ul class="space-y-3">
-                    <li>
-                      <a href="#" class="hover:text-brand-red">Эмали </a>
-                    </li>
-                  </ul>
+                <!-- Right -->
+                <div class="space-y-10">
+                  <!-- Items 1 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">
+                      Кислотоупорные материалы
+                    </p>
+                    <ul class="space-y-3.5">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Лаки </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red"
+                          >Кислотоупорный пол</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Items 2 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">Химстойкие материалы</p>
+                    <ul class="space-y-3">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Лаки </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Items 3 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">Огнезащита</p>
+                    <ul class="space-y-3">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Items 4 -->
+                  <div class="space-y-4">
+                    <p class="text-lg font-semibold">Термозащита</p>
+                    <ul class="space-y-3">
+                      <li>
+                        <a href="#" class="hover:text-brand-red">Эмали </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1181,7 +1475,7 @@
               type="text"
               id="search"
               placeholder="Поиск"
-              class="absolute w-full h-full bg-transparent outline-none placeholder:text-brand-gray-400 focus:h-[3.1875rem] focus:xl:h-14 focus:bg-white outline-1 focus:outline-brand-gray-400 rounded-lg pl-14"
+              class="absolute w-full h-full bg-transparent outline-none placeholder:text-brand-gray-400 focus:h-[51px] focus:xl:h-14 focus:bg-white outline-1 focus:outline-brand-gray-400 rounded-lg pl-14"
             />
             <button id="searchX" class="hidden absolute right-5 z-50">
               <svg
@@ -1295,28 +1589,6 @@
             </li>
           </ul>
         </div>
-      </div>
-
-      <div
-        class="max-w-base mx-auto flex justify-between mt-2.5 md:mt-5 lg:mt-[70px] px-4"
-      >
-        <!-- Path -->
-        <div class="flex flex-wrap items-center gap-3 text-xs xs:text-sm">
-          <span>Главная</span>
-          <img src="./assets/images/chevron-path.svg" alt="Path icon" />
-          <span>Каталог</span>
-          <img src="./assets/images/chevron-path.svg" alt="Path icon" />
-          <span>Покрытия для металла</span>
-          <img src="./assets/images/chevron-path.svg" alt="Path icon" />
-          <span class="text-brand-gray-400"
-            >Политакс 77EPV 2S. Эпокси виниловая эмаль-грунт для металла</span
-          >
-        </div>
-
-        <button class="hidden lg:flex items-center gap-1.5">
-          <img src="./assets/images/icon-share.svg" alt="Icon Share" />
-          <span class="hidden lg:block text-sm">Поделиться</span>
-        </button>
       </div>
     </header>
 
