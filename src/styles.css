@@ -58,6 +58,10 @@
   @apply bg-brand-red;
 }
 
+.tab-buttons.active span {
+  @apply bg-brand-red;
+}
+
 /* Scroll Styles */
 /* Width of the scrollbar */
 ::-webkit-scrollbar {

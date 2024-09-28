@@ -1337,6 +1337,9 @@ td{
 .w-sixty{
   width: 3.75rem;
 }
+.w-2{
+  width: 0.5rem;
+}
 .min-w-100{
   min-width: 6.25rem;
 }
@@ -1351,9 +1354,6 @@ td{
 }
 .min-w-\[25\.625rem\]{
   min-width: 25.625rem;
-}
-.min-w-full{
-  min-width: 100%;
 }
 .min-w-max{
   min-width: -moz-max-content;
@@ -1959,6 +1959,10 @@ td{
 .stroke-brand-red{
   stroke: #9E211B;
 }
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -2165,11 +2169,11 @@ td{
 .pr-30{
   padding-right: 1.875rem;
 }
-.pr-4{
-  padding-right: 1rem;
-}
 .pr-5{
   padding-right: 1.25rem;
+}
+.pr-8{
+  padding-right: 2rem;
 }
 .pt-10{
   padding-top: 2.5rem;
@@ -2681,6 +2685,11 @@ td{
 }
 
 .tab-button.active span{
+  --tw-bg-opacity: 1;
+  background-color: rgb(158 33 27 / var(--tw-bg-opacity));
+}
+
+.tab-buttons.active span{
   --tw-bg-opacity: 1;
   background-color: rgb(158 33 27 / var(--tw-bg-opacity));
 }
@@ -3453,6 +3462,10 @@ input[type="range"]::-moz-range-track {
     height: 28.3125rem;
   }
 
+  .sm\:h-auto{
+    height: auto;
+  }
+
   .sm\:min-h-80{
     min-height: 20rem;
   }
@@ -3642,10 +3655,6 @@ input[type="range"]::-moz-range-track {
 
   .md\:mt-4{
     margin-top: 1rem;
-  }
-
-  .md\:mt-5{
-    margin-top: 1.25rem;
   }
 
   .md\:mt-8{
@@ -4037,10 +4046,6 @@ input[type="range"]::-moz-range-track {
     margin-top: 6.5625rem;
   }
 
-  .lg\:mt-\[70px\]{
-    margin-top: 70px;
-  }
-
   .lg\:block{
     display: block;
   }
@@ -4073,6 +4078,11 @@ input[type="range"]::-moz-range-track {
   .lg\:size-sixty{
     width: 3.75rem;
     height: 3.75rem;
+  }
+
+  .lg\:size-\[410px\]{
+    width: 410px;
+    height: 410px;
   }
 
   .lg\:h-10{

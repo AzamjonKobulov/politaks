@@ -1053,3 +1053,50 @@ function toggleFilters() {
 
 // Call the function to apply the behavior
 toggleFilters();
+
+// Product Slider
+// Select all buttons with data-type attributes
+const buttons = document.querySelectorAll("[data-type]");
+const activeMedia = document.getElementById("activeMedia");
+
+// Function to remove the active border from all buttons
+function removeActiveBorders() {
+  buttons.forEach((button) => {
+    button.classList.remove("border", "border-black");
+  });
+}
+
+// Add event listeners to all buttons
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const mediaType = this.getAttribute("data-type");
+    const mediaSrc = this.getAttribute("data-src");
+
+    // Remove the active border from all buttons
+    removeActiveBorders();
+
+    // Add the black border to the clicked button
+    this.classList.add("border", "border-black");
+
+    // Clear the active media content
+    activeMedia.innerHTML = "";
+
+    if (mediaType === "image") {
+      // Create a new img element for the image
+      const img = document.createElement("img");
+      img.src = mediaSrc;
+      img.alt = "Active product";
+      img.classList.add("w-full", "h-full", "object-cover");
+      activeMedia.appendChild(img);
+    } else if (mediaType === "video") {
+      // Create a new video element for the video
+      const video = document.createElement("video");
+      video.src = mediaSrc;
+      video.controls = true;
+      video.autoplay = true;
+      video.loop = true;
+      video.classList.add("w-full", "h-full", "object-cover");
+      activeMedia.appendChild(video);
+    }
+  });
+});

@@ -526,7 +526,7 @@
 
         <!-- Catalog -->
         <div
-          class="catalog absolute fade-in -translate-x-1/2 top-24 xl:top-36 z-50 max-w-base w-full mx-auto hidden grid grid-cols-3 bg-white mt-10 pr-4"
+          class="catalog absolute fade-in -translate-x-1/2 top-24 xl:top-36 z-50 max-w-base w-full mx-auto hidden grid grid-cols-3 bg-white mt-10 pr-8"
         >
           <!-- Catalog Items -->
           <ul>
@@ -1803,35 +1803,53 @@
             </div>
             <!-- Products Images -->
             <div
-              class="md:basis-1/2 h-[393px] md:h-[410px] flex flex-col-reverse lg:flex-row items-center gap-x-30 gap-y-3 py-5 lg:mt-30"
+              class="md:basis-1/2 h-[393px] md:h-[410px] flex flex-col-reverse lg:flex-row items-center gap-2.5 sm:gap-5 lg:gap-x-30 gap-y-3 py-5 lg:mt-30"
             >
-              <!-- Pagination -->
+              <!-- Product Images -->
               <div
                 class="flex lg:flex-col items-center lg:items-start justify-center gap-y-5 gap-x-5"
               >
-                <button class="w-10 lg:w-20 h-10 lg:h-20 overflow-hidden">
+                <!-- Image 1 -->
+                <button
+                  class="w-10 lg:w-20 h-10 lg:h-20 overflow-hidden rounded-lg"
+                  data-type="image"
+                  data-src="./assets/images/img-products_hero1.png"
+                >
                   <img
                     class="w-full h-full"
                     src="./assets/images/img-products_hero1.png"
                     alt="product"
                   />
                 </button>
-                <button class="w-10 lg:w-20 h-10 lg:h-20 overflow-hidden">
+                <!-- Image 2 -->
+                <button
+                  class="w-10 lg:w-20 h-10 lg:h-20 overflow-hidden rounded-lg"
+                  data-type="image"
+                  data-src="./assets/images/img-products_hero2.png"
+                >
                   <img
                     class="w-full h-full"
                     src="./assets/images/img-products_hero2.png"
                     alt="product"
                   />
                 </button>
-                <button class="w-10 lg:w-20 h-10 lg:h-20 overflow-hidden">
+                <!-- Image 3 -->
+                <button
+                  class="w-10 lg:w-20 h-10 lg:h-20 overflow-hidden rounded-lg"
+                  data-type="image"
+                  data-src="./assets/images/img-products_hero3.png"
+                >
                   <img
                     class="w-full h-full"
                     src="./assets/images/img-products_hero3.png"
                     alt="product"
                   />
                 </button>
+                <!-- Video 1 -->
                 <button
                   class="bg-brand-gray-100 w-10 lg:w-20 h-10 lg:h-20 flex items-center justify-center rounded-full overflow-hidden"
+                  data-type="video"
+                  data-src="./assets/videos/video.mp4"
                 >
                   <svg
                     class="shrink-0"
@@ -1840,6 +1858,7 @@
                     viewBox="0 0 16 19"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    class="w-2 h-2.5 sm:w-auto sm:h-auto"
                   >
                     <path
                       d="M2.28068 18.4857C1.78302 18.8109 1.2789 18.8294 0.768305 18.5412C0.258706 18.254 0.00390625 17.8102 0.00390625 17.2098V1.67455C0.00390625 1.07415 0.258706 0.629857 0.768305 0.341667C1.2789 0.0544768 1.78302 0.0734896 2.28068 0.398705L14.4483 8.16634C14.8962 8.46654 15.1202 8.89182 15.1202 9.44219C15.1202 9.99255 14.8962 10.4178 14.4483 10.718L2.28068 18.4857Z"
@@ -1848,15 +1867,20 @@
                   </svg>
                 </button>
               </div>
-
-              <div class="lg:w-[410] lg:h-[410px] overflow-hidden">
+              <!-- Product Active Image/Video -->
+              <div
+                id="activeMedia"
+                class="w-full lg:size-[410px] overflow-hidden"
+              >
                 <img
+                  id="activeImage"
                   class="w-full h-full object-cover"
                   src="./assets/images/img-main-product.png"
-                  alt="img-product__1"
+                  alt="active product"
                 />
               </div>
             </div>
+
             <!-- Product Description -->
             <div class="hidden lg:block mt-30">
               <div class="flex justify-center gap-x-2.5">
