@@ -1236,6 +1236,9 @@ td{
 .w-16{
   width: 4rem;
 }
+.w-2{
+  width: 0.5rem;
+}
 .w-2\.5{
   width: 0.625rem;
 }
@@ -1336,9 +1339,6 @@ td{
 }
 .w-sixty{
   width: 3.75rem;
-}
-.w-2{
-  width: 0.5rem;
 }
 .min-w-100{
   min-width: 6.25rem;
@@ -1959,10 +1959,6 @@ td{
 .stroke-brand-red{
   stroke: #9E211B;
 }
-.object-contain{
-  -o-object-fit: contain;
-     object-fit: contain;
-}
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -2436,6 +2432,9 @@ td{
 }
 .font-semibold{
   font-weight: 600;
+}
+.uppercase{
+  text-transform: uppercase;
 }
 .\!leading-\[1\.4rem\]{
   line-height: 1.4rem !important;
@@ -4075,14 +4074,14 @@ input[type="range"]::-moz-range-track {
     height: 18.75rem;
   }
 
-  .lg\:size-sixty{
-    width: 3.75rem;
-    height: 3.75rem;
-  }
-
   .lg\:size-\[410px\]{
     width: 410px;
     height: 410px;
+  }
+
+  .lg\:size-sixty{
+    width: 3.75rem;
+    height: 3.75rem;
   }
 
   .lg\:h-10{
@@ -4119,10 +4118,6 @@ input[type="range"]::-moz-range-track {
 
   .lg\:h-\[4\.37500rem\]{
     height: 4.37500rem;
-  }
-
-  .lg\:h-\[410px\]{
-    height: 410px;
   }
 
   .lg\:h-\[75rem\]{
@@ -4176,10 +4171,6 @@ input[type="range"]::-moz-range-track {
 
   .lg\:w-\[300px\]{
     width: 300px;
-  }
-
-  .lg\:w-\[410\]{
-    width: 410;
   }
 
   .lg\:w-\[410px\]{
@@ -4376,6 +4367,10 @@ input[type="range"]::-moz-range-track {
     --tw-space-y-reverse: 0;
     margin-top: calc(3.75rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(3.75rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:overflow-visible{
+    overflow: visible;
   }
 
   .lg\:whitespace-nowrap{

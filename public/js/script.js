@@ -333,6 +333,8 @@ document.addEventListener("DOMContentLoaded", function () {
           targetContent.style.maxHeight = targetContent.scrollHeight + "px";
         });
         icon.classList.add("rotate-180");
+        button.classList.add("text-brand-red"); // Add text-brand-red when open
+        icon.querySelector("path").classList.add("stroke-brand-red"); // Add stroke-brand-red when open
       } else {
         // If the target content is currently visible
         targetContent.style.maxHeight = targetContent.scrollHeight + "px";
@@ -340,6 +342,8 @@ document.addEventListener("DOMContentLoaded", function () {
           targetContent.style.maxHeight = "0";
         });
         icon.classList.remove("rotate-180");
+        button.classList.remove("text-brand-red"); // Remove text-brand-red when closed
+        icon.querySelector("path").classList.remove("stroke-brand-red"); // Remove stroke-brand-red when closed
         setTimeout(() => {
           targetContent.classList.add("hidden");
         }, 500); // Ensure this matches the transition duration
@@ -355,11 +359,21 @@ document.addEventListener("DOMContentLoaded", function () {
           requestAnimationFrame(() => {
             content.style.maxHeight = "0";
           });
+          const otherButton =
+            content.previousElementSibling.querySelector(".accordion-button");
           const otherIcon =
             content.previousElementSibling.querySelector(".accordion-icon");
+
+          if (otherButton) {
+            otherButton.classList.remove("text-brand-red"); // Reset text color of other accordions
+          }
           if (otherIcon) {
             otherIcon.classList.remove("rotate-180");
+            otherIcon
+              .querySelector("path")
+              .classList.remove("stroke-brand-red"); // Reset icon color of other accordions
           }
+
           setTimeout(() => {
             content.classList.add("hidden");
           }, 500); // Ensure this matches the transition duration
