@@ -621,9 +621,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Remove the 'border-b' class from the 'first-th' element
     if (firstTh) firstTh.classList.remove("border-b");
-
-    // Remove the 'border-4' class when the accordion is closed
-    item.classList.remove("border-4");
   }
 
   // Add click event to each accordion header
@@ -635,7 +632,6 @@ document.addEventListener("DOMContentLoaded", function () {
         closeAccordion(item);
       } else {
         openAccordion(item);
-        item.classList.add("border-4"); // Add the 'border-4' class when the accordion is opened
       }
     });
   });
@@ -645,7 +641,6 @@ document.addEventListener("DOMContentLoaded", function () {
     accordionItems.forEach((item) => {
       if (!item.classList.contains("open")) {
         openAccordion(item);
-        item.classList.add("border-4"); // Add the 'border-4' class when all accordions are opened
       }
     });
   });
@@ -1113,4 +1108,126 @@ buttons.forEach((button) => {
       activeMedia.appendChild(video);
     }
   });
+});
+
+// Catalog Mobile Funcs
+document.addEventListener("DOMContentLoaded", function () {
+  function MobileNav(options) {
+    this.curItem = null;
+    this.curLevel = 0;
+    this.transitionEnd = getTransitionEndEventName();
+    this.options = {
+      initElem: document.querySelector(".main-menu"),
+      menuTitle: "Menu",
+    };
+
+    // If options are passed, override the defaults
+    if (options && typeof options === "object") {
+      extendDefaults(this.options, options);
+    }
+
+    // Initialize the menu
+    var initElem = this.options.initElem ? this.options.initElem : null;
+    if (initElem) {
+      clickHandlers(this);
+      updateMenuTitle(this);
+    } else {
+      console.log(
+        this.options.initElem + " element doesn't exist, menu not initialized."
+      );
+    }
+  }
+
+  // Helper to extend default options
+  function extendDefaults(source, extender) {
+    for (var option in extender) {
+      if (source.hasOwnProperty(option)) {
+        source[option] = extender[option];
+      }
+    }
+  }
+
+  // Get the transition end event name for various browsers
+  function getTransitionEndEventName() {
+    var el = document.createElement("div");
+    var transitions = {
+      transition: "transitionend",
+      OTransition: "otransitionend", // old Opera
+      MozTransition: "transitionend",
+      WebkitTransition: "webkitTransitionEnd",
+    };
+
+    for (var i in transitions) {
+      if (transitions.hasOwnProperty(i) && el.style[i] !== undefined) {
+        return transitions[i];
+      }
+    }
+  }
+
+  // Attach click handlers for dropdown and toggle buttons
+  function clickHandlers(menu) {
+    document.querySelectorAll(".has-dropdown > a").forEach(function (element) {
+      element.addEventListener("click", function (e) {
+        e.preventDefault();
+        menu.curItem = this.parentElement;
+        updateActiveMenu(menu);
+      });
+    });
+
+    document.querySelectorAll(".nav-toggle").forEach(function (element) {
+      element.addEventListener("click", function () {
+        updateActiveMenu(menu, "back");
+      });
+    });
+  }
+
+  // Update the active menu state
+  function updateActiveMenu(menu, direction) {
+    slideMenu(menu, direction);
+    if (direction === "back") {
+      menu.curItem.classList.remove("nav-dropdown-open", "nav-dropdown-active");
+      menu.curItem = menu.curItem.parentElement.closest("li");
+      menu.curItem.classList.add("nav-dropdown-open", "nav-dropdown-active");
+    } else {
+      menu.curItem.classList.add("nav-dropdown-open", "nav-dropdown-active");
+    }
+    updateMenuTitle(menu);
+  }
+
+  // Update the menu title based on current level
+  function updateMenuTitle(menu) {
+    var title = menu.options.menuTitle;
+    if (menu.curLevel > 0) {
+      title = menu.curItem.querySelector("a").textContent;
+      document.querySelector(".nav-toggle").classList.add("back-visible");
+    } else {
+      document.querySelector(".nav-toggle").classList.remove("back-visible");
+    }
+    document.querySelector(".nav-title").textContent = title;
+  }
+
+  // Slide the menu horizontally based on current level
+  function slideMenu(menu, direction) {
+    if (direction === "back") {
+      menu.curLevel = menu.curLevel > 0 ? menu.curLevel - 1 : 0;
+    } else {
+      menu.curLevel += 1;
+    }
+    menu.options.initElem.querySelector("ul").style.transform =
+      "translateX(-" + menu.curLevel * 100 + "%)";
+  }
+
+  // Initialize the MobileNav with custom options
+  var mobileMenu = new MobileNav({
+    initElem: document.querySelector("nav"),
+    menuTitle: "Push menu demo",
+  });
+
+  // Toggle the visibility of the menu on nav toggle click
+  document
+    .querySelector(".js-nav-toggle")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(".nav-wrapper").classList.toggle("show-menu");
+    });
 });
