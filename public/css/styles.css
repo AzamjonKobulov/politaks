@@ -796,6 +796,9 @@ td{
 .right-0{
   right: 0px;
 }
+.right-1\/4{
+  right: 25%;
+}
 .right-12{
   right: 3rem;
 }
@@ -807,6 +810,9 @@ td{
 }
 .right-5{
   right: 1.25rem;
+}
+.right-\[15\%\]{
+  right: 15%;
 }
 .top-0{
   top: 0px;
@@ -986,6 +992,9 @@ td{
 }
 .mt-sixty{
   margin-top: 3.75rem;
+}
+.mr-8{
+  margin-right: 2rem;
 }
 .block{
   display: block;
@@ -1368,11 +1377,36 @@ td{
   min-width: -moz-max-content;
   min-width: max-content;
 }
+.min-w-40{
+  min-width: 10rem;
+}
+.min-w-\[300px\]{
+  min-width: 300px;
+}
+.min-w-\[18\.75rem\]{
+  min-width: 18.75rem;
+}
+.min-w-6{
+  min-width: 1.5rem;
+}
+.min-w-44{
+  min-width: 11rem;
+}
+.min-w-fit{
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.min-w-full{
+  min-width: 100%;
+}
 .max-w-2xl{
   max-width: 42rem;
 }
 .max-w-300{
   max-width: 18.75rem;
+}
+.max-w-40{
+  max-width: 10rem;
 }
 .max-w-410{
   max-width: 25.625rem;
@@ -1511,6 +1545,9 @@ td{
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.grid-cols-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
 .flex-col{
   flex-direction: column;
 }
@@ -1534,6 +1571,9 @@ td{
 }
 .items-stretch{
   align-items: stretch;
+}
+.\!items-stretch{
+  align-items: stretch !important;
 }
 .justify-end{
   justify-content: flex-end;
@@ -2186,9 +2226,6 @@ td{
 .pr-10{
   padding-right: 2.5rem;
 }
-.pr-20{
-  padding-right: 5rem;
-}
 .pr-30{
   padding-right: 1.875rem;
 }
@@ -2227,6 +2264,9 @@ td{
 }
 .pt-sixty{
   padding-top: 3.75rem;
+}
+.pr-4{
+  padding-right: 1rem;
 }
 .text-left{
   text-align: left;
@@ -3570,6 +3610,14 @@ input[type="range"]::-moz-range-track {
     width: max-content;
   }
 
+  .sm\:min-w-52{
+    min-width: 13rem;
+  }
+
+  .sm\:max-w-48{
+    max-width: 12rem;
+  }
+
   .sm\:max-w-\[26\.1875rem\]{
     max-width: 26.1875rem;
   }
@@ -3720,6 +3768,10 @@ input[type="range"]::-moz-range-track {
     margin-top: 1rem;
   }
 
+  .md\:mt-5{
+    margin-top: 1.25rem;
+  }
+
   .md\:mt-8{
     margin-top: 2rem;
   }
@@ -3813,8 +3865,32 @@ input[type="range"]::-moz-range-track {
     width: max-content;
   }
 
+  .md\:min-w-\[18\.75rem\]{
+    min-width: 18.75rem;
+  }
+
+  .md\:min-w-\[300px\]{
+    min-width: 300px;
+  }
+
   .md\:max-w-250{
     max-width: 15.625rem;
+  }
+
+  .md\:max-w-64{
+    max-width: 16rem;
+  }
+
+  .md\:max-w-\[300px\]{
+    max-width: 300px;
+  }
+
+  .md\:max-w-80{
+    max-width: 20rem;
+  }
+
+  .md\:max-w-none{
+    max-width: none;
   }
 
   .md\:basis-1\/2{
@@ -3916,6 +3992,11 @@ input[type="range"]::-moz-range-track {
   .md\:py-20{
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .md\:py-3{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   .md\:py-50{
@@ -4053,6 +4134,10 @@ input[type="range"]::-moz-range-track {
     margin-right: -1.5rem;
   }
 
+  .lg\:mb-10{
+    margin-bottom: 2.5rem;
+  }
+
   .lg\:mb-sixty{
     margin-bottom: 3.75rem;
   }
@@ -4105,8 +4190,16 @@ input[type="range"]::-moz-range-track {
     margin-top: 1.75rem;
   }
 
+  .lg\:mt-\[4\.375rem\]{
+    margin-top: 4.375rem;
+  }
+
   .lg\:mt-\[6\.5625rem\]{
     margin-top: 6.5625rem;
+  }
+
+  .lg\:mt-\[70px\]{
+    margin-top: 70px;
   }
 
   .lg\:block{
@@ -4262,6 +4355,14 @@ input[type="range"]::-moz-range-track {
     width: 3.75rem;
   }
 
+  .lg\:min-w-\[18\.75rem\]{
+    min-width: 18.75rem;
+  }
+
+  .lg\:min-w-\[300px\]{
+    min-width: 300px;
+  }
+
   .lg\:max-w-300{
     max-width: 18.75rem;
   }
@@ -4292,6 +4393,10 @@ input[type="range"]::-moz-range-track {
 
   .lg\:max-w-lg{
     max-width: 32rem;
+  }
+
+  .lg\:max-w-none{
+    max-width: none;
   }
 
   .lg\:flex-1{
@@ -4561,6 +4666,10 @@ input[type="range"]::-moz-range-track {
     padding-left: 2.5rem;
   }
 
+  .lg\:pl-5{
+    padding-left: 1.25rem;
+  }
+
   .lg\:pl-sixty{
     padding-left: 3.75rem;
   }
@@ -4571,6 +4680,10 @@ input[type="range"]::-moz-range-track {
 
   .lg\:pr-10{
     padding-right: 2.5rem;
+  }
+
+  .lg\:pr-20{
+    padding-right: 5rem;
   }
 
   .lg\:pr-30{
@@ -4761,6 +4874,10 @@ input[type="range"]::-moz-range-track {
     display: flex;
   }
 
+  .xl\:grid{
+    display: grid;
+  }
+
   .xl\:hidden{
     display: none;
   }
@@ -4845,6 +4962,11 @@ input[type="range"]::-moz-range-track {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+  }
+
+  .xl\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .xl\:px-5{
@@ -4965,4 +5087,3 @@ input[type="range"]::-moz-range-track {
     line-height: 3.5rem;
   }
 }
-  

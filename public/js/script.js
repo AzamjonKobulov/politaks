@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Footer Functions
+// Accordion for Footer & for the accordion in the Product
 document.addEventListener("DOMContentLoaded", function () {
   const accordionButtons = document.querySelectorAll(".accordion-button");
 
@@ -324,6 +324,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.getAttribute("data-accordion-target")
       );
       const icon = button.nextElementSibling;
+      const accordionItem = button.closest(".accordion-item"); // Get the closest accordion item
 
       // If the target content is currently hidden
       if (targetContent.classList.contains("hidden")) {
@@ -335,6 +336,7 @@ document.addEventListener("DOMContentLoaded", function () {
         icon.classList.add("rotate-180");
         button.classList.add("text-brand-red"); // Add text-brand-red when open
         icon.querySelector("path").classList.add("stroke-brand-red"); // Add stroke-brand-red when open
+        accordionItem.classList.add("border-brand-red"); // Add border-brand-red to open item
       } else {
         // If the target content is currently visible
         targetContent.style.maxHeight = targetContent.scrollHeight + "px";
@@ -344,6 +346,7 @@ document.addEventListener("DOMContentLoaded", function () {
         icon.classList.remove("rotate-180");
         button.classList.remove("text-brand-red"); // Remove text-brand-red when closed
         icon.querySelector("path").classList.remove("stroke-brand-red"); // Remove stroke-brand-red when closed
+        accordionItem.classList.remove("border-brand-red"); // Remove border-brand-red from closed item
         setTimeout(() => {
           targetContent.classList.add("hidden");
         }, 500); // Ensure this matches the transition duration
@@ -363,6 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
             content.previousElementSibling.querySelector(".accordion-button");
           const otherIcon =
             content.previousElementSibling.querySelector(".accordion-icon");
+          const otherAccordionItem = content.closest(".accordion-item"); // Get the closest other accordion item
 
           if (otherButton) {
             otherButton.classList.remove("text-brand-red"); // Reset text color of other accordions
@@ -372,6 +376,9 @@ document.addEventListener("DOMContentLoaded", function () {
             otherIcon
               .querySelector("path")
               .classList.remove("stroke-brand-red"); // Reset icon color of other accordions
+          }
+          if (otherAccordionItem) {
+            otherAccordionItem.classList.remove("border-brand-red"); // Remove border-brand-red from other items
           }
 
           setTimeout(() => {
@@ -591,7 +598,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function openAccordion(item) {
     const body = item.querySelector(".accordion-body");
     const plusIcon = item.querySelector(".plus-on");
-    const firstTh = document.querySelector(".first-th");
+    const firstTh = item.querySelector(".first-th"); // Target the first-th inside this item
 
     item.classList.add("open");
     body.classList.remove("hidden");
@@ -601,15 +608,17 @@ document.addEventListener("DOMContentLoaded", function () {
       .querySelectorAll(".hidden-td")
       .forEach((td) => td.classList.remove("hidden"));
 
-    // Add the 'border-b' class to the 'first-th' element
-    if (firstTh) firstTh.classList.add("border-b");
+    // Add the 'border-b' class to the 'first-th' element within this accordion item
+    if (firstTh) {
+      firstTh.classList.add("border-b");
+    }
   }
 
   // Function to close a specific accordion item
   function closeAccordion(item) {
     const body = item.querySelector(".accordion-body");
     const plusIcon = item.querySelector(".plus-on");
-    const firstTh = document.querySelector(".first-th");
+    const firstTh = item.querySelector(".first-th"); // Target the first-th inside this item
 
     item.classList.remove("open");
     body.classList.add("hidden");
@@ -619,8 +628,10 @@ document.addEventListener("DOMContentLoaded", function () {
       .querySelectorAll(".hidden-td")
       .forEach((td) => td.classList.add("hidden"));
 
-    // Remove the 'border-b' class from the 'first-th' element
-    if (firstTh) firstTh.classList.remove("border-b");
+    // Remove the 'border-b' class from the 'first-th' element within this accordion item
+    if (firstTh) {
+      firstTh.classList.remove("border-b");
+    }
   }
 
   // Add click event to each accordion header
@@ -688,9 +699,10 @@ document.querySelectorAll(".hover-table td").forEach((td) => {
   });
 });
 
+// Article FAQ Accordion
 document.addEventListener("DOMContentLoaded", function () {
   const faqHeaders = document.querySelectorAll(".faq-header");
-  const faqItems = document.querySelectorAll(".faq-item"); // Select all faq items
+  const faqItems = document.querySelectorAll(".faq-item");
 
   // Function to close all accordions
   function closeAllAccordions() {
@@ -735,6 +747,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const plusLine = this.querySelector(".article-accordion-plus");
 
       if (faqBody.classList.contains("hidden")) {
+        // Close all accordions before opening a new one
+        closeAllAccordions();
+
         faqBody.classList.remove("hidden");
         faqBody.style.maxHeight = faqBody.scrollHeight + "px"; // Smooth opening
 
