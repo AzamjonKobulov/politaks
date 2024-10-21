@@ -4,7 +4,7 @@ export default function initCatalogHover() {
   const catalogContentItems = document.querySelectorAll(".catalog-content");
   const catalogItemsDiv = document.querySelector(".catalog-items"); // Assume this is the container
 
-  let activeItem = null; // To keep track of the currently hovered item
+  let activeItem = null; // To keep track of the currently hovered item 
 
   // Hide all content sections initially
   catalogContentItems.forEach((content, index) => {

@@ -308,3 +308,25 @@ input[type="range"]::-moz-range-track {
 }
 
 /* Catalog Mobile Styles */
+.catalog-menu {
+  transform: translateX(-100%); /* Start off-screen to the left */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.catalog-open .catalog-menu {
+  transform: translateX(0); /* Move into view */
+}
+
+.catalog-closed .catalog-menu {
+  transform: translateX(-100%); /* Keep it off-screen to the left when closed */
+}
+
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.submenu-open {
+  max-height: 500px; /* Adjust according to your content */
+}

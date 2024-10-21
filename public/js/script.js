@@ -1,20 +1,8 @@
 import togglePassword from "./modules/utils.js";
 import initCatalogHover from "./modules/navbar.js";
+import initCatalog from "./modules/catalog.js";
 
-// Common fucntions
-// Function to handle click outside of specified elements
-function handleClickOutside(elementButtonClass, elementClass) {
-  window.addEventListener("click", (e) => {
-    const button = e.target.closest(elementButtonClass);
-    const element = document.querySelector(elementClass);
-
-    if (!button) {
-      if (!element.classList.contains("hidden")) {
-        element.classList.add("hidden");
-      }
-    }
-  });
-}
+initCatalog();
 
 // Header functions
 
@@ -1246,3 +1234,37 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector(".nav-wrapper").classList.toggle("show-menu");
     });
 });
+
+// Catalog Open/Close
+function openCatalog() {
+  const catalogElement = document.getElementById("catalog");
+  catalogElement.classList.remove("hidden");
+  catalogElement.classList.add("catalog-open");
+  catalogElement.classList.remove("catalog-closed");
+  renderMenu(catalogData, "Каталог");
+}
+
+function closeCatalog() {
+  const catalogElement = document.getElementById("catalog");
+  catalogElement.classList.remove("catalog-open");
+  catalogElement.classList.add("catalog-closed");
+  setTimeout(() => {
+    catalogElement.classList.add("hidden");
+  }, 300); // Delay to allow for transition
+}
+
+// Event Listeners
+document.getElementById("openCatalogBtn").addEventListener("click", () => {
+  closeMobMenu();
+  closeOverlay();
+  openCatalog();
+});
+
+document.getElementById("menuBtn").addEventListener("click", () => {
+  closeCatalog();
+  openMobMenu();
+  openOverlay();
+});
+document.getElementById("closeCatalog").addEventListener("click", closeCatalog);
+document.getElementById("menuBtn").addEventListener("click", closeCatalog);
+document.getElementById("backBtn").addEventListener("click", goBack);
