@@ -3,7 +3,7 @@ export default function initCatalog() {
   const catalogData = [
     {
       title: "Наливные полы",
-      icon: "/public/assets/images/icon-catalog-1.svg",
+      icon: "/assets/images/icon-catalog-1.svg",
       subcategories: [
         {
           title: "Антикоррозийные материалы",
@@ -37,7 +37,7 @@ export default function initCatalog() {
     },
     {
       title: "Для бетона",
-      icon: "/public/assets/images/icon-catalog-2.svg",
+      icon: "/assets/images/icon-catalog-2.svg",
       subcategories: [
         {
           title: "Антикоррозийные материалы",
@@ -74,7 +74,7 @@ export default function initCatalog() {
     },
     {
       title: "Для металла",
-      icon: "/public/assets/images/icon-catalog-3.svg",
+      icon: "/assets/images/icon-catalog-3.svg",
       subcategories: [
         {
           title: "Антикоррозийные материалы",
@@ -98,7 +98,7 @@ export default function initCatalog() {
     },
     {
       title: "Для фасадов",
-      icon: "/public/assets/images/icon-catalog-4.svg",
+      icon: "/assets/images/icon-catalog-4.svg",
       subcategories: [
         {
           title: "Антикоррозийные материалы",
@@ -122,7 +122,7 @@ export default function initCatalog() {
     },
     {
       title: "Для дерева",
-      icon: "/public/assets/images/icon-catalog-5.svg",
+      icon: "/assets/images/icon-catalog-5.svg",
       subcategories: [
         {
           title: "Антикоррозийные материалы",
@@ -146,7 +146,7 @@ export default function initCatalog() {
     },
     {
       title: "Для крыш",
-      icon: "/public/assets/images/icon-catalog-6.svg",
+      icon: "/assets/images/icon-catalog-6.svg",
       subcategories: [
         {
           title: "Антикоррозийные материалы",
@@ -170,7 +170,7 @@ export default function initCatalog() {
     },
     {
       title: "Для асфальта",
-      icon: "/public/assets/images/icon-catalog-7.svg",
+      icon: "/assets/images/icon-catalog-7.svg",
       subcategories: [
         {
           title: "Антикоррозийные материалы",
@@ -194,7 +194,7 @@ export default function initCatalog() {
     },
     {
       title: "Для топинга",
-      icon: "/public/assets/images/icon-catalog-8.svg",
+      icon: "/assets/images/icon-catalog-8.svg",
       subcategories: [
         {
           title: "Антикоррозийные материалы",
@@ -218,7 +218,7 @@ export default function initCatalog() {
     },
     {
       title: "Огнезащитные краски",
-      icon: "/public/assets/images/icon-catalog-9.svg",
+      icon: "/assets/images/icon-catalog-9.svg",
       subcategories: [
         {
           title: "Антикоррозийные материалы",
@@ -242,7 +242,7 @@ export default function initCatalog() {
     },
     {
       title: "«ЭКО» краски",
-      icon: "/public/assets/images/icon-catalog-10.svg",
+      icon: "/assets/images/icon-catalog-10.svg",
       subcategories: [
         {
           title: "Антикоррозийные материалы",
@@ -266,7 +266,7 @@ export default function initCatalog() {
     },
     {
       title: "Кислотостойкие краски",
-      icon: "/public/assets/images/icon-catalog-11.svg",
+      icon: "/assets/images/icon-catalog-11.svg",
       subcategories: [
         {
           title: "Антикоррозийные материалы",
@@ -290,7 +290,7 @@ export default function initCatalog() {
     },
     {
       title: "Промышленные покрытие",
-      icon: "/public/assets/images/icon-catalog-12.svg",
+      icon: "/assets/images/icon-catalog-12.svg",
       subcategories: [
         {
           title: "Антикоррозийные материалы",
