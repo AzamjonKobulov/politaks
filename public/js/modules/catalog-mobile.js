@@ -417,7 +417,7 @@ export default function initCatalog() {
   }
 
   function openCatalog() {
-    const catalogElement = document.getElementById("catalog");
+    const catalogElement = document.getElementById("catalogMobile");
     catalogElement.classList.remove("hidden");
     catalogElement.classList.add("catalog-open");
     catalogElement.classList.remove("catalog-closed");
@@ -425,7 +425,7 @@ export default function initCatalog() {
   }
 
   function closeCatalog() {
-    const catalogElement = document.getElementById("catalog");
+    const catalogElement = document.getElementById("catalogMobile");
     catalogElement.classList.remove("catalog-open");
     catalogElement.classList.add("catalog-closed");
     setTimeout(() => {

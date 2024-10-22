@@ -1,11 +1,10 @@
 import togglePassword from "./modules/utils.js";
 import initCatalogHover from "./modules/navbar.js";
-import initCatalog from "./modules/catalog.js";
+import initCatalog from "./modules/catalog-mobile.js";
 
 initCatalog();
 
 // Header functions
-
 const mobileMenu = document.querySelector("#mobile-menu");
 const mobileMenuOverlay = document.querySelector("#mobile-menu-overlay");
 const mobileMenuCloseBtn = document.querySelector("#mobile-menu-close-btn");
@@ -182,8 +181,8 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 });
 
-// Catalog Functions
-const catalog = document.querySelector(".catalog");
+// Catalog Desktop Functions
+const catalog = document.querySelector(".catalog-desktop");
 const catalogItem = document.querySelector(".catalog-item");
 const catalogButton = document.querySelector(".catalog-button");
 const catalogMenuIcon = document.querySelector(".catalog-button-menu-icon");
@@ -1237,7 +1236,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Catalog Open/Close
 function openCatalog() {
-  const catalogElement = document.getElementById("catalog");
+  const catalogElement = document.getElementById("catalogMobile");
   catalogElement.classList.remove("hidden");
   catalogElement.classList.add("catalog-open");
   catalogElement.classList.remove("catalog-closed");
@@ -1245,7 +1244,7 @@ function openCatalog() {
 }
 
 function closeCatalog() {
-  const catalogElement = document.getElementById("catalog");
+  const catalogElement = document.getElementById("catalogMobile");
   catalogElement.classList.remove("catalog-open");
   catalogElement.classList.add("catalog-closed");
   setTimeout(() => {
