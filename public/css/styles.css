@@ -686,9 +686,6 @@ td{
 .fixed{
   position: fixed;
 }
-.\!absolute{
-  position: absolute !important;
-}
 .absolute{
   position: absolute;
 }
@@ -1214,9 +1211,6 @@ td{
 }
 .max-h-28{
   max-height: 7rem;
-}
-.max-h-\[calc\(100vh-160px\)\]{
-  max-height: calc(100vh - 160px);
 }
 .min-h-44{
   min-height: 11rem;
@@ -1953,10 +1947,6 @@ td{
 .bg-gray-900{
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-.bg-red-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 .bg-transparent{
   background-color: transparent;
